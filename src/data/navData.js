@@ -1,28 +1,28 @@
 const data = [
     {
         id: 0,
-        to: 'about',
-        content: 'Infos',
+        to: 'Accueil',
+        content: 'Accueil',
     },
     {
         id: 1,
-        to: 'experiences',
-        content: 'Expériences',
+        to: 'Le Club',
+        content: 'Le Club',
     },
     {
         id: 2,
-        to: 'projects',
-        content: 'Projets',
+        to: 'Parcours',
+        content: 'Parcours',
     },
     {
         id: 3,
-        to: 'skills',
-        content: 'Compétences',
+        to: 'Conseils',
+        content: 'Conseils',
     },
     {
         id: 4,
-        to: 'contact',
-        content: 'Contact',
+        to: 'Nous Rejoindre',
+        content: 'Nous Rejoindre',
     },
 ];
 

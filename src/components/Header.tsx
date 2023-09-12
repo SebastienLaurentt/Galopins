@@ -25,19 +25,19 @@ function Header() {
   }, [burgerIsOpen]);
 
     return (
-      <header className="flex justify-between items-center p-8 lg:py-16  xl:w-4/5 lg:mx-auto ">
+      <header className="py-4 md:p-8 text-sm md:text-lg xl:text-xl">
       <BurgerMenu 
         setBurgerIsOpen={setBurgerIsOpen} 
         burgerIsOpen={burgerIsOpen}
       />
-        <ul className="hidden md:flex  gap-6 lg:gap-12 ">
+        <ul className="flex justify-center  gap-x-4 md:gap-x-10 xl:gap-x-28">
             {data.map((value) => {
                 return (
                     <li>
                         <Link
                             to={value.to}
                             smooth={true} 
-                            className="cursor-pointer md:hover:text-sky-500"
+                            className="cursor-pointer md:hover:underline"
                             >
                             {value.content}
                         </Link>
@@ -45,17 +45,6 @@ function Header() {
                 );
             })}
         </ul>
-        <div className='flex flex-row-reverse justify-between w-full md:w-1/5'>
-          <div className="md:hidden">
-            <IoMdMenu
-              size={32}
-              className={'cursor-pointer'}
-              onClick={() => {
-                setBurgerIsOpen(true);
-              }}
-            />
-          </div>
-        </div>
     </header>
     );
   }

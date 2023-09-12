@@ -1,4 +1,4 @@
-import Home from "./assets/sections/Home"
+import Home from "./sections/Home"
 
 
 function App() {
