@@ -7,7 +7,6 @@ import { FaHiking } from 'react-icons/fa';
 import Header from '../components/Header';
 
 
-BsFillPenFill
 
 function Club() {
     const sectionStyle = {
