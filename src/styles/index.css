@@ -19,7 +19,7 @@
   }
 
   p {
-    @apply text-sm md:text-lg mb-4
+    @apply text-sm md:text-lg mb-4 md:mb-8
   }
 
   span {
