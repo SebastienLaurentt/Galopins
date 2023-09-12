@@ -6,7 +6,7 @@ const data = [
     },
     {
         id: 1,
-        to: 'Le Club',
+        to: 'Club',
         content: 'Le Club',
     },
     {

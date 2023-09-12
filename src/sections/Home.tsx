@@ -10,13 +10,17 @@ function Home() {
         <section 
             className='h-screen relative p-4 md:p-8 bg-center bg-cover w-full' 
             style={sectionStyle}
+            id ="Accueil"
         >
             <Header/>
             {/* HERO CONTENT */}
-            <div className='p-8 md:p-24 xl:p-48  xl:h-2/3 flex flex-col justify-center items-center  mx-auto'>
+            <div className='p-8 md:p-24 xl:p-72  h-3/4 xl:h-2/3 flex flex-col justify-center items-center  mx-auto'>
                     <h1>LES GALOPINS</h1>
-                    <p className='italic text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, labore quibusdam deserunt aperiam dolor maiores impedit exercitationem consequatur nisi blanditiis rerum voluptatibus. Ab harum, doloremque, nihil magni neque recusandae aspernatur, tempora est necessitatibus fuga placeat accusamus hic. Asperiores accusamus aliquid distinctio praesentium ipsa aliquam quisquam ut nesciunt libero quo dolore id enim tempore, soluta hic, quis sint ullam fugit pariatur. Eligendi praesentium veniam expedita minima, dolorum veritatis illum eius. Totam natus, quaerat debitis, sapiente doloribus a aspernatur magnam quas officia illo perspiciatis voluptate, odit sint eligendi maiores dolore omnis eveniet numquam ab exercitationem cum voluptatibus velit porro? Id, aliquam alias?</p>
-                    <button className='border-2 p-2 rounded-lg md:hover:bg-white md:hover:text-black'>DOCUMENT D'ADMISSION</button>
+                    <p className='italic text-center mb-8'>Bienvenue sur notre site internet ! </p>
+                    <p className=' text-center'>Nous sommes un club de randonnée situé à Montélimar ayant pour but  la découverte de la nature et du patrimoine dans la bonne humeur et en toute convivialité. </p>
+                    <p className=' text-center'>Si cela vous intéresse, sentez vous libre d'explorer ce site afin d'en apprendre davantage sur notre <strong>club</strong>, les <strong>parcours que nous proposons</strong> mais aussi ce qui est <strong>nécessaire pour nous rejoindre</strong> ! </p>
+                    
+                    <button className='border-2 p-2 rounded-lg md:hover:bg-white md:hover:text-black mt-8'>DOCUMENT D'ADMISSION</button>
             </div>
 
         </section>
