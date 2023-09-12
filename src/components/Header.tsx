@@ -5,8 +5,8 @@ import { Link } from 'react-scroll';
 function Header() {
     return (
       <header className="py-4 md:p-8 text-sm md:text-lg xl:text-xl">
-        <ul className="flex justify-center gap-x- md:gap-x-10 xl:gap-x-28">
-                    <li>
+        <ul className="flex justify-center gap-x-2 md:gap-x-10 xl:gap-x-28">
+                    <li className=''>
                         <Link
                             to='Accueil'
                             smooth={true} 
