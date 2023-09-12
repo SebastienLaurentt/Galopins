@@ -4,16 +4,22 @@
 
 @layer base {
   html {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     color:white;
   }
 
   h1 {
-    @apply text-3xl xl:text-5xl font-bold mb-16 text-center
+    font-family: 'Playfair Display', serif;
+    @apply text-3xl md:text-4xl xl:text-5xl font-bold mb-16 text-center 
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    @apply text-2xl xl:text-4xl font-bold  
   }
 
   p {
-    @apply text-sm md:text-base xl:text-lg mb-12
+    @apply text-sm md:text-lg  mb-12 
   }
 
 }

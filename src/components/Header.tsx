@@ -5,9 +5,6 @@ import data from '../data/navData'
 
 
 function Header() {
-  
-
-
     return (
       <header className="py-4 md:p-8 text-sm md:text-lg xl:text-xl">
         <ul className="flex justify-center gap-x-4 md:gap-x-10 xl:gap-x-28">
