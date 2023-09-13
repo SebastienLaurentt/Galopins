@@ -41,7 +41,6 @@ function Club() {
                         <FaHiking className="text-3xl md:text-4xl xl:text-5xl" />
                         <span className='mb-8'>200 randonnées en 2022</span>
                     </div>
-
                 </div>
             </div>
         </Section>
