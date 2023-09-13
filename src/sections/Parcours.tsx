@@ -34,7 +34,7 @@ function Parcours() {
                             Lundi | Après - midi 
                         </h3>
                         <span className='italic mb-4'>
-                            Tous niveau
+                            Tous niveaux
                         </span>
                         <ul >
                             <li>
