@@ -2,27 +2,23 @@ import ParcoursBg from '../static/img/parcours.jpg';
 import { GiStonePath } from 'react-icons/gi';
 
 import Header from '../components/Header';
+import SectionHeader from '../components/SectionHeader';
+import Section from '../components/Section';
 
 
 
 function Parcours() {
-    const sectionStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${ParcoursBg})`,
-    };
-
     return (
-        <section 
-            className='h-screen relative p-4 bg-center bg-cover w-full' 
-            style={sectionStyle}
-            id ="Parcours"
+        <Section
+            id='Parcours'
+            bg={ParcoursBg}
         >
             <Header/>
             {/* PARCOURS CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
-                <div className='flex items-center gap-x-4 my-4 md:mb-16 justify-center md:justify-start'>
-                    <h2>LES PARCOURS</h2>
-                    <GiStonePath className="text-3xl md:text-4xl xl:text-5xl" />
-                </div>
+                <SectionHeader sectionTitle='LES PARCOURS'>
+                    <GiStonePath className="sectionHeaderIcon"/>
+                </SectionHeader>
                 <div className='text-center md:text-left md:px-8 xl:px-12 mb-4 md:mb-16'>
                     <p>Les Galopins se déplacent toujours en covoiturage afin de limiter le nombre de voitures. Une participation est demandée à la personne transportée. Le covid nous obligeant d’être maximun à 4 par voiture le tarif est laissé à l’appréciation du conducteur (la base étant de 0.2€ du km).
                     </p>
@@ -63,7 +59,7 @@ function Parcours() {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
 
