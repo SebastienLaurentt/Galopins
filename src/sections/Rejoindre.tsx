@@ -17,8 +17,8 @@ function Rejoindre() {
         >
             <Header/>
             {/* CONSEILS CONTENT */}
-            <div className='flex flex-col md:p-4 xl:p-8'>
-                <div className='flex items-center gap-x-4 mb-4 md:mb-16 justify-center md:justify-start'>
+            <div className='md:p-4 xl:p-8'>
+                <div className='flex items-center gap-x-4 my-4 md:mb-16 justify-center md:justify-start'>
                     <h2>NOUS REJOINDRE</h2>
                     <LuBackpack className="text-3xl md:text-4xl xl:text-5xl" />
                 </div>
