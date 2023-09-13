@@ -32,18 +32,18 @@ function Club() {
                     <p>Afin de garder un côté convivial, chaque mois un restaurant est organisé (le vendredi soir en principe). Début Janvier, nous nous réunissons pour la galette des rois  à la salle St Martin avec projection sur grand écran des photos prises lors de nos randonnées. En fin de saison nous nous réunissons en plein air pour l’assemblée générale suivie d’un repas. Nous puisons dans l’argent des cotisations afin de participer à ces évènements.
                     </p>
                 </div>
-                <div className='flex flex-col md:flex-row  md:gap-y-0 md:justify-around '>
+                <div className='md:flex md:flex-row md:justify-around '>
                     <div className='flex flex-col items-center gap-y-2'>
                         <BsFillPenFill className="text-3xl md:text-4xl xl:text-5xl" />
-                        <span>Crée en Septembre 2004</span>
+                        <span className='mb-8'>Crée en Septembre 2004</span>
                     </div>
                     <div className='flex flex-col items-center gap-y-2'>
                         <BsPeopleFill className="text-3xl md:text-4xl xl:text-5xl" />
-                        <span>70 adhérents en 2022</span>
+                        <span className='mb-8'>70 adhérents en 2022</span>
                     </div>
                     <div className='flex flex-col items-center gap-y-2'>
                         <FaHiking className="text-3xl md:text-4xl xl:text-5xl" />
-                        <span>200 randonnées en 2022</span>
+                        <span className='mb-8'>200 randonnées en 2022</span>
                     </div>
 
                 </div>
