@@ -1,3 +1,7 @@
+import { BiSolidDownload } from 'react-icons/bi';
+
+BiSolidDownload
+
 interface DownloadLinkProps {
     file:string;
     fileName:string;
@@ -14,7 +18,10 @@ function DownloadLink ({file, fileName, linkName, classname }: DownloadLinkProps
                 href={file}
                 download ={fileName}
             >
-                {linkName}
+                <div className='flex gap-x-2'>
+                    {linkName}
+                    <BiSolidDownload className="text-xl md:text-2xl"/>
+                </div>
             </a>
         )
 
