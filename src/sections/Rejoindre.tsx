@@ -3,6 +3,7 @@ import Header from '../components/Header';
 
 import { LuBackpack } from 'react-icons/lu';
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
+import DownloadLink from '../components/DownloadLink';
 
 function Rejoindre() {
     const sectionStyle = {
@@ -27,14 +28,11 @@ function Rejoindre() {
                     </p>
                     <p className='mb-8'>Les chaussures de randonnées sont obligatoires (baskets non autorisées). Une polaire et un coupe vent sont conseillés selon la saison. Les accompagnateurs se réservent le droit de refuser les personnes mal équipées.</p>
                     <p className='mb-8'>Un montant de 15€ ainsi que le formulaire d'inscription ci-dessous seront demandés afin de valiser l'adhésion. </p>
-
-                    <a 
-                        className='downloadLink'
-                        href={AdmissionFile}
-                        download ="Admission_Galopins.pdf"
-                    >
-                        DOCUMENT D'ADMISSION
-                    </a>
+                    <DownloadLink 
+                        file={AdmissionFile}
+                        fileName='Admission_Galopins.pdf'
+                        linkName="DOCUMENT D'ADMISSION"
+                    />
                 </div>
             </div>
         </section>
