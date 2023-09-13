@@ -1,21 +1,17 @@
-import ConseilsBg from '../static/img/conseils.jpg';
+import RejoindreBg from '../static/img/rejoindre.jpg';
 import Header from '../components/Header';
 
 import { LuBackpack } from 'react-icons/lu';
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
 import SectionHeader from '../components/SectionHeader';
+import Section from '../components/Section';
 
 function Rejoindre() {
-    const sectionStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${ConseilsBg})`,
-    };
-
     return (
-        <section 
-            className='h-screen relative p-4 md:p-8 bg-center bg-cover w-full' 
-            style={sectionStyle}
-            id ="Rejoindre"
+        <Section
+            id='Rejoindre'
+            bg={RejoindreBg}
         >
             <Header/>
             {/* CONSEILS CONTENT */}
@@ -35,7 +31,7 @@ function Rejoindre() {
                     />
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
 

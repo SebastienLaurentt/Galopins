@@ -3,17 +3,13 @@ import Header from '../components/Header';
 
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
+import Section from '../components/Section';
 
 function Home() {
-    const sectionStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${HomeBg})`,
-    };
-
     return (
-        <section 
-            className='h-screen relative p-4 md:p-8 bg-center bg-cover w-full' 
-            style={sectionStyle}
-            id ="Accueil"
+        <Section
+            id='Accueil'
+            bg={HomeBg}
         >
             <Header/>
             {/* HERO CONTENT */}
@@ -24,11 +20,12 @@ function Home() {
                     <p className=' text-center'>Si vous souhaitez en savoir davantage, sentez vous libre d'explorer ce site ! Vous y trouverez des informations plus précises concernant notre <strong>club</strong>, les <strong>parcours que nous proposons</strong> mais aussi ce qui est <strong>nécessaire pour nous rejoindre</strong> ! </p>
                     <DownloadLink 
                         file={AdmissionFile}
-                        fileName='Admission_Galopins.pdf'
+                        fileName="Admission_Galopins.pdf"
                         linkName="DOCUMENT D'ADMISSION"
                     />
             </div>
-        </section>
+        </Section>
+
     );
 }
 

@@ -6,19 +6,15 @@ import { BsPeopleFill } from 'react-icons/bs';
 import { FaHiking } from 'react-icons/fa';
 import Header from '../components/Header';
 import SectionHeader from '../components/SectionHeader';
+import Section from '../components/Section';
 
 
 
 function Club() {
-    const sectionStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${ClubBg})`,
-    };
-
     return (
-        <section 
-            className='h-screen relative p-4 bg-center bg-cover w-full' 
-            style={sectionStyle}
-            id ="Club"
+        <Section
+            id='Club'
+            bg={ClubBg}
         >
             <Header/>
             {/* CLUB CONTENT */}
@@ -48,7 +44,7 @@ function Club() {
 
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
 

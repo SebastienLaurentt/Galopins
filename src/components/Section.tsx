@@ -1,28 +1,25 @@
 
 interface SectionProps {
   id?: string;
-  paddingBottom: boolean;
   className?: string;
+  bg:string;
   children: React.ReactNode;
 }
 
 function Section({
   id,
-  paddingBottom,
   className,
+  bg,
   children,
 }: SectionProps) {
-
-
-  const isPaddingBottom = paddingBottom ? "pb-28 md:pb-32" : "";
-
-
-
 
   return (
     <section
       id={`${id}`}
-      className={` ${isPaddingBottom} ${className} py-4 md:py-8 px-8 text-white`}
+      className={` ${className} h-screen relative p-4 md:p-8 bg-center bg-cover w-full`}
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${bg})`,
+    }}
     >
       {children}
     </section>

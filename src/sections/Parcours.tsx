@@ -3,19 +3,15 @@ import { GiStonePath } from 'react-icons/gi';
 
 import Header from '../components/Header';
 import SectionHeader from '../components/SectionHeader';
+import Section from '../components/Section';
 
 
 
 function Parcours() {
-    const sectionStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${ParcoursBg})`,
-    };
-
     return (
-        <section 
-            className='h-screen relative p-4 bg-center bg-cover w-full' 
-            style={sectionStyle}
-            id ="Parcours"
+        <Section
+            id='Parcours'
+            bg={ParcoursBg}
         >
             <Header/>
             {/* PARCOURS CONTENT */}
@@ -63,7 +59,7 @@ function Parcours() {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
 
