@@ -17,7 +17,7 @@ function Parcours() {
             id ="Parcours"
         >
             <Header/>
-            {/* Club CONTENT */}
+            {/* PARCOURS CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
                 <div className='flex items-center gap-x-4 mb-4 md:mb-16 justify-center md:justify-start'>
                     <h2>LES PARCOURS</h2>

@@ -30,7 +30,6 @@ function Home() {
                         DOCUMENT D'ADMISSION
                     </a>
             </div>
-
         </section>
     );
 }

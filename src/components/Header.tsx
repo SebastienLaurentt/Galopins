@@ -35,15 +35,6 @@ function Header() {
                     </li>
                     <li>
                         <Link
-                            to='Conseils'
-                            smooth={true} 
-                            className="cursor-pointer md:hover:underline"
-                            >
-                            Conseils
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
                             to='Rejoindre'
                             smooth={true} 
                             className="cursor-pointer md:hover:underline"
