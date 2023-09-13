@@ -23,7 +23,7 @@ function Home() {
                     <p className=' text-center'>Si vous souhaitez en savoir davantage, sentez vous libre d'explorer ce site ! Vous y trouverez des informations plus précises concernant notre <strong>club</strong>, les <strong>parcours que nous proposons</strong> mais aussi ce qui est <strong>nécessaire pour nous rejoindre</strong> ! </p>
                     
                     <a 
-                        className='border-2 p-2 rounded-lg md:hover:bg-white md:hover:text-black mt-8'
+                        className='downloadLink'
                         href={AdmissionFile}
                         download ="Admission_Galopins.pdf"
                     >
