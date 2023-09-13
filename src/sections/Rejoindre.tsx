@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import { LuBackpack } from 'react-icons/lu';
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
+import SectionHeader from '../components/SectionHeader';
 
 function Rejoindre() {
     const sectionStyle = {
@@ -19,10 +20,9 @@ function Rejoindre() {
             <Header/>
             {/* CONSEILS CONTENT */}
             <div className='md:p-4 xl:p-8'>
-                <div className='flex items-center gap-x-4 mt-4 mb-16 md:mb-16 justify-center md:justify-start'>
-                    <h2>NOUS REJOINDRE</h2>
-                    <LuBackpack className="text-3xl md:text-4xl xl:text-5xl" />
-                </div>
+                <SectionHeader sectionTitle='NOUS REJOINDRE'>
+                    <LuBackpack className="sectionHeaderIcon"/>
+                </SectionHeader>
                 <div className='text-center md:text-left md:px-8 xl:px-12 mb-4 md:mb-16'>
                     <p className='mb-8'>Pour rejoindre le club il est nécessaire de fournir un certificat médical validant l'aptitude à la randonnée ainsi qu'une copie d'attestation de responsabilité civile ou carte FFRP.
                     </p>

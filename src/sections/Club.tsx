@@ -5,6 +5,7 @@ import { BsFillPenFill } from 'react-icons/bs';
 import { BsPeopleFill } from 'react-icons/bs';
 import { FaHiking } from 'react-icons/fa';
 import Header from '../components/Header';
+import SectionHeader from '../components/SectionHeader';
 
 
 
@@ -22,10 +23,9 @@ function Club() {
             <Header/>
             {/* CLUB CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
-                <div className='flex items-center gap-x-4 my-4 md:mb-16 justify-center md:justify-start'>
-                    <h2>LE CLUB</h2>
-                    <AiFillHome className="text-3xl md:text-4xl xl:text-5xl" />
-                </div>
+                <SectionHeader sectionTitle='LE CLUB'>
+                    <AiFillHome className="sectionHeaderIcon"/>
+                </SectionHeader>
                 <div className='text-center md:text-left md:px-8 xl:px-12 mb-4 md:mb-32'>
                     <p>Une fois par an, une sortie en bus est organisée et est ouverte aux non adhérents.  St Guilhèm le Désert, La St Baume, Les sentiers de Pagnol, les îles Frioul, Les Baux, les carrières d’ocre de Rustrel, Le pont du Gard, De Gordes à Fontaine de Vaucluse, L’étang du Vaccarès et les Stes Marie de la mer, la cité templière de La Couvertoirade. 
                     </p>

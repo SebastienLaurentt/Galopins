@@ -37,8 +37,7 @@
 
 }
 
-
-.downloadLink {
-  @apply md:text-lg border-2 p-2 md:p-4 rounded-lg md:hover:bg-white md:hover:text-black mt-8
+.sectionHeaderIcon {
+  @apply text-3xl md:text-4xl xl:text-5xl
 }
 
