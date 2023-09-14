@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 function Header() {
     return (
       <header className="">
-        <ul className="flex justify-around text-base md:text-xl xl:text-2xl md:p-8 ">
+        <ul className="flex justify-around text-base md:text-xl xl:text-2xl py-4 md:p-8 ">
             <li className=''>
                 <Link
                     to='Accueil'
