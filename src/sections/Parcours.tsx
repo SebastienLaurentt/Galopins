@@ -16,7 +16,7 @@ function Parcours() {
             {/* PARCOURS CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
                 <SectionHeader sectionTitle='LES PARCOURS'>
-                    <GiStonePath className="sectionHeaderIcon"/>
+                    <GiStonePath className="icon"/>
                 </SectionHeader>
                 <div className='text-center md:text-left md:px-8 xl:px-12 mb-4 md:mb-16'>
                     <p>Les Galopins se déplacent toujours en covoiturage afin de limiter le nombre de voitures. Une participation est demandée à la personne transportée. Le covid nous obligeant d’être maximun à 4 par voiture le tarif est laissé à l’appréciation du conducteur (la base étant de 0.2€ du km).
