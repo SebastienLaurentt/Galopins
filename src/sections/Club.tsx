@@ -27,17 +27,23 @@ function Club() {
                     <p>Afin de garder un côté convivial, chaque mois un restaurant est organisé (le vendredi soir en principe). Début Janvier, nous nous réunissons pour la galette des rois  à la salle St Martin avec projection sur grand écran des photos prises lors de nos randonnées. En fin de saison nous nous réunissons en plein air pour l’assemblée générale suivie d’un repas. Nous puisons dans l’argent des cotisations afin de participer à ces évènements.
                     </p>
                 </div>
-                <div className='md:flex md:flex-row md:justify-around '>
-                    <ClubIcon iconDescription='Crée en Septembre 2004' >
-                        <BsFillPenFill className="icon" />
-                    </ClubIcon>
-                    <ClubIcon iconDescription='70 adhérents en 2022' >
-                        <BsPeopleFill className="icon" />
-                    </ClubIcon>
+                <ul className='md:flex md:flex-row md:justify-around '>
+                    <li>
+                        <ClubIcon iconDescription='Crée en Septembre 2004' >
+                            <BsFillPenFill className="icon" />
+                        </ClubIcon>
+                    </li>
+                    <li>
+                        <ClubIcon iconDescription='70 adhérents en 2022' >
+                            <BsPeopleFill className="icon" />
+                        </ClubIcon>
+                    </li>
+                    <li>
                     <ClubIcon iconDescription='200 randonnées en 2022' >
                         <FaHiking className="icon" />
                     </ClubIcon>
-                </div>
+                    </li>
+                </ul>
             </div>
         </Section>
     );
