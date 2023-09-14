@@ -21,7 +21,7 @@ function Rejoindre() {
                 <SectionHeader sectionTitle='NOUS REJOINDRE'>
                     <LuBackpack className="sectionHeaderIcon"/>
                 </SectionHeader>
-                <div className='md:text-left md:px-8 xl:px-12 mb-4 md:mb-16 flex flex-col items-start'>
+                <div className='text-center md:text-left  md:px-8 xl:px-12 mb-4 md:mb-16 flex flex-col items-center md:items-start'>
                     <p className='mb-8'>Pour rejoindre le club il est nécessaire de fournir un certificat médical validant l'aptitude à la randonnée ainsi qu'une copie d'attestation de responsabilité civile ou carte FFRP.
                     </p>
                     <p className='mb-8'>Les chaussures de randonnées sont obligatoires (baskets non autorisées). Une polaire et un coupe vent sont conseillés selon la saison. Les accompagnateurs se réservent le droit de refuser les personnes mal équipées.</p>
