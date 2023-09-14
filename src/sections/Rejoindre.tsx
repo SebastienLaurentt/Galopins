@@ -1,5 +1,5 @@
 import RejoindreBg from '../static/img/rejoindre.jpg';
-import Header from '../components/Header';
+
 
 import { LuBackpack } from 'react-icons/lu';
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
@@ -15,7 +15,7 @@ function Rejoindre() {
             bg={RejoindreBg}
         >
             
-            {/* <Header/> */}
+
             {/* CONSEILS CONTENT */}
             <div className='md:p-4 xl:p-8'>
                 <SectionHeader sectionTitle='ADHÉSION'>

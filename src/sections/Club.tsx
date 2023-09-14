@@ -4,7 +4,6 @@ import { AiFillHome } from 'react-icons/ai';
 import { BsFillPenFill } from 'react-icons/bs';
 import { BsPeopleFill } from 'react-icons/bs';
 import { FaHiking } from 'react-icons/fa';
-import Header from '../components/Header';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 
@@ -16,7 +15,6 @@ function Club() {
             id='Club'
             bg={ClubBg}
         >
-            {/* <Header/> */}
             {/* CLUB CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
                 <SectionHeader sectionTitle='LE CLUB'>

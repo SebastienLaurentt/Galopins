@@ -1,7 +1,6 @@
 import ParcoursBg from '../static/img/parcours.jpg';
 import { GiStonePath } from 'react-icons/gi';
 
-import Header from '../components/Header';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 
@@ -13,7 +12,7 @@ function Parcours() {
             id='Parcours'
             bg={ParcoursBg}
         >
-            {/* <Header/> */}
+            
             {/* PARCOURS CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
                 <SectionHeader sectionTitle='LES PARCOURS'>
