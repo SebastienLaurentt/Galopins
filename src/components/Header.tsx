@@ -4,44 +4,44 @@ import { Link } from 'react-scroll';
 
 function Header() {
     return (
-      <header className="py-4 md:p-8 text-md md:text-lg xl:text-xl">
-        <ul className="flex justify-center gap-x-4 md:gap-x-10 xl:gap-x-28">
-                    <li className=''>
-                        <Link
-                            to='Accueil'
-                            smooth={true} 
-                            className="cursor-pointer md:hover:underline"
-                            >
-                            Accueil
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to='Club'
-                            smooth={true} 
-                            className="cursor-pointer md:hover:underline"
-                            >
-                            Club
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to='Parcours'
-                            smooth={true} 
-                            className="cursor-pointer md:hover:underline"
-                            >
-                            Parcours
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to='Rejoindre'
-                            smooth={true} 
-                            className="cursor-pointer md:hover:underline"
-                            >
-                            Nous rejoindre
-                        </Link>
-                    </li>
+      <header className="">
+        <ul className="flex justify-around text-base md:text-xl xl:text-2xl md:p-8 ">
+            <li className=''>
+                <Link
+                    to='Accueil'
+                    smooth={true} 
+                    className="cursor-pointer md:hover:underline"
+                    >
+                    Accueil
+                </Link>
+            </li>
+            <li>
+                <Link
+                    to='Club'
+                    smooth={true} 
+                    className="cursor-pointer md:hover:underline"
+                    >
+                    Club
+                </Link>
+            </li>
+            <li>
+                <Link
+                    to='Parcours'
+                    smooth={true} 
+                    className="cursor-pointer md:hover:underline"
+                    >
+                    Parcours
+                </Link>
+            </li>
+            <li>
+                <Link
+                    to='Rejoindre'
+                    smooth={true} 
+                    className="cursor-pointer md:hover:underline"
+                    >
+                    Adhésion
+                </Link>
+            </li>
         </ul>
     </header>
     );
