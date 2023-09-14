@@ -15,7 +15,7 @@ function Parcours() {
         >
 
             {/* PARCOURS CONTENT */}
-            <div className='flex flex-col md:p-4 xl:p-8'>
+            <div className='flex flex-col md:p-4 xl:p-8 mb-4'>
                 <SectionHeader sectionTitle='LES PARCOURS'>
                     <GiStonePath className="icon"/>
                 </SectionHeader>
