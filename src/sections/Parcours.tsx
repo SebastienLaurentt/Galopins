@@ -3,6 +3,7 @@ import { GiStonePath } from 'react-icons/gi';
 
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
+import ParcoursCard from '../components/ParcoursCard';
 
 
 
@@ -23,40 +24,24 @@ function Parcours() {
                     </p>
                     <p>Les randonnées ont lieu du 1er Septembre à la mi-Juin tous les lundis après midi et vendredis à la journée.</p>
                 </div>
-                <div className='flex flex-col xl:flex-row gap-y-8 md:justify-around text-center'>
-                    <div className='flex flex-col border rounded-lg p-4'>
-                        <h3>
-                            Lundi | Après - midi 
-                        </h3>
-                        <span className='italic mb-4'>
-                            Tous niveaux
-                        </span>
-                        <ul >
-                            <li>
-                                - De 5 à 14 km
-                            </li>
-                            <li>
-                               - Dans un rayon de 40 km maximum entre la Drôme et l'Ardèche
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='flex flex-col border rounded-lg p-4 mb-8'>
-                        <h3>
-                            Vendredi | Journée entière
-                        </h3>
-                        <span className='italic mb-4'>
-                            Niveau confirmé
-                        </span>
-                        <ul>
-                            <li>
-                                - De 15 à 20 km
-                            </li>
-                            <li>
-                               - Dans un rayon de 120 km maximum jusqu'au Vaucluse, Isère, Gard, Hérault ou Lozère
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <ul className='flex flex-col xl:flex-row gap-y-8 md:justify-around text-center'>
+                    <li>
+                        <ParcoursCard 
+                            day='Lundi | Après - midi'
+                            level='Tous niveaux'
+                            description1='- De 5 à 14 km'
+                            description2="- Dans un rayon de 40 km maximum entre la Drôme et l'Ardèche"
+                        />
+                    </li>
+                    <li>
+                        <ParcoursCard 
+                            day='Vendredi | Journée entière'
+                            level='Niveau confirmé'
+                            description1='- De 15 à 20 km'
+                            description2="- Dans un rayon de 120 km maximum jusqu'au Vaucluse, Isère, Gard, Hérault ou Lozère"
+                        />
+                    </li>
+                </ul>
             </div>
         </Section>
     );
