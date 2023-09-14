@@ -13,7 +13,7 @@ function Home() {
         >
             <Header/>
             {/* HERO CONTENT */}
-            <div className='p-4 md:p-24 xl:p-60   xl:h-3/4 flex flex-col justify-center items-center  mx-auto'>
+            <div className='p-4 md:p-24 xl:px-60   flex flex-col justify-center items-center  mx-auto'>
                     <h1>LES GALOPINS</h1>
                     <p className='italic text-center mb-8'>Bienvenue sur notre site internet ! </p>
                     <p className=' text-center'>Nous sommes un club de randonnée situé à Montélimar, dans la Drôme, ayant pour but la découverte de la <strong>nature</strong> et du <strong>patrimoine</strong> dans la <strong>bonne humeur</strong> et en toute <strong>convivialité</strong>. Les randonnées ont lieu du <strong>1er Septembre au 15 Juin</strong>, chaque <strong>Lundi et Vendredi</strong> et sont organisées selon <strong>deux niveaux de difficultés</strong>.  </p>
