@@ -29,7 +29,7 @@ function Rejoindre() {
                     <DownloadLink 
                         file={AdmissionFile}
                         fileName="Admission_Galopins.pdf"
-                        linkName="DOCUMENT D'ADMISSION"
+                        linkName="BULLETIN D'ADHÉSION"
                     />
                 </div>
                 
