@@ -12,7 +12,7 @@ function Parcours() {
             id='Parcours'
             bg={ParcoursBg}
         >
-            
+
             {/* PARCOURS CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
                 <SectionHeader sectionTitle='LES PARCOURS'>
@@ -40,7 +40,7 @@ function Parcours() {
                             </li>
                         </ul>
                     </div>
-                    <div className='flex flex-col border rounded-lg p-4'>
+                    <div className='flex flex-col border rounded-lg p-4 mb-8'>
                         <h3>
                             Vendredi | Journée entière
                         </h3>
