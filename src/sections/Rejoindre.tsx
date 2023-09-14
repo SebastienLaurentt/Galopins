@@ -15,7 +15,7 @@ function Rejoindre() {
             bg={RejoindreBg}
         >
             
-            <Header/>
+            {/* <Header/> */}
             {/* CONSEILS CONTENT */}
             <div className='md:p-4 xl:p-8'>
                 <SectionHeader sectionTitle='NOUS REJOINDRE'>

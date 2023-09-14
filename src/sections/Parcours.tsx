@@ -13,7 +13,7 @@ function Parcours() {
             id='Parcours'
             bg={ParcoursBg}
         >
-            <Header/>
+            {/* <Header/> */}
             {/* PARCOURS CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
                 <SectionHeader sectionTitle='LES PARCOURS'>

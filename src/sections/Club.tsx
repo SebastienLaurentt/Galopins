@@ -16,7 +16,7 @@ function Club() {
             id='Club'
             bg={ClubBg}
         >
-            <Header/>
+            {/* <Header/> */}
             {/* CLUB CONTENT */}
             <div className='flex flex-col md:p-4 xl:p-8'>
                 <SectionHeader sectionTitle='LE CLUB'>
@@ -29,15 +29,15 @@ function Club() {
                     </p>
                 </div>
                 <div className='md:flex md:flex-row md:justify-around '>
-                    <div className='flex flex-col items-center gap-y-2'>
+                    <div className='flex flex-col items-center text-center gap-y-2'>
                         <BsFillPenFill className="text-3xl md:text-4xl xl:text-5xl" />
                         <span className='mb-8'>Crée en Septembre 2004</span>
                     </div>
-                    <div className='flex flex-col items-center gap-y-2'>
+                    <div className='flex flex-col items-center text-center gap-y-2'>
                         <BsPeopleFill className="text-3xl md:text-4xl xl:text-5xl" />
                         <span className='mb-8'>70 adhérents en 2022</span>
                     </div>
-                    <div className='flex flex-col items-center gap-y-2'>
+                    <div className='flex flex-col items-center text-center gap-y-2'>
                         <FaHiking className="text-3xl md:text-4xl xl:text-5xl" />
                         <span className='mb-8'>200 randonnées en 2022</span>
                     </div>
