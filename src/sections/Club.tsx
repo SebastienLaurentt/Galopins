@@ -7,6 +7,7 @@ import { FaHiking } from 'react-icons/fa';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 import ClubIcon from '../components/ClubIcon';
+import SubSection from '../components/SubSection';
 
 
 
@@ -17,11 +18,12 @@ function Club() {
             bg={ClubBg}
         >
             {/* CLUB CONTENT */}
-            <div className='flex flex-col md:p-4 xl:p-8'>
-                <SectionHeader sectionTitle='LE CLUB'>
-                    <AiFillHome className="icon"/>
-                </SectionHeader>
-                <div className='text-center md:text-left md:px-8 xl:px-12 mb-4 md:mb-32'>
+            <SectionHeader sectionTitle='LE CLUB'>
+                <AiFillHome className="icon"/>
+            </SectionHeader>
+            {/* <div className='flex flex-col md:p-4 xl:p-8'> */}
+            <SubSection>
+            <div className='text-center md:text-left md:px-8 xl:px-12 mb-4 md:mb-32'>
                     <p>Une fois par an, une sortie en bus est organisée et est ouverte aux non adhérents.  St Guilhèm le Désert, La St Baume, Les sentiers de Pagnol, les îles Frioul, Les Baux, les carrières d’ocre de Rustrel, Le pont du Gard, De Gordes à Fontaine de Vaucluse, L’étang du Vaccarès et les Stes Marie de la mer, la cité templière de La Couvertoirade. 
                     </p>
                     <p>Afin de garder un côté convivial, chaque mois un restaurant est organisé (le vendredi soir en principe). Début Janvier, nous nous réunissons pour la galette des rois  à la salle St Martin avec projection sur grand écran des photos prises lors de nos randonnées. En fin de saison nous nous réunissons en plein air pour l’assemblée générale suivie d’un repas. Nous puisons dans l’argent des cotisations afin de participer à ces évènements.
@@ -44,7 +46,8 @@ function Club() {
                     </ClubIcon>
                     </li>
                 </ul>
-            </div>
+            </SubSection>
+
         </Section>
     );
 }
