@@ -6,6 +6,7 @@ import AdmissionFile from '../assets/Admission_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
+import SubSection from '../components/SubSection';
 
 function Rejoindre() {
     return (
@@ -17,10 +18,10 @@ function Rejoindre() {
             
 
             {/* CONSEILS CONTENT */}
-            <div className='md:p-4 xl:p-8'>
-                <SectionHeader sectionTitle='ADHÉSION'>
-                    <LuBackpack className="icon"/>
-                </SectionHeader>
+            <SectionHeader sectionTitle='ADHÉSION'>
+                <LuBackpack className="icon"/>
+            </SectionHeader>
+            <SubSection>
                 <div className='text-center md:text-left  md:px-8 xl:px-12 mb-4 md:mb-16 flex flex-col items-center md:items-start'>
                     <p className='mb-8'>Pour rejoindre le club il est nécessaire de fournir un certificat médical validant l'aptitude à la randonnée ainsi qu'une copie d'attestation de responsabilité civile ou carte FFRP.
                     </p>
@@ -32,8 +33,7 @@ function Rejoindre() {
                         linkName="BULLETIN D'ADHÉSION"
                     />
                 </div>
-                
-            </div>
+            </SubSection>
 
         </Section>
         
