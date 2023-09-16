@@ -3,7 +3,6 @@ import { GiStonePath } from 'react-icons/gi';
 
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
-import ParcoursCard from '../components/ParcoursCard';
 import SubSection from '../components/SubSection';
 
 import ProgrammeFile from '../assets/Programme_Galopins.pdf'
@@ -30,12 +29,12 @@ function Parcours() {
                     <DownloadLink 
                         file={ProgrammeFile}
                         fileName="Programme_Galopins.pdf"
-                        linkName="TÉLÉCHARGER PROGRAMME"
+                        linkName="PROGRAMME"
                     />
                 </div>
                 <div className='text-center md:text-left  md:px-8 xl:px-12 mb-4  flex flex-col items-center md:items-start'>
                     <p> Vous pourrez y retrouver : </p>
-                    <ul className='md: ml-12 md:list-disc'>
+                    <ul className='md:ml-12 md:list-disc'>
                         <li>
                             <p className='leading-6 md:leading-9'> En <Tag classname='bg-white' tagName='BLANC'/> les randonnées COOL du Lundi concernant la Drôme et l'Ardèche
                             </p>

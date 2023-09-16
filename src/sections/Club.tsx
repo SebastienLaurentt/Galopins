@@ -1,12 +1,9 @@
 import ClubBg from '../static/img/club.jpg';
 import { AiFillHome } from 'react-icons/ai';
 
-import { BsFillPenFill } from 'react-icons/bs';
-import { BsPeopleFill } from 'react-icons/bs';
-import { FaHiking } from 'react-icons/fa';
+
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
-import ClubIcon from '../components/ClubIcon';
 import SubSection from '../components/SubSection';
 import ParcoursCard from '../components/ParcoursCard';
 
@@ -55,23 +52,6 @@ function Club() {
                             Afin de garder un côté convivial, tous les 2 mois un restaurant est organisé (le vendredi ou samedi soir). En début d'année, la galette des rois est aussi l'occasion de se retrouver pour partager un moment festif.  C'est également le cas à la fin Juin où un repas en plein air vient clôturer la fin de saison. Le club participe financierement à ces événements.
                         </p>
                 </div>
-                    {/* <ul className='md:flex md:flex-row md:justify-around '>
-                        <li>
-                            <ClubIcon iconDescription='Crée en Septembre 2004' >
-                                <BsFillPenFill className="icon" />
-                            </ClubIcon>
-                        </li>
-                        <li>
-                            <ClubIcon iconDescription='70 adhérents en 2022' >
-                                <BsPeopleFill className="icon" />
-                            </ClubIcon>
-                        </li>
-                        <li>
-                        <ClubIcon iconDescription='200 randonnées en 2022' >
-                            <FaHiking className="icon" />
-                        </ClubIcon>
-                        </li>
-                    </ul> */}
             </SubSection>
 
         </Section>
