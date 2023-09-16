@@ -1,6 +1,5 @@
 import RejoindreBg from '../static/img/rejoindre.jpg';
 
-
 import { LuBackpack } from 'react-icons/lu';
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
@@ -31,8 +30,27 @@ function Rejoindre() {
                         file={AdmissionFile}
                         fileName="Admission_Galopins.pdf"
                         linkName="BULLETIN D'ADHÉSION"
+                        classname='mb-12'
                     />
+                    {/* <ul className='md:flex md:flex-row md:justify-around '>
+                        <li>
+                            <ClubIcon iconDescription='Crée en Septembre 2004' >
+                                <BsFillPenFill className="icon" />
+                            </ClubIcon>
+                        </li>
+                        <li>
+                            <ClubIcon iconDescription='70 adhérents en 2022' >
+                                <BsPeopleFill className="icon" />
+                            </ClubIcon>
+                        </li>
+                        <li>
+                        <ClubIcon iconDescription='200 randonnées en 2022' >
+                            <FaHiking className="icon" />
+                        </ClubIcon>
+                        </li>
+                    </ul> */}
                 </div>
+                
             </SubSection>
 
         </Section>

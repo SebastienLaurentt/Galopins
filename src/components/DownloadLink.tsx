@@ -1,6 +1,5 @@
 import { BiSolidDownload } from 'react-icons/bi';
 
-BiSolidDownload
 
 interface DownloadLinkProps {
     file:string;
