@@ -31,7 +31,7 @@ function Club() {
                             Afin de garder un côté convivial, chaque mois un restaurant est organisé (le vendredi soir en principe). Début Janvier, nous nous réunissons pour la galette des rois  à la salle St Martin avec projection sur grand écran des photos prises lors de nos randonnées. En fin de saison nous nous réunissons en plein air pour l’assemblée générale suivie d’un repas. Nous puisons dans l’argent des cotisations afin de participer à ces évènements.
                         </p> */}
                 </div>
-                <ul className='flex flex-col xl:flex-row gap-y-8 md:justify-around text-center mb-4 md:mb-8'>
+                <ul className='flex flex-col xl:flex-row gap-y-8 md:justify-around text-center mb-4 md:mb-12'>
                     <li>
                         <ParcoursCard 
                             day='Lundi | Après - midi'
