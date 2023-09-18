@@ -32,7 +32,7 @@ function Parcours() {
                         linkName="PROGRAMME"
                     />
                 </div>
-                <div className='md:px-8 xl:px-12 mb-4 flex flex-col items-center md:items-start'>
+                <div className='mb-4 flex flex-col items-center md:items-start'>
                     <p> Vous pourrez y retrouver : </p>
                     <ul className='md:ml-12 md:list-disc'>
                         <li>
