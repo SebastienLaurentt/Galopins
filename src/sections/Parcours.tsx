@@ -24,7 +24,7 @@ function Parcours() {
                 <GiStonePath className="icon"/>
             </SectionHeader>
             <SubSection>
-                <div className='text-center md:text-left  md:px-8 xl:px-12 mb-4  flex flex-col items-center md:items-start'>
+                <div className='mb-4 flex flex-col items-center md:items-start'>
                     <p>Le programme des randonnées est établi pour une période de 4 mois. Vous pouvez télécharger le programme actuel ci-dessous : </p>
                     <DownloadLink 
                         file={ProgrammeFile}
@@ -32,7 +32,7 @@ function Parcours() {
                         linkName="PROGRAMME"
                     />
                 </div>
-                <div className='text-center md:text-left  md:px-8 xl:px-12 mb-4  flex flex-col items-center md:items-start'>
+                <div className='md:px-8 xl:px-12 mb-4 flex flex-col items-center md:items-start'>
                     <p> Vous pourrez y retrouver : </p>
                     <ul className='md:ml-12 md:list-disc'>
                         <li>
@@ -53,7 +53,7 @@ function Parcours() {
                         </li>
                     </ul>
                 </div>
-                <div className='text-center md:text-left  md:px-8 xl:px-12 mb-4 md:mb-12 flex flex-col items-center md:items-start'>
+                <div className='mb-4 md:mb-12 flex flex-col items-center md:items-start'>
                     <p>Le lieu de rendez-vous du point de départ des randonnées est situé au 8 chemin de la Rochelle. L'heure de
                     départ est fixée à 13h30.</p>
                 <Link 
@@ -61,7 +61,7 @@ function Parcours() {
                     linkName="VOIR LE POINT DE RDV"
                 />
                 </div>
-                <div className='text-center md:text-left md:px-8 xl:px-12 mb-4 md:mb-16'> 
+                <div className=''> 
                     <p>Les Galopins se déplacent toujours en covoiturage afin de limiter le nombre de voitures. Une participation est demandée à la personne transportée. Le tarif est laissé à l’appréciation du conducteur (la base étant de 0.2€ du km).
                     </p>
                 </div>
