@@ -32,15 +32,15 @@ function Club() {
                     <li>
                         <ParcoursCard 
                             day='Lundi | Après - midi'
-                            level='Niveau cool ou confirmé'
-                            description1='&#x2022; Cool : 5 à 9 kms (2-3h environ)'
-                            description2="&#x2022; Plus difficile : 10 à 14 kms (200 à 500m de dénivelé)"
+                            level='Niveau cool ou avancé'
+                            description1='&#x2022; Cool : 5 à 9 km (2-3h environ)'
+                            description2="&#x2022; Plus difficile : 10 à 14 km (200 à 500 m de dénivelé)"
                         />
                     </li>
                     <li>
                         <ParcoursCard 
                             day='Vendredi | Journée entière'
-                            level='Niveau confirmé'
+                            level='Niveau avancé'
                             description1="&#x2022; Jusqu'à 15 km ou de 15 à 20 km"
                             description2="&#x2022; Dans un rayon de 100 km maximum jusqu'au Vaucluse, Gard ou Lozère"
                         />

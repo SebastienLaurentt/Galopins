@@ -45,7 +45,7 @@ function Parcours() {
                             </p>
                         </li>
                         <li>
-                            <p className=''> <Tag classname='bg-yellow-400' tagName='JAUNE'/> : Niveau avancé du Lundi en l'Ardèche
+                            <p className=''> <Tag classname='bg-yellow-400' tagName='JAUNE'/> : Niveau avancé du Lundi en Ardèche
                             </p>
                         </li>
                         <li>
