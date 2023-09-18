@@ -1,4 +1,4 @@
-import ParcoursBg from '../static/img/club.jpg';
+import ParcoursBg from '../static/img/parcours.jpg';
 import { GiStonePath } from 'react-icons/gi';
 
 import SectionHeader from '../components/SectionHeader';
