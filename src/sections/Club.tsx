@@ -21,7 +21,7 @@ function Club() {
             </SectionHeader>
             <SubSection>
                 <div className=''>
-                        <p>Notre club est une association à but non lucratif régie par la loi de 1901.  Des randonnées sont  proposées le Lundi après-midi et le Vendredi à la journée. Le Lundi, deux niveaux de difficultés sont possibles : 
+                        <p>Notre club est une association à but non lucratif régie par la loi de 1901.  Des randonnées sont  proposées le <strong>Lundi après-midi</strong> et le <strong>Vendredi</strong> à la journée. Le Lundi, <strong>deux niveaux de difficultés</strong> sont possibles : 
                         </p>
                         {/* <p>St Guilhèm le Désert, La St Baume, Les sentiers de Pagnol, les îles Frioul, Les Baux, les carrières d’ocre de Rustrel, Le pont du Gard, De Gordes à Fontaine de Vaucluse, L’étang du Vaccarès et les Stes Marie de la mer, la cité templière de La Couvertoirade. 
                             
@@ -47,9 +47,9 @@ function Club() {
                     </li>
                 </ul>
                 <div className=''>
-                        <p>Une fois par an une sortie en bus est organisèe et est ouverte aux non-adhérents. Par exemple, des lieux tels que St Guilhèm le Désert, La St Baume, Les sentiers de Pagnol, mais aussi les carrières d’ocre de Rustrel, Le pont du Gard ou L’étang du Vaccarès ont dèja étés visités lors de ces sorties. </p>
+                        <p><strong>Une fois par an</strong> une sortie en bus est organisèe et est ouverte aux non-adhérents. Par exemple, des lieux tels que St Guilhèm le Désert, La St Baume, Les sentiers de Pagnol, mais aussi les carrières d’ocre de Rustrel, Le pont du Gard ou L’étang du Vaccarès ont déja étés visités. </p>
                         <p>
-                            Afin de garder un côté convivial, tous les 2 mois un restaurant est organisé (le vendredi soir ou samedi midi). En début d'année, la galette des rois est aussi l'occasion de se retrouver pour partager un moment festif.  C'est également le cas à la fin Juin où un repas en plein air vient clôturer la fin de saison. Le club participe financierement à ces événements.
+                            Afin de garder un côté <strong>convivial</strong>, tous les 2 mois un <strong>restaurant</strong> est organisé (le vendredi soir ou samedi midi). <strong>En début d'année</strong>, la galette des rois est aussi l'occasion de se retrouver pour partager un moment festif.  C'est également le cas à la <strong>fin Juin</strong> où un repas en plein air vient clôturer la fin de saison. Le club participe financierement à ces événements.
                         </p>
                 </div>
             </SubSection>

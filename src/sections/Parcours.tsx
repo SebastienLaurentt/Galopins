@@ -25,7 +25,7 @@ function Parcours() {
             </SectionHeader>
             <SubSection>
                 <div className='mb-8 flex flex-col items-center md:items-start'>
-                    <p className='mb-3'>Le programme des randonnées est établi pour une période de 4 mois. Vous pouvez télécharger le programme actuel ci-dessous : </p>
+                    <p className='mb-3'>Le programme des randonnées est établi pour une période de <strong>4 mois</strong>. Vous pouvez télécharger le programme actuel ci-dessous : </p>
                     <DownloadLink 
                         file={ProgrammeFile}
                         fileName="Programme_Galopins.pdf"
@@ -55,7 +55,7 @@ function Parcours() {
                     </ul>
                 </div>
                 <div className='mb-8  flex flex-col items-center md:items-start'>
-                    <p className='mb-3'>Le lieu de rendez-vous du point de départ des randonnées est situé au 8 chemin de la Rochelle. L'heure de
+                    <p className='mb-3'>Le lieu de <strong>rendez-vous</strong> avant chaque départ est situé au 8 chemin de la Rochelle. L'heure de
                     départ est fixée à 13h30.</p>
                 <Link 
                     href="https://maps.app.goo.gl/W6D3Ui73RSKW8swr8"
@@ -64,7 +64,7 @@ function Parcours() {
                 />
                 </div>
                 <div className=''> 
-                    <p>Les Galopins se déplacent toujours en covoiturage afin de limiter le nombre de voitures. Une participation est demandée à la personne transportée. Le tarif est laissé à l’appréciation du conducteur (la base étant de 0.2€ du km).
+                    <p>Les Galopins se déplacent toujours en <strong>covoiturage</strong> afin de limiter le nombre de voitures. Une participation est demandée à la personne transportée. Le tarif est laissé à l’appréciation du conducteur (la base étant de 0.2€ du km).
                     </p>
                 </div>
             </SubSection>

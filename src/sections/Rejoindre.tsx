@@ -21,16 +21,15 @@ function Rejoindre() {
                 <LuBackpack className="icon"/>
             </SectionHeader>
             <SubSection>
-                <div className='flex flex-col items-center md:items-start'>
-                    <p className='mb-8'>Pour rejoindre le club il est nécessaire de fournir un certificat médical validant l'aptitude à la randonnée ainsi qu'une copie d'attestation de responsabilité civile ou carte FFRP.
+                <div className='flex flex-col  items-center md:items-start'>
+                    <p className='mb-8'>Pour <strong>rejoindre</strong> le club il est nécessaire de fournir un certificat médical validant l'aptitude à la randonnée ainsi qu'une copie d'attestation de responsabilité civile ou carte FFRP.
                     </p>
-                    <p className='mb-8'>Les chaussures de randonnées sont obligatoires (baskets non autorisées). Une polaire et un coupe vent sont conseillés selon la saison. Les accompagnateurs se réservent le droit de refuser les personnes mal équipées.</p>
+                    <p className='mb-8'>Les chaussures de randonnées sont <strong>obligatoires</strong> (baskets non autorisées). Une polaire et un coupe vent sont conseillés selon la saison. Les accompagnateurs se réservent le droit de refuser les personnes mal équipées.</p>
                     <p className='mb-8'>Un montant de 15€ ainsi que le formulaire d'inscription ci-dessous seront demandés afin de valider l'adhésion. </p>
                     <DownloadLink 
                         file={AdmissionFile}
                         fileName="Admission_Galopins.pdf"
                         linkName="BULLETIN D'ADHÉSION"
-                        classname='mb-12'
                     />
                     {/* <ul className='md:flex md:flex-row md:justify-around '>
                         <li>
