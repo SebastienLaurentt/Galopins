@@ -30,6 +30,7 @@ function Rejoindre() {
                         file={AdmissionFile}
                         fileName="Admission_Galopins.pdf"
                         linkName="BULLETIN D'ADHÉSION"
+                        classname='md:ml-4'
                     />
                     {/* <ul className='md:flex md:flex-row md:justify-around '>
                         <li>
