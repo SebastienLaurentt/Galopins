@@ -24,17 +24,18 @@ function Parcours() {
                 <GiStonePath className="icon"/>
             </SectionHeader>
             <SubSection>
-                <div className='mb-4 flex flex-col items-center md:items-start'>
-                    <p>Le programme des randonnées est établi pour une période de 4 mois. Vous pouvez télécharger le programme actuel ci-dessous : </p>
+                <div className='mb-8 flex flex-col items-center md:items-start'>
+                    <p className='mb-3'>Le programme des randonnées est établi pour une période de 4 mois. Vous pouvez télécharger le programme actuel ci-dessous : </p>
                     <DownloadLink 
                         file={ProgrammeFile}
                         fileName="Programme_Galopins.pdf"
                         linkName="PROGRAMME"
+                        classname='md:ml-4'
                     />
                 </div>
                 <div className='mb-4'>
-                    <p> Le détail des randonnées est : </p>
-                    <ul className='list-disc text-start leading-7 md:leading-9'>
+                    <p className='mb-3'> Le détail des randonnées est : </p>
+                    <ul className='list-disc text-start leading-7 md:leading-9 md:ml-4'>
                         <li>
                             <p className=''> <Tag classname='bg-white' tagName='BLANC'/> : Niveau cool du Lundi en Drôme / Ardèche 
                             </p>
@@ -53,12 +54,13 @@ function Parcours() {
                         </li>
                     </ul>
                 </div>
-                <div className='mb-4 md:mb-12 flex flex-col items-center md:items-start'>
-                    <p>Le lieu de rendez-vous du point de départ des randonnées est situé au 8 chemin de la Rochelle. L'heure de
+                <div className='mb-8  flex flex-col items-center md:items-start'>
+                    <p className='mb-3'>Le lieu de rendez-vous du point de départ des randonnées est situé au 8 chemin de la Rochelle. L'heure de
                     départ est fixée à 13h30.</p>
                 <Link 
                     href="https://maps.app.goo.gl/W6D3Ui73RSKW8swr8"
                     linkName="VOIR LE POINT DE RDV"
+                    classname='md:ml-4'
                 />
                 </div>
                 <div className=''> 
