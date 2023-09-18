@@ -7,7 +7,7 @@ interface ParcoursCardProps {
 
 function ParcoursCard ({day, level, description1, description2}: ParcoursCardProps) {
     return (
-        <div className='flex flex-col border rounded-lg p-4 bg-'>
+        <div className='flex flex-col rounded-2xl md:rounded-full xl:rounded-3xl p-8 bg-yellow-900 opacity-90'>
             <h3>
                 {day}
             </h3>

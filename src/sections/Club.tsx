@@ -1,4 +1,4 @@
-import ClubBg from '../static/img/club.jpg';
+import ClubBg from '../static/img/parcours.jpg';
 import { AiFillHome } from 'react-icons/ai';
 
 
@@ -32,17 +32,17 @@ function Club() {
                     <li>
                         <ParcoursCard 
                             day='Lundi | Après - midi'
-                            level='2 niveaux'
-                            description1='- Cool : 5 à 9 kms (2-3h environ)'
-                            description2="- Plus difficile : 10 à 14 kms (200 à 500m de dénivelé)"
+                            level='Niveau cool ou confirmé'
+                            description1='&#x2022; Cool : 5 à 9 kms (2-3h environ)'
+                            description2="&#x2022; Plus difficile : 10 à 14 kms (200 à 500m de dénivelé)"
                         />
                     </li>
                     <li>
                         <ParcoursCard 
                             day='Vendredi | Journée entière'
                             level='Niveau confirmé'
-                            description1="- Jusqu'à 15km ou de 15 à 20 km"
-                            description2="- Dans un rayon de 100 km maximum jusqu'au Vaucluse, Gard ou Lozère"
+                            description1="&#x2022; Jusqu'à 15 km ou de 15 à 20 km"
+                            description2="&#x2022; Dans un rayon de 100 km maximum jusqu'au Vaucluse, Gard ou Lozère"
                         />
                     </li>
                 </ul>
