@@ -55,10 +55,10 @@ function Parcours() {
                     </ul>
                 </div>
                 <div className='mb-8  flex flex-col items-center md:items-start'>
-                    <p className='mb-3'>Le lieu de <strong>rendez-vous</strong> avant chaque départ est situé au 8 chemin de la Rochelle. L'heure de
+                    <p className='mb-3'>Le lieu de <strong>rendez-vous</strong> avant chaque départ est situé sur le parking en face du  95 Route de Valence. L'heure de
                     départ est fixée à 13h30.</p>
                 <Link 
-                    href="https://maps.app.goo.gl/W6D3Ui73RSKW8swr8"
+                    href="https://maps.app.goo.gl/1fQz1QrNGHzLm8a48"
                     linkName="VOIR LE POINT DE RDV"
                     classname='md:ml-4'
                 />
