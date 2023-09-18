@@ -12,7 +12,7 @@ function Link ({href, linkName, classname }: LinkProps) {
 
     return(
             <a 
-                className={`flex border-2 p-2 rounded-lg md:text-lg md:p-4 md:hover:bg-white md:hover:text-black ${classname}`}
+                className={`flex  p-2 rounded-lg md:text-lg md:p-4 md:hover:bg-green-600 ${classname} bg-green-800`}
                 href={href}
                 target='_blank'
             >
