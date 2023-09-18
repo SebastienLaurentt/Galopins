@@ -10,7 +10,7 @@ function SubSection({
 
   return (
     <section
-      className={` ${className} text-center md:text-left flex flex-col mx-auto p-4 md:p-8 xl:p-20  `}
+      className={` ${className} text-center md:text-left flex flex-col mx-auto p-4 md:px-12 xl:px-20  `}
     >
       {children}
     </section>
