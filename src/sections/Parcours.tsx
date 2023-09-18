@@ -32,23 +32,23 @@ function Parcours() {
                         linkName="PROGRAMME"
                     />
                 </div>
-                <div className='mb-4 flex flex-col items-center md:items-start'>
-                    <p> Vous pourrez y retrouver : </p>
-                    <ul className='md:ml-12 md:list-disc'>
+                <div className='mb-4'>
+                    <p> Le détail des randonnées est : </p>
+                    <ul className='list-disc text-start leading-7 md:leading-9'>
                         <li>
-                            <p className='leading-6 md:leading-9'> En <Tag classname='bg-white' tagName='BLANC'/> les randonnées COOL du Lundi concernant la Drôme et l'Ardèche
+                            <p className=''> <Tag classname='bg-white' tagName='BLANC'/> : Niveau cool du Lundi en Drôme / Ardèche 
                             </p>
                         </li>
                         <li>
-                            <p className='leading-6 md:leading-9'> En <Tag classname='bg-cyan-500' tagName='BLEU'/> les randonnées plus difficiles du Lundi concernant la Drôme 
+                            <p className=''> <Tag classname='bg-cyan-500' tagName='BLEU'/> : Niveau avancé du Lundi en Drôme 
                             </p>
                         </li>
                         <li>
-                            <p className='leading-6 md:leading-9'> En <Tag classname='bg-yellow-400' tagName='JAUNE'/> les randonnées plus difficiles du Lundi concernant l'Ardèche
+                            <p className=''> <Tag classname='bg-yellow-400' tagName='JAUNE'/> : Niveau avancé du Lundi en l'Ardèche
                             </p>
                         </li>
                         <li>
-                            <p className='leading-6 md:leading-9'> En <Tag classname='bg-emerald-400' tagName='VERT'/> les randonnées plus difficiles du Vendredi avec la région correspondante
+                            <p className=''> <Tag classname='bg-emerald-400' tagName='VERT'/> : les randonnées du Vendredi
                             </p>
                         </li>
                     </ul>
