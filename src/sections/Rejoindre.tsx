@@ -1,9 +1,6 @@
 import RejoindreBg from '../static/img/rejoindre.jpg';
 
 import { LuBackpack } from 'react-icons/lu';
-import { BsFillPenFill } from 'react-icons/bs';
-import { BsPeopleFill } from 'react-icons/bs';
-import { FaHiking } from 'react-icons/fa';
 
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
@@ -11,7 +8,6 @@ import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 import SubSection from '../components/SubSection';
 import ScrollTop from '../components/ScrollTop';
-import ClubIcon from '../components/ClubIcon';
 import ContactButton from '../components/ContactButton';
 
 function Rejoindre() {
