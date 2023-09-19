@@ -16,7 +16,7 @@ function ScrollTop() {
 
     return (
         <div 
-            className={`flex justify-center cursor-pointer text-green-500 rounded-full ${isActive ? 'hovered' : ''}`}
+            className={`w-12 mx-auto flex justify-center cursor-pointer text-green-600 rounded-full ${isActive ? 'hovered' : ''}`}
             onMouseEnter={handleHover}
             onMouseLeave={handleUnhover}
         >
