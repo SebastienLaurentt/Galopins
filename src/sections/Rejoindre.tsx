@@ -39,24 +39,8 @@ function Rejoindre() {
                         linkName="BULLETIN D'ADHÉSION"
                         classname='md:ml-4'
                     />
-                    <ul className='mt-16 w-full md:flex md:flex-row md:justify-around '>
-                        <li>
-                            <ClubIcon iconDescription='Créé en Septembre 2004' >
-                                <BsFillPenFill className="icon" />
-                            </ClubIcon>
-                        </li>
-                        <li>
-                            <ClubIcon iconDescription='70 adhérents en 2022' >
-                                <BsPeopleFill className="icon" />
-                            </ClubIcon>
-                        </li>
-                        <li>
-                        <ClubIcon iconDescription='200 randonnées en 2022' >
-                            <FaHiking className="icon" />
-                        </ClubIcon>
-                        </li>
-                    </ul>
-                    <div className='flex flex-col items-center  mx-auto mb-4 text-center'>
+
+                    <div className='mt-12 flex flex-col    mb-4 '>
                         <p className='text-2xl md:text-3xl xl:text-3xl mb-0'>Des questions ? </p>
                         <p className='italic mb-4'><strong>Besoin d'informations supplémentaires</strong>, n'hésitez pas à nous contacter en <strong>cliquant sur le bouton</strong> ci-dessous.</p>
                         <ContactButton />

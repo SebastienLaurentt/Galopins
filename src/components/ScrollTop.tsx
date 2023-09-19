@@ -16,14 +16,14 @@ function ScrollTop() {
 
     return (
         <div 
-            className={`w-12 mx-auto flex justify-center cursor-pointer text-green-600 rounded-full ${isActive ? 'hovered' : ''}`}
+            className={`w-12 mx-auto flex justify-center cursor-pointer md:hover:text-green-500 rounded-full ${isActive ? 'hovered' : ''}`}
             onMouseEnter={handleHover}
             onMouseLeave={handleUnhover}
         >
             <Link
                 to='Accueil'
                 smooth={true} 
-                className="flex flex-col items-center"
+                className="flex flex-col items-center font-bold"
             >
                 <FaArrowUp className={`iconHeader ${isActive ? 'icon-hover' : ''}`} />
                 Accueil
