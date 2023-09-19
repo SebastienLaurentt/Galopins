@@ -41,4 +41,7 @@
   @apply text-3xl md:text-4xl xl:text-5xl
 }
 
+.iconHeader {
+  @apply text-xl md:text-2xl xl:text-3xl
+}
 
