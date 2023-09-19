@@ -6,6 +6,7 @@ import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 import SubSection from '../components/SubSection';
 import ParcoursCard from '../components/ParcoursCard';
+import ScrollTop from '../components/ScrollTop';
 
 
 
@@ -53,7 +54,7 @@ function Club() {
                         </p>
                 </div>
             </SubSection>
-
+            <ScrollTop/>
         </Section>
     );
 }

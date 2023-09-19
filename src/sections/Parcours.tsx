@@ -9,6 +9,7 @@ import ProgrammeFile from '../assets/Programme_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
 import Link from '../components/Link';
 import Tag from '../components/Tag';
+import ScrollTop from '../components/ScrollTop';
 
 
 
@@ -68,7 +69,7 @@ function Parcours() {
                     </p>
                 </div>
             </SubSection>
-
+            <ScrollTop/>
         </Section>
     );
 }

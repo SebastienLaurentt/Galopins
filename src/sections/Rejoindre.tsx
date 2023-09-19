@@ -6,6 +6,7 @@ import DownloadLink from '../components/DownloadLink';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 import SubSection from '../components/SubSection';
+import ScrollTop from '../components/ScrollTop';
 
 function Rejoindre() {
     return (
@@ -52,6 +53,7 @@ function Rejoindre() {
                 </div>
                 
             </SubSection>
+            <ScrollTop/>
 
         </Section>
         
