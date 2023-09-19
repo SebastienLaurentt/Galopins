@@ -19,13 +19,13 @@ function ContactButton({ classname }: ContactButtonProps) {
                 onClick={handleClick}
             >
                 <div className='flex flex-row justify-center gap-x-2'>
-                    Contact
+                    CONTACT
                     <RiContactsFill className="text-xl md:text-2xl" />
                 </div>
                 {isActive && (
                     <div className="text-left p-2 mt-4">
-                        <p className='mb-2'> <strong>Adresse mail</strong> : blabla@email.fr</p>
-                        <p className='mb-0'><strong>Téléphone</strong> : 01 23 45 67 89</p>
+                        <p className='mb-2'>Gisèle : 06-80-47-55-38</p>
+                        <p className='mb-0'>Allain : 06-24-01-60-30</p>
                     </div>
             )}
             </button>
