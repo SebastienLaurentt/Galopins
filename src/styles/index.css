@@ -40,6 +40,11 @@
   @apply text-3xl md:text-4xl xl:text-5xl
 }
 
+.icon-hover:hover {
+  transform: translateY(-5px); /* Ajustez la valeur selon vos préférences */
+  transition: transform 0.3s ease; /* Ajoute une transition pour une animation fluide */
+}
+
 .iconHeader {
   @apply text-xl md:text-2xl xl:text-3xl
 }
