@@ -29,11 +29,11 @@ function Club() {
                             Afin de garder un côté convivial, chaque mois un restaurant est organisé (le vendredi soir en principe). Début Janvier, nous nous réunissons pour la galette des rois  à la salle St Martin avec projection sur grand écran des photos prises lors de nos randonnées. En fin de saison nous nous réunissons en plein air pour l’assemblée générale suivie d’un repas. Nous puisons dans l’argent des cotisations afin de participer à ces évènements.
                         </p> */}
                 </div>
-                <ul className='flex flex-col xl:flex-row gap-y-8 md:justify-around text-center mb-4 md:mb-12'>
+                <ul className='flex flex-col xl:flex-row xl:items-center gap-y-8 md:justify-around text-center mb-4 md:mb-12'>
                     <li>
                         <ParcoursCard 
                             day='Lundi | Après - midi'
-                            level='Niveau cool ou avancé'
+                            level='2 niveaux'
                             description1='&#x2022; Cool : 5 à 9 km (2-3h environ)'
                             description2="&#x2022; Plus difficile : 10 à 14 km (200 à 500 m de dénivelé)"
                         />
@@ -42,8 +42,9 @@ function Club() {
                         <ParcoursCard 
                             day='Vendredi | Journée entière'
                             level='Niveau avancé'
-                            description1="&#x2022; Jusqu'à 15 km ou de 15 à 20 km"
-                            description2="&#x2022; Dans un rayon de 100 km maximum jusqu'au Vaucluse, Gard ou Lozère"
+                            description1="&#x2022; Jusqu'à 15 km"
+                            description2="&#x2022; De 15 à 20 km"
+                            description3="&#x2022; Dans un rayon de 100 km maximum jusqu'au Vaucluse, Gard ou Lozère"
                         />
                     </li>
                 </ul>

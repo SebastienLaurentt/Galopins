@@ -3,9 +3,10 @@ interface ParcoursCardProps {
     level:string;
     description1:string;
     description2:string;
+    description3?:string;
 }
 
-function ParcoursCard ({day, level, description1, description2}: ParcoursCardProps) {
+function ParcoursCard ({day, level, description1, description2, description3}: ParcoursCardProps) {
     return (
         <div className='flex flex-col'>
             <div className='bg-green-600 bg-opacity-40 rounded-2xl md:rounded-full xl:rounded-3xl p-4 md:p-8'>
@@ -24,6 +25,11 @@ function ParcoursCard ({day, level, description1, description2}: ParcoursCardPro
                     <li>
                         <p className="mb-0">
                             {description2}
+                        </p>
+                    </li>
+                    <li>
+                        <p className="mb-0">
+                            {description3}
                         </p>
                     </li>
                 </ul>
