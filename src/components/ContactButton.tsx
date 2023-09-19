@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { RiContactsFill } from 'react-icons/ri';
 
 interface ContactButtonProps {
