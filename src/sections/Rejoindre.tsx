@@ -1,12 +1,17 @@
 import RejoindreBg from '../static/img/rejoindre.jpg';
 
 import { LuBackpack } from 'react-icons/lu';
+import { BsFillPenFill } from 'react-icons/bs';
+import { BsPeopleFill } from 'react-icons/bs';
+import { FaHiking } from 'react-icons/fa';
+
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 import SubSection from '../components/SubSection';
 import ScrollTop from '../components/ScrollTop';
+import ClubIcon from '../components/ClubIcon';
 
 function Rejoindre() {
     return (
@@ -33,9 +38,9 @@ function Rejoindre() {
                         linkName="BULLETIN D'ADHÉSION"
                         classname='md:ml-4'
                     />
-                    {/* <ul className='md:flex md:flex-row md:justify-around '>
+                    <ul className='mt-8 w-full md:flex md:flex-row md:justify-around '>
                         <li>
-                            <ClubIcon iconDescription='Crée en Septembre 2004' >
+                            <ClubIcon iconDescription='Créé en Septembre 2004' >
                                 <BsFillPenFill className="icon" />
                             </ClubIcon>
                         </li>
@@ -49,7 +54,7 @@ function Rejoindre() {
                             <FaHiking className="icon" />
                         </ClubIcon>
                         </li>
-                    </ul> */}
+                    </ul>
                 </div>
                 
             </SubSection>
