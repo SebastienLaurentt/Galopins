@@ -18,7 +18,7 @@ function Home() {
             <SubSection
                 className='text-center md:text-center items-center md:p-12 xl:p-20'
             >
-                <p className='italic'>Bienvenue sur notre site internet ! </p>
+                <h3 className='italic'>Bienvenue sur notre site internet ! </h3>
                 <p>Nous sommes un club de randonnée situé à Montélimar, dans la Drôme, ayant pour but la découverte de la <strong>nature</strong> et du <strong>patrimoine</strong> dans la <strong>bonne humeur</strong> et en toute <strong>convivialité</strong>. Les randonnées ont lieu du <strong>1er Septembre au 30 Juin</strong>, les <strong>Lundis après-midi</strong> en alternance dans la Drôme et l'Ardèche ainsi que les   <strong>Vendredis</strong>, à destination de la Drôme, l'Ardèche, le Gard, la Lozère ou encore le Vaucluse.  </p>
                 <p>Si vous souhaitez en savoir davantage, sentez vous libre d'explorer ce site ! Vous y trouverez des informations plus précises concernant notre <strong>club</strong>, les <strong>parcours que nous proposons</strong> mais aussi ce qui est <strong>nécessaire pour nous rejoindre</strong> ! </p>
                 <DownloadLink 
