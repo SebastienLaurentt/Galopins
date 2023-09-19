@@ -12,6 +12,7 @@ import Section from '../components/Section';
 import SubSection from '../components/SubSection';
 import ScrollTop from '../components/ScrollTop';
 import ClubIcon from '../components/ClubIcon';
+import ContactButton from '../components/ContactButton';
 
 function Rejoindre() {
     return (
@@ -38,7 +39,7 @@ function Rejoindre() {
                         linkName="BULLETIN D'ADHÉSION"
                         classname='md:ml-4'
                     />
-                    <ul className='mt-8 w-full md:flex md:flex-row md:justify-around '>
+                    <ul className='mt-16 w-full md:flex md:flex-row md:justify-around '>
                         <li>
                             <ClubIcon iconDescription='Créé en Septembre 2004' >
                                 <BsFillPenFill className="icon" />
@@ -55,6 +56,12 @@ function Rejoindre() {
                         </ClubIcon>
                         </li>
                     </ul>
+                    <div className='flex flex-col items-center  mx-auto mb-4 text-center'>
+                        <p className='text-2xl md:text-3xl xl:text-3xl mb-0'>Des questions ? </p>
+                        <p className='italic mb-2'>Besoin d'informations supplémentaires, n'hésitez pas à nous contacter en cliquant sur le bouton ci-dessous.</p>
+                        <ContactButton />
+                    </div>
+                    
                 </div>
                 
             </SubSection>

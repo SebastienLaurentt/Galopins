@@ -7,7 +7,7 @@ function ClubIcon ({children, iconDescription}: ClubIconProps) {
     return (
         <div className='flex flex-col items-center text-center gap-y-2 p-4'>
             {children}
-            <span className='mb-8'>{iconDescription}</span>
+            <span className='mb-2'>{iconDescription}</span>
         </div>
     )
 }
