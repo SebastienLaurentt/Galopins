@@ -24,8 +24,8 @@ function ContactButton({ classname }: ContactButtonProps) {
                 </div>
                 {isActive && (
                     <div className="text-left p-2 mt-4">
-                        <p>Adresse mail : blabla@email.fr</p>
-                        <p>Téléphone : 01 23 45 67 89</p>
+                        <p className='mb-2'> <strong>Adresse mail</strong> : blabla@email.fr</p>
+                        <p className='mb-0'><strong>Téléphone</strong> : 01 23 45 67 89</p>
                     </div>
             )}
             </button>

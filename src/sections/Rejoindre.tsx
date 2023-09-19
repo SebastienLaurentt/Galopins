@@ -58,7 +58,7 @@ function Rejoindre() {
                     </ul>
                     <div className='flex flex-col items-center  mx-auto mb-4 text-center'>
                         <p className='text-2xl md:text-3xl xl:text-3xl mb-0'>Des questions ? </p>
-                        <p className='italic mb-2'>Besoin d'informations supplémentaires, n'hésitez pas à nous contacter en cliquant sur le bouton ci-dessous.</p>
+                        <p className='italic mb-4'>Besoin d'informations supplémentaires, n'hésitez pas à nous contacter en cliquant sur le bouton ci-dessous.</p>
                         <ContactButton />
                     </div>
                     
