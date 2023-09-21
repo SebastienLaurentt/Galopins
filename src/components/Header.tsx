@@ -2,7 +2,9 @@ import { Link } from 'react-scroll';
 
 import { AiFillHome } from 'react-icons/ai';
 import { GiStonePath } from 'react-icons/gi';
+import { MdOutlinePhotoCamera } from 'react-icons/md';
 import { LuBackpack } from 'react-icons/lu';
+
 
 
 function Header() {
@@ -30,7 +32,7 @@ function Header() {
                 </Link>
             </li>
             <li className='flex flex-col items-center cursor-pointer md:hover:text-green-500'>
-                <AiFillHome className='iconHeader'/>
+                <MdOutlinePhotoCamera className='iconHeader'/>
                 <Link
                     to='Club'
                     smooth={true} 
