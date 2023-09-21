@@ -5,7 +5,7 @@ import { AiFillHome } from 'react-icons/ai';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 import SubSection from '../components/SubSection';
-import ParcoursCard from '../components/ParcoursCard';
+import ParcoursCard from '../components/ClubCard';
 import ScrollTop from '../components/ScrollTop';
 
 

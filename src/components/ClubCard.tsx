@@ -1,4 +1,4 @@
-interface ParcoursCardProps {
+interface ClubCardProps {
     day:string;
     level?:string;
     description1:string;
@@ -6,7 +6,7 @@ interface ParcoursCardProps {
     description3?:string;
 }
 
-function ParcoursCard ({day, level, description1, description2, description3}: ParcoursCardProps) {
+function ClubCard ({day, level, description1, description2, description3}: ClubCardProps) {
     return (
         <div className='flex flex-col'>
             <div className='bg-green-600 bg-opacity-40 rounded-2xl md:rounded-full xl:rounded-3xl p-4 md:p-8'>
@@ -38,4 +38,4 @@ function ParcoursCard ({day, level, description1, description2, description3}: P
     )
 }
 
-export default ParcoursCard;
+export default ClubCard;
