@@ -15,7 +15,7 @@ function ContactButton({ classname }: ContactButtonProps) {
     return (
         <div>
             <button
-                className={` p-2 rounded-lg md:text-lg md:p-4 ${classname} bg-white text-black ${isActive ? 'active' : ''}`}
+                className={` p-2 rounded-lg md:text-lg md:p-4 ${classname} bg-cyan-700 md:hover:bg-cyan-500 text-white ${isActive ? 'active' : ''}`}
                 onClick={handleClick}
             >
                 <div className='flex flex-row justify-center gap-x-2'>
