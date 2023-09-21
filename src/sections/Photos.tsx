@@ -1,4 +1,4 @@
-import RejoindreBg from '../static/img/rejoindre.webp';
+import PhotosBg from '../static/img/photos.jpg';
 
 import { MdOutlinePhotoCamera } from 'react-icons/md';
 
@@ -12,7 +12,7 @@ function Photos() {
         
         <Section
             id='Photos'
-            bg={RejoindreBg}
+            bg={PhotosBg}
         >
             
 
