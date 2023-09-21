@@ -1,4 +1,4 @@
-import PhotosBg from '../static/img/photos.jpg';
+import PhotosBg from '../static/img/photos.webp';
 
 import { MdOutlinePhotoCamera } from 'react-icons/md';
 
