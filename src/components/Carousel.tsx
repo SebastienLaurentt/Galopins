@@ -30,7 +30,7 @@ function Carousel({ children }: CarouselProps) {
         390: { slidesPerView: 1.0, spaceBetween: 8 },
         768: { slidesPerView: 1.0, spaceBetween: 8 },
         1024: { slidesPerView: 2.0, spaceBetween: 16 },
-        1280: { slidesPerView: 2.0, spaceBetween: 32 },
+        1280: { slidesPerView: 3.0, spaceBetween: 32 },
       }}
       className="mySwiper mb-2 xl:mb-4 w-11/12 pb-18"
     >
