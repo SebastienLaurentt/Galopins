@@ -39,7 +39,9 @@ function Rejoindre() {
                     <div className='mt-12 flex flex-col    mb-4 '>
                         <p className='text-2xl md:text-3xl xl:text-3xl mb-0'>Des questions ? </p>
                         <p className='italic mb-4'><strong>Besoin d'informations supplémentaires</strong>, n'hésitez pas à nous contacter en <strong>cliquant sur le bouton</strong> ci-dessous.</p>
-                        <ContactButton />
+                        <ContactButton 
+                           classname='md:ml-4'
+                        />
                     </div>
                     
                 </div>
