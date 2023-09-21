@@ -1,10 +1,6 @@
 // Import Swiper React components
 import { Swiper } from 'swiper/react';
 // import Swiper from 'swiper/bundle';
-import SwiperCore, { Pagination } from 'swiper';
-
-// Initialize the Pagination component
-SwiperCore.use([Pagination]);
 
 // Import Swiper styles
 import 'swiper/css';
@@ -32,9 +28,9 @@ function Carousel({ children }: CarouselProps) {
       pagination={{ clickable: true }}
       breakpoints={{
         390: { slidesPerView: 1.0, spaceBetween: 8 },
-        768: { slidesPerView: 2.0, spaceBetween: 8 },
+        768: { slidesPerView: 1.0, spaceBetween: 8 },
         1024: { slidesPerView: 2.0, spaceBetween: 16 },
-        1280: { slidesPerView: 3.0, spaceBetween: 32 },
+        1280: { slidesPerView: 2.0, spaceBetween: 32 },
       }}
       className="mySwiper mb-2 xl:mb-4 w-11/12 pb-18"
     >
