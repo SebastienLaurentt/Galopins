@@ -1,4 +1,4 @@
-import HomeBg from '../static/img/home.jpg';
+import HomeBg from '../static/img/home.webp';
 import Header from '../components/Header';
 
 

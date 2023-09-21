@@ -1,4 +1,4 @@
-import ParcoursBg from '../static/img/parcours.jpg';
+import ParcoursBg from '../static/img/parcours.webp';
 import { GiStonePath } from 'react-icons/gi';
 
 import SectionHeader from '../components/SectionHeader';

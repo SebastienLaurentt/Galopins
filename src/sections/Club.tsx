@@ -1,4 +1,4 @@
-import ClubBg from '../static/img/club.jpg';
+import ClubBg from '../static/img/club.webp';
 import { AiFillHome } from 'react-icons/ai';
 
 

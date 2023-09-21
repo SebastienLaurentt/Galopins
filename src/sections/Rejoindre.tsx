@@ -1,4 +1,4 @@
-import RejoindreBg from '../static/img/rejoindre.jpg';
+import RejoindreBg from '../static/img/rejoindre.webp';
 
 import { LuBackpack } from 'react-icons/lu';
 
