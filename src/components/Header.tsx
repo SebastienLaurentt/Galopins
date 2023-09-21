@@ -34,7 +34,7 @@ function Header() {
             <li className='flex flex-col items-center cursor-pointer md:hover:text-green-500'>
                 <MdOutlinePhotoCamera className='iconHeader'/>
                 <Link
-                    to='Club'
+                    to='Photos'
                     smooth={true} 
                     className=""
                     >
