@@ -33,9 +33,9 @@ function Club() {
                     <li>
                         <ParcoursCard 
                             day='Lundi | Après - midi'
-                            level='2 niveaux'
                             description1='&#x2022; Cool : 5 à 9 km (2-3h environ)'
                             description2="&#x2022; Plus : 10 à 14 km (200 à 500 m de dénivelé)"
+                            description3="&#x2022; Dans la Drôme ou l'Ardèche"
                         />
                     </li>
                     <li>
