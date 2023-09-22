@@ -40,7 +40,7 @@ function Photos() {
   return (
     <Section id='Photos' bg={PhotosBg}>
       <SectionHeader sectionTitle='NOS PHOTOS'>
-        <MdOutlinePhotoCamera className="icon"/>
+        <MdOutlinePhotoCamera className="icon md:mt-4"/>
       </SectionHeader>
       <SubSection>
         <div className="">
