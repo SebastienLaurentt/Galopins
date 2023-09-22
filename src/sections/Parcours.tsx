@@ -38,15 +38,15 @@ function Parcours() {
                     <p className='mb-3'> Le détail des randonnées est : </p>
                     <ul className='list-disc text-start leading-7 md:leading-9 md:ml-4'>
                         <li>
-                            <p className=''> <Tag classname='bg-white' tagName='BLANC'/> : Niveau <strong>cool</strong> du Lundi en Drôme / Ardèche 
+                            <p className=''> <Tag classname='bg-white' tagName='BLANC'/> : Rando <strong>cool</strong> du Lundi en Drôme / Ardèche 
                             </p>
                         </li>
                         <li>
-                            <p className=''> <Tag classname='bg-cyan-500' tagName='BLEU'/> : Niveau <strong>plus</strong> du Lundi en Drôme 
+                            <p className=''> <Tag classname='bg-cyan-500' tagName='BLEU'/> : Rando <strong>classique</strong> du Lundi en Drôme 
                             </p>
                         </li>
                         <li>
-                            <p className=''> <Tag classname='bg-yellow-400' tagName='JAUNE'/> : Niveau <strong>plus</strong> du Lundi en Ardèche
+                            <p className=''> <Tag classname='bg-yellow-400' tagName='JAUNE'/> : Rando <strong>classique</strong> du Lundi en Ardèche
                             </p>
                         </li>
                         <li>
