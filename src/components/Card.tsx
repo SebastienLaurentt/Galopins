@@ -8,11 +8,11 @@ interface CardProps {
 
 function Card({ mainImage, onZoomClick }: CardProps) {
   return (
-    <div className="">
+    <div className="mb-8">
       <img 
         src={mainImage} 
         alt="" 
-        className="rounded-3xl transition-all duration-400 hover:md:scale-[1.04] h-[12rem] md:h-[24rem] xl:h-[31rem] mx-auto cursor-pointer"
+        className="rounded-3xl transition-all duration-400 hover:md:scale-[1.04] h-[12rem] md:h-[24rem] xl:h-[28rem] mx-auto cursor-pointer"
         onClick={() => onZoomClick(mainImage)}
       />
     </div>

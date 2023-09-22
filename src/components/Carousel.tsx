@@ -1,10 +1,8 @@
-// Import Swiper React components
 import { Swiper } from 'swiper/react';
-// import Swiper from 'swiper/bundle';
+import { Pagination } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination'; // Add this line to import pagination styles
+import 'swiper/css/pagination';
 
 interface CarouselProps {
   children: React.ReactNode;
@@ -13,14 +11,7 @@ interface CarouselProps {
 function Carousel({ children }: CarouselProps) {
   return (
     <Swiper 
-    // style={{
-    //   "--swiper-pagination-bullet-width": "16px",
-    //   "--swiper-pagination-bullet-height": "8px",
-    //   "--swiper-pagination-bullet-border-radius": "30%",
-    //   "--swiper-pagination-color": "#22d3ee",
-    //   "--swiper-pagination-bullet-size": "8px",
-    //   "--swiper-pagination-bullet-horizontal-gap": "6px"
-    // }}
+      modules={[ Pagination ]}
       slidesPerView={1}
       spaceBetween={16}
       loop={false}
@@ -32,7 +23,7 @@ function Carousel({ children }: CarouselProps) {
         1024: { slidesPerView: 2.0, spaceBetween: 16 },
         1280: { slidesPerView: 2.0, spaceBetween: 32 },
       }}
-      className="mySwiper mb-2 xl:mb-4 w-11/12 pb-18"
+      className="mb-4"
     >
       {children}
     </Swiper>
