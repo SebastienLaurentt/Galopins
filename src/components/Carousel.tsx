@@ -14,8 +14,8 @@ interface CustomSwiperStyles {
 
 function Carousel({ children }: CarouselProps) {
   const swiperStyles: CustomSwiperStyles = {
-    "--swiper-pagination-bullet-width": "16px",
-    "--swiper-pagination-bullet-height": "16px",
+    "--swiper-pagination-bullet-width": "12px",
+    "--swiper-pagination-bullet-height": "12px",
     "--swiper-pagination-bullet-border-radius": "50%",
     "--swiper-pagination-bullet-inactive-color": "#FFFFFF",
     "--swiper-pagination-bullet-inactive-opacity": "1",
