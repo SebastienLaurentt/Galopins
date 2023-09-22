@@ -11,6 +11,17 @@ interface CarouselProps {
 function Carousel({ children }: CarouselProps) {
   return (
     <Swiper 
+      style={{
+      "--swiper-pagination-bullet-width": "16px",
+      "--swiper-pagination-bullet-height": "16px",
+      "--swiper-pagination-bullet-border-radius": "50%",
+      "--swiper-pagination-bullet-inactive-color": "#FFFFFF",
+      "--swiper-pagination-bullet-inactive-opacity": "1",
+      "--swiper-pagination-bullet-opacity": "1",
+      "--swiper-pagination-color": "#22c55e",
+      "--swiper-pagination-bullet-size": "8px",
+      "--swiper-pagination-bullet-horizontal-gap": "6px"
+    }}
       modules={[ Pagination ]}
       slidesPerView={1}
       spaceBetween={16}
@@ -23,7 +34,7 @@ function Carousel({ children }: CarouselProps) {
         1024: { slidesPerView: 2.0, spaceBetween: 16 },
         1280: { slidesPerView: 2.0, spaceBetween: 32 },
       }}
-      className="mb-4"
+      className=""
     >
       {children}
     </Swiper>
