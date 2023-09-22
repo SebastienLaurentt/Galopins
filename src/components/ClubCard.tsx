@@ -1,21 +1,17 @@
 interface ClubCardProps {
     day:string;
-    level?:string;
     description1:string;
     description2:string;
     description3?:string;
 }
 
-function ClubCard ({day, level, description1, description2, description3}: ClubCardProps) {
+function ClubCard ({day, description1, description2, description3}: ClubCardProps) {
     return (
         <div className='flex flex-col'>
             <div className='bg-green-600 bg-opacity-40 rounded-2xl md:rounded-full xl:rounded-3xl p-4 md:p-8'>
                 <h3 className="mb-0">
                     {day}
                 </h3>
-                <span className='italic'>
-                    {level}
-                </span>
                 <ul className="mt-4">
                     <li>
                         <p className="mb-0">

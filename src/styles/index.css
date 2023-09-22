@@ -27,7 +27,7 @@
   }
 
   span {
-    @apply text-sm md:text-lg  mb-12 
+    @apply text-sm md:text-lg  
   }
 
   strong{
