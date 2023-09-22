@@ -33,17 +33,14 @@ function Photos() {
                 <MdOutlinePhotoCamera className="icon"/>
             </SectionHeader>
             <SubSection>
-                <div className='flex flex-col  items-center md:items-start'>
-                    <p className='mb-8'> Quelques exemples photos de nos sorties en groupe ! 
-                    </p>
-                </div>
+
 
                 {/* PROJECTS CONTENT (IN CARROUSEL) */}
                 <div className=''>
                     <Carousel>
                         {data.map((value: PhotoData) => {
                             return (
-                                <SwiperSlide className="" key={value.id}>
+                                <SwiperSlide className="p-4" key={value.id}>
                                     <Card 
                                     key={value.id}
                                     mainImage={value.mainImage}
