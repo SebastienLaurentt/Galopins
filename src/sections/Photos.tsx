@@ -65,7 +65,7 @@ function Photos() {
           <img 
             src={zoomedImage} 
             alt="" 
-            className="max-w-full max-h-full object-contain rounded-[12rem]"
+            className="max-w-full max-h-full object-contain rounded-[4rem] md:rounded-[8rem]"
           />
         </div>
       )}
