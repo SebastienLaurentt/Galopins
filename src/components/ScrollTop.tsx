@@ -13,7 +13,7 @@ function ScrollTop() {
         >
             <Link to='Accueil' smooth={true} className="flex flex-col items-center font-bold">
                 <FaArrowUp className={`iconHeader transition-transform duration-300 ${hovered ? 'transform -translate-y-1' : ''}`} />
-                Accueil
+                <span>Accueil</span>
             </Link>
         </div>
     );
