@@ -9,9 +9,9 @@ function ClubCard ({day, description1, description2, description3}: ClubCardProp
     return (
         <div className='flex flex-col'>
             <div className='bg-green-600 bg-opacity-40 rounded-2xl md:rounded-full xl:rounded-3xl p-4 md:p-8'>
-                <h3 className="mb-0">
+                <h4 className="mb-0">
                     {day}
-                </h3>
+                </h4>
                 <ul className="mt-4">
                     <li>
                         <p className="mb-0">
