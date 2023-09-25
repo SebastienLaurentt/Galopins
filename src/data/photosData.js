@@ -27,6 +27,14 @@ const data = [
         id: 2,
         mainImage: '/static/img/montagne.webp',
       },
+      {
+        id: 3,
+        mainImage: '/static/img/groupe2.webp',
+      },
+      {
+        id: 4,
+        mainImage: '/static/img/village.webp',
+      },
     ];
   
   export default data;
