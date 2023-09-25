@@ -9,7 +9,7 @@ function ScrollTop() {
     const fadeInAnimationsVariants = {
         initial: {
             opacity:0,
-            y:100,
+            y:-50,
         },
         animate: () => ({
             opacity:1,
