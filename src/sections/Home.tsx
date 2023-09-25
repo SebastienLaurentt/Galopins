@@ -8,14 +8,38 @@ import { FaHiking } from 'react-icons/fa';
 import Section from '../components/Section';
 import SubSection from '../components/SubSection';
 import ClubIcon from '../components/ClubIcon';
+import { motion } from 'framer-motion';
 
 function Home() {
+    const fadeInAnimationsVariants = {
+        initial: {
+            opacity:0,
+            y:100,
+        },
+        animate: () => ({
+            opacity:1,
+            y:0,
+            transition:{
+                delay:0.5,
+            },
+        }),
+    };
+
     return (
         <Section
             id='Accueil'
             bg={HomeBg}
         >
             <Header/>
+            <motion.div
+                variants={fadeInAnimationsVariants}
+                initial="initial"
+                whileInView='animate'
+                viewport={{
+                    once:true,
+                }}   
+            
+            >
             <h1>LES GALOPINS</h1>
             {/* HERO CONTENT */}
             <SubSection
@@ -41,6 +65,7 @@ function Home() {
                         </li>
                     </ul>
             </SubSection>
+            </motion.div>
         </Section>
 
     );
