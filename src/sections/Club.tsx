@@ -32,7 +32,7 @@ function Club() {
                 <ul className='flex flex-col xl:flex-row xl:items-center gap-y-8 md:justify-around text-center mb-4 md:mb-12'>
                     <li>
                         <ParcoursCard 
-                            day='Lundi| Après - midi'
+                            day='Lundi | Après - midi'
                             location="Drôme ou l'Ardèche"
                             frequency="Chaque semaine, 2 possibilités :"
                             description1='&#x2022; Cool : 5 à 9 km (2-3 h environ)'
