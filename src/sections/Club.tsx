@@ -53,7 +53,7 @@ function Club() {
                 <div className=''>
                         <p><strong>Une fois par an</strong> une sortie en bus est organisée et reste ouverte aux non-adhérents. Par exemple, des lieux tels que St Guilhèm le Désert, La St Baume, Les sentiers de Pagnol, mais aussi les carrières d’ocre de Rustrel, Le pont du Gard ou L’étang du Vaccarès ont déja étés visités. </p>
                         <p>
-                            Afin de garder un côté <strong>convivial</strong>, tous les 2 mois un <strong>restaurant</strong> est organisé (le vendredi soir ou samedi midi). <strong>En début d'année</strong>, la galette des rois est aussi l'occasion de se retrouver pour partager un moment festif.  C'est également le cas à la <strong>fin Juin</strong> où un repas en plein air vient clôturer la fin de saison. Le club participe financierement à ces événements.
+                            Afin de garder un côté <strong>convivial</strong>, tous les 2 mois un <strong>restaurant</strong> est organisé (vendredi soir ou samedi midi). <strong>En début d'année</strong>, la galette des rois est aussi l'occasion de se retrouver pour partager un moment festif.  C'est également le cas <strong>fin Juin</strong> où un repas en plein air clôture la fin de saison. Le club participe financierement à ces événements.
                         </p>
                 </div>
             </SubSection>
