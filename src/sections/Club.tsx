@@ -33,7 +33,7 @@ function Club() {
                     <li>
                         <ParcoursCard 
                             day='Lundi | Après - midi'
-                            location="Drôme ou l'Ardèche"
+                            location="Drôme ou Ardèche"
                             frequency="Chaque semaine, 2 possibilités :"
                             description1='&#x2022; Cool : 5 à 9 km (2-3 h environ)'
                             description2="&#x2022; Classique : 10 à 14 km (200 à 500 m de dénivelé)"
