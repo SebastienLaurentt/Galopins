@@ -11,11 +11,11 @@ function ScrollTop() {
             opacity:0,
             y:100,
         },
-        animate: (id: number) => ({
+        animate: () => ({
             opacity:1,
             y:0,
             transition:{
-                delay:0.15 * id,
+                delay:0.5,
             },
         }),
     };
