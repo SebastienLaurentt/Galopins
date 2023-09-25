@@ -1,18 +1,26 @@
 interface ClubCardProps {
     day:string;
+    location:string;
+    frequency:string;
     description1:string;
     description2:string;
-    description3?:string;
+
 }
 
-function ClubCard ({day, description1, description2, description3}: ClubCardProps) {
+function ClubCard ({day, location, frequency, description1, description2, }: ClubCardProps) {
     return (
         <div className='flex flex-col'>
             <div className='bg-green-600 bg-opacity-40 rounded-2xl md:rounded-full xl:rounded-3xl p-4 md:p-8'>
                 <h4 className="mb-0">
                     {day}
                 </h4>
-                <ul className="mt-4">
+                <h5 className="mb-4">
+                    {location}
+                </h5>
+                <p className="mb-0">
+                    {frequency}
+                </p>
+                <ul className="mt-2">
                     <li>
                         <p className="mb-0">
                             {description1}
@@ -21,11 +29,6 @@ function ClubCard ({day, description1, description2, description3}: ClubCardProp
                     <li>
                         <p className="mb-0">
                             {description2}
-                        </p>
-                    </li>
-                    <li>
-                        <p className="mb-0">
-                            {description3}
                         </p>
                     </li>
                 </ul>

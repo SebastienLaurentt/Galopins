@@ -26,6 +26,10 @@
     @apply text-md md:text-xl xl:text-2xl 2xl:text-3xl italic mb-8 2xl:mb-12
   }
 
+  h5 {
+    @apply text-sm md:text-lg xl:text-xl 2xl:text-2xl italic mb-8 2xl:mb-12
+  }
+
   p {
     @apply text-sm md:text-lg 2xl:text-2xl mb-4 md:mb-8 2xl:mb-12
   }
