@@ -18,9 +18,9 @@ function ContactButton({ classname }: ContactButtonProps) {
                 className={` p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 ${classname} bg-cyan-700 md:hover:bg-cyan-500 text-white ${isActive ? 'active' : ''}`}
                 onClick={handleClick}
             >
-                <div className='flex flex-row justify-center gap-x-2'>
+                <div className='flex justify-center gap-x-2 items-center'>
                     CONTACT
-                    <RiContactsFill className="md:text-2xl 2xl:text-3xl" />
+                    <RiContactsFill className=" text-lg md:text-2xl 2xl:text-3xl" />
                 </div>
                 {isActive && (
                     <div className="text-left p-2 mt-4">

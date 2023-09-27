@@ -16,9 +16,9 @@ function Link ({href, linkName, classname }: LinkProps) {
                 href={href}
                 target='_blank'
             >
-                <div className='flex gap-x-2'>
+                <div className='flex gap-x-2 items-center'>
                     {linkName}
-                    <TfiLocationPin className="md:text-2xl 2xl:text-3xl"/>
+                    <TfiLocationPin className="text-lg md:text-2xl 2xl:text-3xl"/>
                 </div>
             </a>
         )
