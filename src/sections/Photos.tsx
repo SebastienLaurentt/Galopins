@@ -12,6 +12,7 @@ import Carousel from '../components/Carousel';
 import Card from '../components/Card.js';
 import { SwiperSlide } from 'swiper/react';
 import JSZip from 'jszip';
+import { BiSolidDownload } from 'react-icons/bi';
 
 interface PhotoData {
   id: number;
@@ -59,23 +60,6 @@ function Photos() {
 
   const dataToUse = selectedDate === 'date1' ? dataDate1 : dataDate2;
 
-  const locationInfo = [
-    {
-      date: 'date1',
-      location: 'Randonnée à Savasse'
-    },
-    {
-      date: 'date2',
-      location: 'Randonnée à Dieulefit'
-    },
-    // Ajoutez d'autres informations de lieu si nécessaire
-  ];
-
-  const getLocationInfo = (selectedDate: string) => {
-    const info = locationInfo.find(item => item.date === selectedDate);
-    return info ? info.location : '';
-  }
-
   const handleDownloadClick = async () => {
     const imageUrls = dataToUse.map(item => item.mainImage);
     const zip = new JSZip();
@@ -105,18 +89,24 @@ function Photos() {
         <MdOutlinePhotoCamera className="icon md:mt-4"/>
       </SectionHeader>
       <SubSection>
-        <div className="flex justify-center items-center mb-4">
-          <label htmlFor="dateSelect" className="mr-2 text-sm md:text-lg">Choisir une date :</label>
-          <select id="dateSelect" value={selectedDate} onChange={handleDateChange} className="p-2 border border-gray-300 rounded-md text-black text-sm md:text">
-            <option value="date1">18/09/2023</option>
-            <option value="date2">25/09/2023</option>
-          </select>
-        </div>
-        <div className="flex flex-row gap-2 justify-center items-center justify-center mb-2">
-          <p className='mb-0'>{getLocationInfo(selectedDate)}</p>
-          <button onClick={handleDownloadClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm md:text-lg">
-            Télécharger les photos
-          </button>
+        <div className='flex flex-wrap justify-center items-center gap-x-6 gap-y-2'>
+          <div className="flex flex-wrap gap-2 justify-center items-center">
+            <select id="dateSelect" value={selectedDate} onChange={handleDateChange} className=" md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold">
+              <option value="date1">18/09/2023 - SAVASSE</option>
+              <option value="date2">25/09/2023 - DIEULEFIT</option>
+            </select>
+          </div>
+          <div className="flex flex-row gap-2 justify-center items-center justify-center  md:cursor-pointer">
+            <a 
+                  className={`flex p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 bg-green-800`}
+                  onClick={handleDownloadClick}
+              >
+                  <div className='flex gap-x-2 items-center'>
+                      TÉLÉCHARGER
+                      <BiSolidDownload className=" text-lg md:text-2xl 2xl:text-3xl"/>
+                  </div>
+            </a>
+          </div>
         </div>
         <div className="">
           <Carousel>
