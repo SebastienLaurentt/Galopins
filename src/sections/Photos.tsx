@@ -114,7 +114,7 @@ function Photos() {
         </div>
         <div className="flex flex-row gap-2 justify-center items-center justify-center mb-2">
           <p className='mb-0'>{getLocationInfo(selectedDate)}</p>
-          <button onClick={handleDownloadClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button onClick={handleDownloadClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm md:text-lg">
             Télécharger les photos
           </button>
         </div>
