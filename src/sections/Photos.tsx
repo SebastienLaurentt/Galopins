@@ -9,6 +9,7 @@ import ScrollTop from '../components/ScrollTop';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card.js';
 import { SwiperSlide } from 'swiper/react';
+import JSZip from 'jszip';
 
 interface PhotoData {
   id: number;
@@ -73,6 +74,29 @@ function Photos() {
     return info ? info.location : '';
   }
 
+  const handleDownloadClick = async () => {
+    const imageUrls = dataToUse.map(item => item.mainImage);
+    const zip = new JSZip();
+
+    const promises = imageUrls.map(async (url, index) => {
+      const response = await fetch(url);
+      const arrayBuffer = await response.arrayBuffer();
+      zip.file(`image_${index + 1}.jpg`, arrayBuffer);
+    });
+
+    await Promise.all(promises);
+
+    zip.generateAsync({ type: 'blob' })
+      .then(content => {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(content);
+        link.download = 'images.zip';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+  }
+
   return (
     <Section id='Photos' bg={PhotosBg}>
       <SectionHeader sectionTitle='NOS PHOTOS'>
@@ -81,13 +105,16 @@ function Photos() {
       <SubSection>
         <div className="flex justify-center items-center mb-4">
           <label htmlFor="dateSelect" className="mr-2 text-sm md:text-lg">Choisir une date :</label>
-          <select id="dateSelect" value={selectedDate} onChange={handleDateChange} className="p-2 border border-gray-300 rounded-md text-black text-sm md:text-lg">
+          <select id="dateSelect" value={selectedDate} onChange={handleDateChange} className="p-2 border border-gray-300 rounded-md text-black text-sm md:text">
             <option value="date1">18/09/2023</option>
             <option value="date2">25/09/2023</option>
           </select>
         </div>
-        <div className="text-center">
-          <p>{getLocationInfo(selectedDate)}</p>
+        <div className="flex flex-row gap-2 justify-center items-center justify-center mb-2">
+          <p className='mb-0'>{getLocationInfo(selectedDate)}</p>
+          <button onClick={handleDownloadClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Télécharger les photos
+          </button>
         </div>
         <div className="">
           <Carousel>
