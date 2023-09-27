@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import PhotosBg from '../static/img/photos.webp';
 import { MdOutlinePhotoCamera } from 'react-icons/md';
+
+// @ts-ignore
 import data from '../data/photosData.js';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
@@ -37,7 +39,7 @@ function Photos() {
     }
   }, [zoomedImage]);
 
-  const handleDateChange = (event) => {
+  const handleDateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedDate(event.target.value);
   }
 
@@ -69,7 +71,7 @@ function Photos() {
     // Ajoutez d'autres informations de lieu si nécessaire
   ];
 
-  const getLocationInfo = (selectedDate) => {
+  const getLocationInfo = (selectedDate: string) => {
     const info = locationInfo.find(item => item.date === selectedDate);
     return info ? info.location : '';
   }
