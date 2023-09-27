@@ -92,8 +92,8 @@ function Photos() {
         <div className='flex flex-wrap justify-center items-center gap-x-6 gap-y-2'>
           <div className="flex flex-wrap gap-2 justify-center items-center">
             <select id="dateSelect" value={selectedDate} onChange={handleDateChange} className=" md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold">
-              <option value="date1">18/09/2023 - SAVASSE</option>
-              <option value="date2">25/09/2023 - DIEULEFIT</option>
+              <option className='font-bold' value="date1">18/09/2023 - SAVASSE</option>
+              <option className='font-bold' value="date2">25/09/2023 - DIEULEFIT</option>
             </select>
           </div>
           <div className="flex flex-row gap-2 justify-center items-center justify-center  md:cursor-pointer">
