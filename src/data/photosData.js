@@ -35,6 +35,22 @@ const data = [
         id: 4,
         mainImage: '/static/img/village.webp',
       },
+      {
+        id: 5,
+        mainImage: '/static/img/cheval.webp',
+      },
+      {
+        id: 6,
+        mainImage: '/static/img/cabanonBois.webp',
+      },
+      {
+        id: 7,
+        mainImage: '/static/img/groupe3.webp',
+      },
+      {
+        id: 8,
+        mainImage: '/static/img/groupe4.webp',
+      },
     ];
   
   export default data;
