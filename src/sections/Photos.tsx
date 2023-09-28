@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import PhotosBg from '../static/img/photos.webp';
 import { MdOutlinePhotoCamera } from 'react-icons/md';
+
+// @ts-ignore
 import data from '../data/photosData.js';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
@@ -15,7 +17,6 @@ import { BiSolidDownload } from 'react-icons/bi';
 interface PhotoData {
   id: number;
   mainImage: string;
-  description: string;
 }
 
 function Photos() {
@@ -45,10 +46,10 @@ function Photos() {
   const dataToUse = data[selectedDate].photos;
 
   const handleDownloadClick = async () => {
-    const imageUrls = dataToUse.map(item => item.mainImage);
+    const imageUrls = dataToUse.map((item: PhotoData) => item.mainImage);
     const zip = new JSZip();
 
-    const promises = imageUrls.map(async (url, index) => {
+    const promises = imageUrls.map(async (url: string, index: number) => {
       const response = await fetch(url);
       const arrayBuffer = await response.arrayBuffer();
       zip.file(`image_${index + 1}.jpg`, arrayBuffer);
@@ -112,7 +113,6 @@ function Photos() {
                   <Card 
                     key={value.id}
                     mainImage={value.mainImage}
-                    description={value.description}
                     onZoomClick={handleZoomClick}
                   />
                 </SwiperSlide>
