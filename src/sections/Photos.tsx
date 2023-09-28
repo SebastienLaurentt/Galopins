@@ -74,7 +74,6 @@ function Photos() {
         <MdOutlinePhotoCamera className="icon md:mt-4"/>
       </SectionHeader>
       <SubSection>
-        <div className='flex flex-wrap justify-center items-center gap-x-6 gap-y-2'>
           <div className="flex flex-wrap gap-2 justify-center items-center">
             <select
               id="dateSelect"
@@ -92,18 +91,6 @@ function Photos() {
               ))}
             </select>
           </div>
-          <div className="flex flex-row gap-2 justify-center items-center justify-center  md:cursor-pointer">
-            <a 
-              className={`flex p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 bg-green-800`}
-              onClick={handleDownloadClick}
-            >
-              <div className='flex gap-x-2 items-center'>
-                TÉLÉCHARGER
-                <BiSolidDownload className=" text-lg md:text-2xl 2xl:text-3xl"/>
-              </div>
-            </a>
-          </div>
-        </div>
 
         <div className="">
           <Carousel>
@@ -120,6 +107,18 @@ function Photos() {
             })}
           </Carousel>
         </div>
+
+        <div className="flex flex-wrap gap-2 justify-center items-center justify-center  md:cursor-pointer">
+            <a 
+              className={`flex p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 bg-green-800`}
+              onClick={handleDownloadClick}
+            >
+              <div className='flex gap-x-2 items-center'>
+                TÉLÉCHARGER LES PHOTOS
+                <BiSolidDownload className=" text-lg md:text-2xl 2xl:text-3xl"/>
+              </div>
+            </a>
+          </div>
       </SubSection>
       {zoomedImage && (
         <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-75 p-12" onClick={handleCloseZoom}>
