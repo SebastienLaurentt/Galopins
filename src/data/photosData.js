@@ -1,55 +1,97 @@
 const data = {
   rando1: {
     date:"18/09/2023",
-    localisation:"SAVASSE",
+    localisation:"ST MONTANT",
     photos: [
       {
         id: 0,
-        mainImage: '/static/img/groupe.webp',
+        mainImage: '/static/img/SaintMontant/1.webp',
       },
       {
         id: 1,
-        mainImage: '/static/img/chevaux.webp',
+        mainImage: '/static/img/SaintMontant/2.webp',
       },
       {
         id: 2,
-        mainImage: '/static/img/montagne.webp',
+        mainImage: '/static/img/SaintMontant/3.webp',
       },
       {
         id: 3,
-        mainImage: '/static/img/groupe2.webp',
+        mainImage: '/static/img/SaintMontant/4.webp',
+      },
+      {
+        id: 4,
+        mainImage: '/static/img/SaintMontant/5.webp',
+      },
+      {
+        id: 5,
+        mainImage: '/static/img/SaintMontant/6.webp',
+      },
+      {
+        id: 6,
+        mainImage: '/static/img/SaintMontant/7.webp',
+      },
+      {
+        id: 7,
+        mainImage: '/static/img/SaintMontant/8.webp',
+      },
+      {
+        id: 8,
+        mainImage: '/static/img/SaintMontant/9.webp',
+      },
+      {
+        id: 9,
+        mainImage: '/static/img/SaintMontant/10.webp',
       },
     ],
   },
   rando2: {
     date:"25/09/2023",
-    localisation:"DIEULEFIT",
+    localisation:"CHOMERAC",
     photos: [
       {
+        id: 0,
+        mainImage: '/static/img/Chomerac/1.webp',
+      },
+      {
+        id: 1,
+        mainImage: '/static/img/Chomerac/2.webp',
+      },
+      {
+        id: 2,
+        mainImage: '/static/img/Chomerac/3.webp',
+      },
+      {
+        id: 3,
+        mainImage: '/static/img/Chomerac/4.webp',
+      },
+      {
         id: 4,
-        mainImage: '/static/img/village.webp',
+        mainImage: '/static/img/Chomerac/5.webp',
       },
       {
         id: 5,
-        mainImage: '/static/img/cheval.webp',
+        mainImage: '/static/img/Chomerac/6.webp',
       },
       {
         id: 6,
-        mainImage: '/static/img/cabanonBois.webp',
+        mainImage: '/static/img/Chomerac/7.webp',
       },
-    ],
-  },
-  rando3: {
-    date:"27/09/2023",
-    localisation:"ANCONE",
-    photos: [
       {
         id: 7,
-        mainImage: '/static/img/groupe3.webp',
+        mainImage: '/static/img/Chomerac/8.webp',
       },
       {
         id: 8,
-        mainImage: '/static/img/groupe4.webp',
+        mainImage: '/static/img/Chomerac/9.webp',
+      },
+      {
+        id: 9,
+        mainImage: '/static/img/Chomerac/10.webp',
+      },
+      {
+        id: 10,
+        mainImage: '/static/img/Chomerac/11.webp',
       },
     ],
   },
