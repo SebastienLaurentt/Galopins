@@ -55,42 +55,38 @@ const data = {
       },
       {
         id: 1,
-        mainImage: '/static/img/Chomerac/2.webp',
-      },
-      {
-        id: 2,
         mainImage: '/static/img/Chomerac/3.webp',
       },
       {
-        id: 3,
+        id: 2,
         mainImage: '/static/img/Chomerac/4.webp',
       },
       {
-        id: 4,
+        id: 3,
         mainImage: '/static/img/Chomerac/5.webp',
       },
       {
-        id: 5,
+        id: 4,
         mainImage: '/static/img/Chomerac/6.webp',
       },
       {
-        id: 6,
+        id: 5,
         mainImage: '/static/img/Chomerac/7.webp',
       },
       {
-        id: 7,
+        id: 6,
         mainImage: '/static/img/Chomerac/8.webp',
       },
       {
-        id: 8,
+        id: 7,
         mainImage: '/static/img/Chomerac/9.webp',
       },
       {
-        id: 9,
+        id: 8,
         mainImage: '/static/img/Chomerac/10.webp',
       },
       {
-        id: 10,
+        id: 9,
         mainImage: '/static/img/Chomerac/11.webp',
       },
     ],
