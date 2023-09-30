@@ -96,7 +96,7 @@ function Photos() {
           <Carousel>
             {dataToUse.map((value: PhotoData) => {
               return (
-                <SwiperSlide className="p-4" key={value.id}>
+                <SwiperSlide className="" key={value.id}>
                   <Card 
                     key={value.id}
                     mainImage={value.mainImage}

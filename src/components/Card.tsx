@@ -8,7 +8,7 @@ interface CardProps {
 
 function Card({ mainImage, onZoomClick }: CardProps) {
   return (
-    <div className="mb-8">
+    <div className="p-4 mb-8">
       <img 
         src={mainImage} 
         alt="" 

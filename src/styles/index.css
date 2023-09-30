@@ -52,3 +52,14 @@
   @apply text-xl md:text-2xl xl:text-3xl 2xl:text-4xl
 }
 
+.custom-next, .custom-prev {
+  @apply absolute top-1/2 transform -translate-y-1/2 z-10 text-base
+}
+
+.custom-next {
+  @apply right-0
+}
+
+.custom-prev {
+  @apply left-0
+}

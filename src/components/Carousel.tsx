@@ -1,8 +1,9 @@
 import { Swiper } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 interface CarouselProps {
   children: React.ReactNode;
@@ -14,26 +15,25 @@ interface CustomSwiperStyles {
 
 function Carousel({ children }: CarouselProps) {
   const swiperStyles: CustomSwiperStyles = {
-    "--swiper-pagination-bullet-width": "12px",
-    "--swiper-pagination-bullet-height": "12px",
-    "--swiper-pagination-bullet-border-radius": "50%",
-    "--swiper-pagination-bullet-inactive-color": "#FFFFFF",
-    "--swiper-pagination-bullet-inactive-opacity": "1",
-    "--swiper-pagination-bullet-opacity": "1",
-    "--swiper-pagination-color": "#22c55e",
-    "--swiper-pagination-bullet-size": "8px",
-    "--swiper-pagination-bullet-horizontal-gap": "6px"
+    "--swiper-navigation-color": "#FFFFFF",
+    "--swiper-navigation-margin": "0", 
   };
   
   return (
     <Swiper 
       style={swiperStyles}
-      modules={[ Pagination ]}
+      modules={[ Pagination, Navigation ]}
       slidesPerView={1}
       spaceBetween={16}
       loop={false}
       centeredSlides={false}
-      pagination={{ clickable: true }}
+      pagination={
+        {type:'fraction',}
+      }
+      navigation= {{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }}
       breakpoints={{
         390: { slidesPerView: 1.0, spaceBetween: 8 },
         768: { slidesPerView: 1.0, spaceBetween: 8 },
@@ -42,7 +42,11 @@ function Carousel({ children }: CarouselProps) {
       }}
       className=""
     >
-      {children}
+      <div className=''>
+        {children}
+      </div>
+      <div className="swiper-button-prev h-4"></div>
+      <div className="swiper-button-next h-4"></div>
     </Swiper>
   );
 }
