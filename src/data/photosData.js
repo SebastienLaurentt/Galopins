@@ -91,6 +91,48 @@ const data = {
       },
     ],
   },
+  rando3: {
+    date:"28/09/2023",
+    localisation:"MEJANES LE CLAP",
+    photos: [
+      {
+        id: 0,
+        mainImage: '/static/img/Mejanes/1.webp',
+      },
+      {
+        id: 1,
+        mainImage: '/static/img/Mejanes/2.webp',
+      },
+      {
+        id: 2,
+        mainImage: '/static/img/Mejanes/3.webp',
+      },
+      {
+        id: 3,
+        mainImage: '/static/img/Mejanes/4.webp',
+      },
+      {
+        id: 4,
+        mainImage: '/static/img/Mejanes/5.webp',
+      },
+      {
+        id: 5,
+        mainImage: '/static/img/Mejanes/6.webp',
+      },
+      {
+        id: 6,
+        mainImage: '/static/img/Mejanes/7.webp',
+      },
+      {
+        id: 7,
+        mainImage: '/static/img/Mejanes/8.webp',
+      },
+      {
+        id: 8,
+        mainImage: '/static/img/Mejanes/9.webp',
+      },
+    ],
+  },
 };
   
   export default data;
