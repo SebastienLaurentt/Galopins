@@ -16,7 +16,6 @@ interface CustomSwiperStyles {
 function Carousel({ children }: CarouselProps) {
   const swiperStyles: CustomSwiperStyles = {
     "--swiper-navigation-color": "#FFFFFF",
-    "--swiper-navigation-margin": "0", 
   };
   
   return (
