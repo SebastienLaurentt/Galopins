@@ -121,11 +121,11 @@ function Photos() {
           </div>
       </SubSection>
       {zoomedImage && (
-        <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-75 p-8" onClick={handleCloseZoom}>
+        <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-90 p-8" onClick={handleCloseZoom}>
           <img 
             src={zoomedImage} 
             alt="" 
-            className="h-[12rem] md:h-[32rem] xl:h-[40rem] 2xl:h-[56rem]  rounded-[4rem] md:rounded-[8rem]"
+            className="h-[12rem] md:h-[32rem] xl:h-[44rem] 2xl:h-[56rem]  rounded-[4rem] md:rounded-[8rem]"
           />
         </div>
       )}
