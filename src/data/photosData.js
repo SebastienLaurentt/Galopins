@@ -131,6 +131,58 @@ const data = {
         id: 8,
         mainImage: '/static/img/Mejanes/9.webp',
       },
+      {
+        id: 9,
+        mainImage: '/static/img/Mejanes/10.webp',
+      },
+      {
+        id: 10,
+        mainImage: '/static/img/Mejanes/11.webp',
+      },
+      {
+        id: 11,
+        mainImage: '/static/img/Mejanes/12.webp',
+      },
+      {
+        id: 12,
+        mainImage: '/static/img/Mejanes/13.webp',
+      },
+      {
+        id: 13,
+        mainImage: '/static/img/Mejanes/14.webp',
+      },
+      {
+        id: 14,
+        mainImage: '/static/img/Mejanes/15.webp',
+      },
+      {
+        id: 15,
+        mainImage: '/static/img/Mejanes/16.webp',
+      },
+      {
+        id: 16,
+        mainImage: '/static/img/Mejanes/17.webp',
+      },
+      {
+        id: 17,
+        mainImage: '/static/img/Mejanes/18.webp',
+      },
+      {
+        id: 18,
+        mainImage: '/static/img/Mejanes/19.webp',
+      },
+      {
+        id: 19,
+        mainImage: '/static/img/Mejanes/20.webp',
+      },
+      {
+        id: 20,
+        mainImage: '/static/img/Mejanes/21.webp',
+      },
+      {
+        id: 21,
+        mainImage: '/static/img/Mejanes/22.webp',
+      },
     ],
   },
 };
