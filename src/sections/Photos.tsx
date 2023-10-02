@@ -22,13 +22,27 @@ interface PhotoData {
 function Photos() {
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [selectedDate, setSelectedDate] = useState<string>('rando1');
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
-  const handleZoomClick = (image: string) => {
+  const handleZoomClick = (image: string, index: number) => {
     setZoomedImage(image);
+    setCurrentImageIndex(index);
   }
 
   const handleCloseZoom = () => {
     setZoomedImage(null);
+  }
+
+  const handleNextImage = () => {
+    const nextIndex = (currentImageIndex + 1) % dataToUse.length;
+    setZoomedImage(dataToUse[nextIndex].mainImage);
+    setCurrentImageIndex(nextIndex);
+  }
+
+  const handlePrevImage = () => {
+    const prevIndex = (currentImageIndex - 1 + dataToUse.length) % dataToUse.length;
+    setZoomedImage(dataToUse[prevIndex].mainImage);
+    setCurrentImageIndex(prevIndex);
   }
 
   useEffect(() => {
@@ -78,33 +92,33 @@ function Photos() {
         <MdOutlinePhotoCamera className="icon md:mt-4"/>
       </SectionHeader>
       <SubSection>
-          <div className="mb-8 xl:mb-0 flex flex-wrap gap-2 justify-center items-center">
-            <select
-              id="dateSelect"
-              value={selectedDate}
-              onChange={handleDateChange}
-              className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
-            >
-              {Object.keys(data).map(key => (
-                <option
-                  key={key}
-                  className="font-bold"
-                  value={key}
-                >{`${data[key].date} - ${data[key].localisation}`}
-                </option>
-              ))}
-            </select>
-          </div>
+        <div className="mb-8 xl:mb-0 flex flex-wrap gap-2 justify-center items-center">
+          <select
+            id="dateSelect"
+            value={selectedDate}
+            onChange={handleDateChange}
+            className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
+          >
+            {Object.keys(data).map(key => (
+              <option
+                key={key}
+                className="font-bold"
+                value={key}
+              >{`${data[key].date} - ${data[key].localisation}`}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <div className="mb-8 xl:mb-4">
           <Carousel>
-            {dataToUse.map((value: PhotoData) => {
+            {dataToUse.map((value: PhotoData, index: number) => {
               return (
                 <SwiperSlide className="" key={value.id}>
                   <Card 
                     key={value.id}
                     mainImage={value.mainImage}
-                    onZoomClick={handleZoomClick}
+                    onZoomClick={() => handleZoomClick(value.mainImage, index)}
                   />
                 </SwiperSlide>
               );
@@ -113,24 +127,32 @@ function Photos() {
         </div>
 
         <div className="mb-4 xl:mb-0 flex flex-wrap gap-2 justify-center items-center justify-center  md:cursor-pointer">
-            <a 
-              className={`flex p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 bg-green-800`}
-              onClick={handleDownloadClick}
-            >
-              <div className='flex gap-x-2 items-center'>
-                TÉLÉCHARGER LES PHOTOS
-                <BiSolidDownload className=" text-lg md:text-2xl 2xl:text-3xl"/>
-              </div>
-            </a>
-          </div>
+          <a 
+            className={`flex p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 bg-green-800`}
+            onClick={handleDownloadClick}
+          >
+            <div className='flex gap-x-2 items-center'>
+              TÉLÉCHARGER LES PHOTOS
+              <BiSolidDownload className=" text-lg md:text-2xl 2xl:text-3xl"/>
+            </div>
+          </a>
+        </div>
       </SubSection>
       {zoomedImage && (
-        <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-90 p-8" onClick={handleCloseZoom}>
+        <div 
+          className="fixed inset-0 z-50 flex flex-col justify-center items-center bg-black bg-opacity-90 p-8"
+          onClick={(e) => e.target === e.currentTarget && handleCloseZoom()}
+        >
+          <div className='mb-8 flex gap-x-6 xl:gap-x-12 md:text-xl'>
+            <button className="text-white p-2 px-4 md:p-4 bg-green-700 rounded-xl" onClick={handlePrevImage}>Précédent</button>
+            <button className="text-white p-2 px-4 md:p-4 bg-green-700 rounded-xl" onClick={handleNextImage}>Suivant</button>
+          </div>
           <img 
             src={zoomedImage} 
             alt="" 
-            className="h-[12rem] md:h-[32rem] xl:h-[44rem] 2xl:h-[56rem]  rounded-[4rem] md:rounded-[8rem]"
+            className="h-[12rem] md:h-[32rem] xl:h-[44rem] 2xl:h-[56rem] rounded-[4rem] md:rounded-[8rem]"
           />
+          
         </div>
       )}
       <ScrollTop/>
