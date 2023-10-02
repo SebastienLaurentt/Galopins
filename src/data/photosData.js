@@ -92,8 +92,8 @@ const data = {
     ],
   },
   rando3: {
-    date:"28/09/2023",
-    localisation:"MEJANES LE CLAP",
+    date:"29/09/2023",
+    localisation:"MEJANNES LE CLAP",
     photos: [
       {
         id: 0,
