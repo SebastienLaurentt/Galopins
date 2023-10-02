@@ -61,5 +61,6 @@
 }
 
 .swiper-custom-pagination {
-  @apply text-center mb-2
+  @apply text-center 
+
 }

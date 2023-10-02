@@ -92,7 +92,7 @@ function Photos() {
             </select>
           </div>
 
-        <div className="">
+        <div className="mb-4">
           <Carousel>
             {dataToUse.map((value: PhotoData) => {
               return (
