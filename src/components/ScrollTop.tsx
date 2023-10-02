@@ -22,7 +22,7 @@ function ScrollTop() {
 
     return (
         <motion.div 
-            className="w-12 mx-auto flex justify-center cursor-pointer md:hover:text-green-500 rounded-full"
+            className="w-12 mx-auto flex justify-center cursor-pointer md:hover:text-green-500 rounded-full "
             variants={fadeInAnimationsVariants}
             initial="initial"
             whileInView='animate'

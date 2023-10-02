@@ -7,7 +7,7 @@ interface TagProps {
 function Tag ({tagName, classname }: TagProps) {
 
     return(
-            <div className={`p-2 rounded-lg inline text-black font-bold ${classname}`}>
+            <div className={`p-2 xl:p-4 rounded-lg inline text-black font-bold ${classname}`}>
                 {tagName}
             </div>
         )

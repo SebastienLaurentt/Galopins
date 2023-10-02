@@ -69,7 +69,11 @@ function Photos() {
   }
 
   return (
-    <Section id='Photos' bg={PhotosBg}>
+    <Section 
+      id='Photos' 
+      bg={PhotosBg}
+      minHeightScreen={false}
+    >
       <SectionHeader sectionTitle='NOS PHOTOS'>
         <MdOutlinePhotoCamera className="icon md:mt-4"/>
       </SectionHeader>
