@@ -78,7 +78,7 @@ function Photos() {
         <MdOutlinePhotoCamera className="icon md:mt-4"/>
       </SectionHeader>
       <SubSection>
-          <div className="flex flex-wrap gap-2 justify-center items-center">
+          <div className="mb-8 xl:mb-0 flex flex-wrap gap-2 justify-center items-center">
             <select
               id="dateSelect"
               value={selectedDate}
@@ -96,7 +96,7 @@ function Photos() {
             </select>
           </div>
 
-        <div className="mb-4">
+        <div className="mb-8 xl:mb-4">
           <Carousel>
             {dataToUse.map((value: PhotoData) => {
               return (
@@ -112,7 +112,7 @@ function Photos() {
           </Carousel>
         </div>
 
-        <div className="flex flex-wrap gap-2 justify-center items-center justify-center  md:cursor-pointer">
+        <div className="mb-4 xl:mb-0 flex flex-wrap gap-2 justify-center items-center justify-center  md:cursor-pointer">
             <a 
               className={`flex p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 bg-green-800`}
               onClick={handleDownloadClick}
