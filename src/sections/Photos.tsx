@@ -29,6 +29,7 @@ function Photos() {
     setCurrentImageIndex(index);
   }
 
+  
   const handleCloseZoom = () => {
     setZoomedImage(null);
   }
@@ -45,6 +46,7 @@ function Photos() {
     setCurrentImageIndex(prevIndex);
   }
 
+  // PREVENT SCROLL WHEN ZOOM IN
   useEffect(() => {
     if (zoomedImage) {
       document.body.style.overflow = 'hidden';
@@ -59,6 +61,7 @@ function Photos() {
 
   const dataToUse = data[selectedDate].photos;
 
+  // DOWLOAD IMG AS ZIP
   const handleDownloadClick = async () => {
     const imageUrls = dataToUse.map((item: PhotoData) => item.mainImage);
     const zip = new JSZip();
