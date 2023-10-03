@@ -185,6 +185,60 @@ const data = {
       },
     ],
   },
+  rando4: {
+    date:"02/10/2023",
+    localisation:"LACHAMP",
+    photos: [
+      {
+        id: 0,
+        mainImage: '/static/img/Lachamp/1.webp',
+      },
+      {
+        id: 1,
+        mainImage: '/static/img/Lachamp/2.webp',
+      },
+      {
+        id: 2,
+        mainImage: '/static/img/Lachamp/3.webp',
+      },
+      {
+        id: 3,
+        mainImage: '/static/img/Lachamp/4.webp',
+      },
+      {
+        id: 4,
+        mainImage: '/static/img/Lachamp/5.webp',
+      },
+      {
+        id: 5,
+        mainImage: '/static/img/Lachamp/6.webp',
+      },
+      {
+        id: 6,
+        mainImage: '/static/img/Lachamp/7.webp',
+      },
+      {
+        id: 7,
+        mainImage: '/static/img/Lachamp/8.webp',
+      },
+      {
+        id: 8,
+        mainImage: '/static/img/Lachamp/9.webp',
+      },
+      {
+        id: 9,
+        mainImage: '/static/img/Lachamp/10.webp',
+      },
+      {
+        id: 10,
+        mainImage: '/static/img/Lachamp/11.webp',
+      },
+      {
+        id: 11,
+        mainImage: '/static/img/Lachamp/12.webp',
+      },
+    ],
+  },
 };
   
   export default data;
