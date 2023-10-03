@@ -147,8 +147,8 @@ function Photos() {
           onClick={(e) => e.target === e.currentTarget && handleCloseZoom()}
         >
           <div className='mb-8 flex gap-x-6 xl:gap-x-12 md:text-xl'>
-            <button className="text-white p-2 px-4 md:p-4 bg-green-700 rounded-xl" onClick={handlePrevImage}>Précédent</button>
-            <button className="text-white p-2 px-4 md:p-4 bg-green-700 rounded-xl" onClick={handleNextImage}>Suivant</button>
+            <button className="text-white p-2 px-4 md:p-4 bg-green-800 rounded-xl md:hover:bg-green-600" onClick={handlePrevImage}>Précédent</button>
+            <button className="text-white p-2 px-4 md:p-4 bg-green-800 rounded-xl md:hover:bg-green-600" onClick={handleNextImage}>Suivant</button>
           </div>
           <img 
             src={zoomedImage} 
