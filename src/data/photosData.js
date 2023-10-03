@@ -239,6 +239,68 @@ const data = {
       },
     ],
   },
+  rando5: {
+    date:"02/10/2023",
+    localisation:"LA BEGUDE DE MAZENC",
+    photos: [
+      {
+        id: 0,
+        mainImage: '/static/img/LaBegudeDeMazenc/1.webp',
+      },
+      {
+        id: 1,
+        mainImage: '/static/img/LaBegudeDeMazenc/2.webp',
+      },
+      {
+        id: 2,
+        mainImage: '/static/img/LaBegudeDeMazenc/3.webp',
+      },
+      {
+        id: 3,
+        mainImage: '/static/img/LaBegudeDeMazenc/4.webp',
+      },
+      {
+        id: 4,
+        mainImage: '/static/img/LaBegudeDeMazenc/5.webp',
+      },
+      {
+        id: 5,
+        mainImage: '/static/img/LaBegudeDeMazenc/6.webp',
+      },
+      {
+        id: 6,
+        mainImage: '/static/img/LaBegudeDeMazenc/7.webp',
+      },
+      {
+        id: 7,
+        mainImage: '/static/img/LaBegudeDeMazenc/8.webp',
+      },
+      {
+        id: 8,
+        mainImage: '/static/img/LaBegudeDeMazenc/9.webp',
+      },
+      {
+        id: 9,
+        mainImage: '/static/img/LaBegudeDeMazenc/10.webp',
+      },
+      {
+        id: 10,
+        mainImage: '/static/img/LaBegudeDeMazenc/11.webp',
+      },
+      {
+        id: 11,
+        mainImage: '/static/img/LaBegudeDeMazenc/12.webp',
+      },
+      {
+        id: 12,
+        mainImage: '/static/img/LaBegudeDeMazenc/13.webp',
+      },
+      {
+        id: 13,
+        mainImage: '/static/img/LaBegudeDeMazenc/14.webp',
+      },
+    ],
+  },
 };
   
   export default data;
