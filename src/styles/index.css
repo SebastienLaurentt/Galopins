@@ -62,7 +62,13 @@
 
 .swiper-custom-pagination {
   @apply text-center 
+}
 
+.swiper-slide {
+  height:auto;
+  align-self:center;
+  display:flex;
+  justify-content: center;
 }
 
 .wideScreen {
