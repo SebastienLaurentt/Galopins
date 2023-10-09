@@ -143,7 +143,7 @@ function Photos() {
       </SubSection>
       {zoomedImage && (
         <div 
-          className="fixed inset-0 z-50 flex flex-col justify-center items-center bg-black bg-opacity-90 p-8"
+          className="fixed inset-0 z-50 flex flex-col justify-center items-center bg-black bg-opacity-90 p-8 xl:p-40 "
           onClick={(e) => e.target === e.currentTarget && handleCloseZoom()}
         >
           <div className='mb-8 flex gap-x-6 xl:gap-x-12 md:text-xl'>
@@ -153,7 +153,7 @@ function Photos() {
           <img 
             src={zoomedImage} 
             alt="" 
-            className="h-[12rem] md:h-[32rem] xl:h-[44rem] 2xl:h-[56rem] rounded-[4rem] md:rounded-[8rem]"
+            className="m-4 rounded-lg "
           />
           
         </div>
