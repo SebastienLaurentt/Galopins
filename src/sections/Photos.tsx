@@ -113,6 +113,10 @@ function Photos() {
           </select>
         </div>
 
+        <div className='flex flex-wrap justify-center'>
+          <p>Description</p>
+        </div>
+
         <div className="mb-8 xl:mb-4 ">
           <Carousel>
             {dataToUse.map((value: PhotoData, index: number) => {
