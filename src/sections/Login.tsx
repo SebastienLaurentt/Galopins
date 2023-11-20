@@ -10,6 +10,7 @@ function Login () {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
   
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,6 +33,7 @@ function Login () {
         }
         } catch (error) {
         console.error('Erreur de connexion:', error);
+        setError("Nom d'utilisateur ou mot de passe incorrect.");
         }
 
         // Reset Username and Password after Submit
@@ -53,7 +55,10 @@ function Login () {
                         id="username"
                         className="text-black rounded-md p-1"
                         value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        onChange={(e) => {
+                            setUsername(e.target.value);
+                            setError(null);
+                        }}
                         required
                         />
                     </div>
@@ -64,10 +69,14 @@ function Login () {
                         id="password"
                         className="text-black rounded-md p-1"
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={(e) => {
+                            setPassword(e.target.value);
+                            setError(null);
+                        }}
                         required
                         />
                     </div>
+                    {error && <p className="text-red-500">{error}</p>}
                     <button type="submit" className="md:hover:font-bold">Se connecter</button>
                 </form>
             </div>
