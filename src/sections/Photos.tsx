@@ -62,7 +62,7 @@ function Photos() {
               className="font-bold"
               value={rando.name}
             >
-              {rando.name}
+             {rando.date} - {rando.name}
             </option>
           ))}
         </select>
