@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "../components/Link";
+import { BiArrowBack } from "react-icons/bi";
 
 function Login () {
     const [email, setEmail] = useState('');
@@ -54,6 +55,7 @@ function Login () {
             <Link 
                     href="/"
                     linkName="Retourner sur le site des Galopins"
+                    logo={<BiArrowBack />}
                     classname='md:ml-4'
             />
 

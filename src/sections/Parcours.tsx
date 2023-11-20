@@ -1,5 +1,6 @@
 import ParcoursBg from '../static/img/parcours.webp';
 import { GiStonePath } from 'react-icons/gi';
+import { TfiLocationPin } from 'react-icons/tfi';
 
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
@@ -62,6 +63,7 @@ function Parcours() {
                 <Link 
                     href="https://maps.app.goo.gl/1fQz1QrNGHzLm8a48"
                     linkName="VOIR LE POINT DE RDV"
+                    logo={<TfiLocationPin/>}
                     classname='md:ml-4'
                 />
             </div>
