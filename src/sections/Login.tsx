@@ -21,28 +21,28 @@ function Login () {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center gap-y-4 ">
-            <div className="bg-slate-900 p-4">
+            <div className="bg-slate-900 p-8">
                 <h3 className="text-center">
                     Les Galopins
                 </h3>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-y-4">
-                    <div>
-                        <label htmlFor="email">Email: </label>
+                    <div className="flex flex-col gap-y-1 items-center">
+                        <label htmlFor="email">Email</label>
                         <input
                         type="email"
                         id="email"
-                        className="text-black"
+                        className="text-black rounded-md"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                         />
                     </div>
-                    <div>
-                        <label htmlFor="password">Mot de passe: </label>
+                    <div className="flex flex-col gap-y-1 items-center">
+                        <label htmlFor="password">Mot de passe</label>
                         <input
                         type="password"
                         id="password"
-                        className="text-black"
+                        className="text-black rounded-md"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
@@ -54,9 +54,9 @@ function Login () {
 
             <Link 
                     href="/"
-                    linkName="Retourner sur le site des Galopins"
+                    linkName="Retourner sur le site"
                     logo={<BiArrowBack />}
-                    classname='md:ml-4'
+                    classname=''
             />
 
         </div>
