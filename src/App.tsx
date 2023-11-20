@@ -2,9 +2,9 @@ import MainPage from "./sections/MainPage";
 
 function App() {
   return (
-  <div>
-    <MainPage/>
-  </div>
+    <div>
+      <MainPage/>
+    </div>
   )
 }
 
