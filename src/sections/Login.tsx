@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "../components/Link";
 
 function Login () {
     const [email, setEmail] = useState('');
@@ -18,7 +19,7 @@ function Login () {
   };
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center ">
+        <div className="min-h-screen flex flex-col items-center justify-center gap-y-4 ">
             <div className="bg-slate-900 p-4">
                 <h3 className="text-center">
                     Les Galopins
@@ -49,6 +50,12 @@ function Login () {
                     <button type="submit" className="md:hover:font-bold">Se connecter</button>
                 </form>
             </div>
+
+            <Link 
+                    href="/"
+                    linkName="Retourner sur le site des Galopins"
+                    classname='md:ml-4'
+            />
 
         </div>
     );
