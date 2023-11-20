@@ -3,7 +3,7 @@ interface SectionProps {
   id?: string;
   className?: string;
   minHeightScreen:boolean;
-  bg:string;
+  bg?:string;
   children: React.ReactNode;
 }
 
