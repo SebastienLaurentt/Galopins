@@ -20,8 +20,8 @@ function Login () {
   };
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center gap-y-4 ">
-            <div className="bg-slate-900 p-8">
+        <div className="min-h-screen flex flex-col items-center justify-center gap-y-4 bg-stone-300">
+            <div className="bg-slate-900 p-8 rounded-md">
                 <h3 className="text-center">
                     Les Galopins
                 </h3>
