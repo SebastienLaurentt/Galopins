@@ -17,13 +17,11 @@ function Account() {
   };
 
 
-  const handleEdit = (id) => {
-    // Logique pour éditer la randonnée avec l'ID spécifié
-    console.log(`Édition de la randonnée avec l'ID ${id}`);
-  };
+  // const handleEdit = (id) => {
+  //   console.log(`Édition de la randonnée avec l'ID ${id}`);
+  // };
 
   const handleDelete = (id) => {
-    // Logique pour supprimer la randonnée avec l'ID spécifié
     setRandosData((prevRandos) => prevRandos.filter((rando) => rando.id !== id));
   };
 
@@ -37,7 +35,7 @@ function Account() {
     }, []); 
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center ">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-stone-300 ">
       <h3 className="text-black p-4 text-center">
         Bienvenue sur l'espace administrateur des Galopins ! 
       </h3>
@@ -47,30 +45,30 @@ function Account() {
         >
         Se déconnecter
       </button>
-      <div className='text-black'>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Date de la rando</th>
-              <th>Nom de la rando</th>
-              <th>Actions</th>
+      <div className='text-white bg-slate-900 p-8 rounded-md mt-4'>
+      <table className="w-full">
+        <thead>
+          <tr className='border-b-2'>
+            <th className="px-4 py-2">N°</th>
+            <th className="px-4 py-2">Date de la rando</th>
+            <th className="px-4 py-2">Nom de la rando</th>
+            <th className="px-4 py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {randosData.map((rando) => (
+            <tr key={rando.id} className="border-b">
+              <td className="px-4 py-2">{rando.id}</td>
+              <td className="px-4 py-2">{rando.date}</td>
+              <td className="px-4 py-2">{rando.name}</td>
+              <td className="px-4 py-2">
+                <button onClick={() => handleDelete(rando.id)} className="text-red-500 md:hover:font-bold">Supprimer</button>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {randosData.map((rando) => (
-              <tr key={rando.id}>
-                <td>{rando.id}</td>
-                <td>{rando.date}</td>
-                <td>{rando.name}</td>
-                <td>
-                  <button onClick={() => handleEdit(rando.id)}>Edit</button>
-                  <button onClick={() => handleDelete(rando.id)}>Delete</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+          ))}
+        </tbody>
+      </table>
+
       </div>
     </div>
   );
