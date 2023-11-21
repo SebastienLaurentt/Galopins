@@ -1,6 +1,6 @@
 
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './components/Auth';
+import { useAuth } from './components/Auth';
 import MainPage from './sections/MainPage';
 import Login from './sections/Login';
 import Account from './sections/Account';

@@ -1,6 +1,3 @@
-import { TfiLocationPin } from 'react-icons/tfi';
-
-
 interface LinkProps {
     href:string;
     linkName:string;
