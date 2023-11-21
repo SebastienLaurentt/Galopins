@@ -3,11 +3,12 @@ import Link from "../components/Link";
 import { BiArrowBack } from "react-icons/bi";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { useAuth } from "../components/Auth";
 
 function Login () {
 
     const navigate = useNavigate(); 
-
+    const { login } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
@@ -21,12 +22,15 @@ function Login () {
             password: password,
         });
 
-        // If success, connexion response
+
+
+        // If success, set the state auth to true with the hook useAuth and log connexion response
+        login();
         console.log('Réponse de la connexion:', response.data);
 
         // User data
         const user = response.data.data;
-
+        
         // If success, redirection
         if (user) {
             navigate('/account');

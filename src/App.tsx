@@ -1,20 +1,27 @@
-import { Route, Routes } from 'react-router';
-
-import MainPage from "./sections/MainPage";
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './components/Auth';
+import MainPage from './sections/MainPage';
 import Login from './sections/Login';
 import Account from './sections/Account';
 
-function App() {
-  return (
-    <div>
-      <Routes>
-        <Route path="/" element={<MainPage/>}/>
-        <Route path="/auth/login" element={<Login />} />
-        <Route path="/account" element={<Account/>} />
-      </Routes>
-      
-    </div>
-  )
-}
+const App = () => {
+  const  isAuthenticated  = useAuth();
 
-export default App;
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/auth/login" element={<Login />} />
+      <Route
+        path="/account"
+        element={isAuthenticated ? <Account /> : <Navigate to="/auth/login" />}
+      />
+    </Routes>
+  );
+};
+
+export default () => (
+  <AuthProvider>
+    <App />
+  </AuthProvider>
+);
