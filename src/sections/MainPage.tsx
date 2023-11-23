@@ -3,12 +3,14 @@ import Rejoindre from "../sections/Rejoindre";
 import Home from "../sections/Home"
 import Parcours from "../sections/Parcours";
 import Photos from "../sections/Photos";
+import News from "./News";
 
 
 function MainPage() {
     return (
         <div>
             <Home/>
+            <News />
             <Club/>
             <Parcours/>
             <Photos />
