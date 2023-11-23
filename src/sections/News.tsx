@@ -21,21 +21,17 @@ function News() {
             <ul className='flex flex-col xl:flex-row xl:items-center gap-y-8 md:justify-around text-center  wideScreen'>
                 <li>
                     <NewsCard
-                        day='Lundi | Après - midi'
-                        location="Drôme ou Ardèche"
-                        frequency="Chaque semaine, 2 possibilités :"
-                        description1='&#x2022; Cool : 5 à 9 km (2-3 h environ)'
-                        description2="&#x2022; Classique : 10 à 14 km (200 à 500 m de dénivelé)"
+                        title='Lundi | Après - midi'
+                        date="Drôme ou Ardèche"
+                        description='&#x2022; Cool : 5 à 9 km (2-3 h environ)'
 
                     />
                 </li>
                 <li>
                     <NewsCard
-                        day='Vendredi | Journée entière'
-                        location="Vaucluse, Gard ou Lozère (100 km max)"
-                        frequency="En alternance :"
-                        description1="&#x2022;  Semaine A : Jusqu'à 15 km"
-                        description2="&#x2022;  Semaine B : De 15 à 20 km"
+                        title='Vendredi | Journée entière'
+                        date="Vaucluse, Gard ou Lozère (100 km max)"
+                        description="&#x2022;  Semaine A : Jusqu'à 15 km"
                     />
                 </li>
             </ul>
