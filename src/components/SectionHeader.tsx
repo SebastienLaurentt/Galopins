@@ -5,7 +5,7 @@ interface SectionHeaderProps {
 
 function SectionHeader ({sectionTitle, children}: SectionHeaderProps) {
     return (
-        <div className='flex items-center gap-x-2 md:gap-x-4 mb-4  md:ml-4 xl:ml-8 2xl:ml-60 justify-center md:justify-start 2xl:w-1/2'>
+        <div className='flex flex-wrap items-center gap-x-2 md:gap-x-4 mb-4  md:ml-4 xl:ml-8 2xl:ml-60 justify-center md:justify-start 2xl:w-1/2'>
             <h2>{sectionTitle}</h2>
             {children}
         </div>
