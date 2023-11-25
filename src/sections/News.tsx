@@ -13,7 +13,7 @@ function News() {
 
       // Fetch all Randos Data
     useEffect(() => {
-        axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos/')
+        axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos/last')
         .then(response => {
             setInfosData(response.data.data);
         })
@@ -32,8 +32,8 @@ function News() {
             <SectionHeader sectionTitle='LES DERNIERES INFOS'>
                 <HiOutlineNewspaper className="icon"/>
             </SectionHeader>
-            <div className="flex ">
-                <ul className='flex   xl:items-center gap-y-8 md:justify-around text-center  wideScreen'>
+            <div className="">
+                <ul className='flex wrap gap-x-20 xl:items-center gap-y-8 md:justify-around text-center  wideScreen'>
                     {infosData.map(info => (
                         <li>
                         <NewsCard
