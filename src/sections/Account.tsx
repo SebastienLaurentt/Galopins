@@ -5,10 +5,16 @@ import axios from 'axios';
 import Link from '../components/Link';
 import { BiArrowBack } from 'react-icons/bi';
 import { CiLogout } from "react-icons/ci";
+import AccountRando from './AccountRando';
+import AccountNews from './AccountNews';
 
 
 function Account() {
-  const [randosData, setRandosData] = useState([]); // State with all Rando Data
+  const [activeButton, setActiveButton] = useState('Infos'); // État initial avec le bouton "Infos" actif
+
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+  };
 
 
   const { logout } = useAuth(); 
@@ -20,55 +26,51 @@ function Account() {
   };
 
 
-  // const handleEdit = (id) => {
-  //   console.log(`Édition de la randonnée avec l'ID ${id}`);
-  // };
-
-  const handleDelete = (id) => {
-    setRandosData((prevRandos) => prevRandos.filter((rando) => rando.id !== id));
-  };
-
-    // Fetch all Randos Data
-    useEffect(() => {
-      axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/randos/')
-      .then(response => {
-        setRandosData(response.data.data);
-      })
-  
-    }, []); 
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-stone-300 ">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-stone-300 p-4 ">
+
       <h3 className="text-black p-4 text-center">
         Bienvenue sur l'espace administrateur des Galopins ! 
       </h3>
       <p className='italic text-black'> Depuis cet espace, il est possible de gérer les informations du site des Galopins. </p>
       <p className='italic text-black'> Premierement, vous pouvez choisir le type d'informations avez lequel vous souhaitez interagir en cliquant sur les boutons ci-dessous. </p>
       <p className='italic text-black'> Deuxiemement, vous pourez choisir d'ajouter, supprimer ou modifier ces informations.  </p>
-      <div className='text-white bg-slate-900 p-8 rounded-md mb-4'>
-        <table className="w-full">
-          <thead>
-            <tr className='border-b-2'>
-              <th className="px-4 py-2">N°</th>
-              <th className="px-4 py-2">Date de la rando</th>
-              <th className="px-4 py-2">Nom de la rando</th>
-              <th className="px-4 py-2">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {randosData.map((rando) => (
-              <tr key={rando.id} className="border-b">
-                <td className="px-4 py-2">{rando.id}</td>
-                <td className="px-4 py-2">{rando.date}</td>
-                <td className="px-4 py-2">{rando.name}</td>
-                <td className="px-4 py-2">
-                  <button onClick={() => handleDelete(rando.id)} className="text-red-500 md:hover:font-bold">Supprimer</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+      <div className='flex flex-row gap-x-2 text-black mb-2'>
+        <button
+          className={`p-2 border-solid border-2 border-zinc-600 rounded-md ${
+            activeButton === 'Infos' ? 'bg-zinc-600 text-white' : ''
+          }`}
+          onClick={() => handleButtonClick('Infos')}
+        >
+          Infos
+        </button>
+        <button
+          className={`p-2 border-solid border-2 border-zinc-600 rounded-md ${
+            activeButton === 'Rando' ? 'bg-zinc-600 text-white' : ''
+          }`}
+          onClick={() => handleButtonClick('Rando')}
+        >
+          Rando
+        </button>
+        <button
+          className={`p-2 border-solid border-2 border-zinc-600 rounded-md ${
+            activeButton === 'Liens' ? 'bg-zinc-600 text-white' : ''
+          }`}
+          onClick={() => handleButtonClick('Liens')}
+        >
+          Liens
+        </button>
       </div>
+
+
+      <div className="text-white bg-slate-900 p-4 rounded-md mb-4">
+        {activeButton === 'Infos' && <AccountNews />}
+        {activeButton === 'Rando' && <AccountRando />}
+        {/* {activeButton === 'Liens' && <AccountLiens />} */}
+      </div>
+
       <div className='flex gap-4'>
         <button
           className="flex  p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-red-600 bg-red-800"
@@ -90,8 +92,8 @@ function Account() {
           classname=''
         />
       </div>
-
     </div>
+
   );
 }
 
