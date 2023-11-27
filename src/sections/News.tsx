@@ -33,7 +33,7 @@ function News() {
                 <HiOutlineNewspaper className="icon"/>
             </SectionHeader>
             <div className="">
-                <ul className='flex wrap gap-x-20 xl:items-center gap-y-8 md:justify-around text-center  wideScreen'>
+                <ul className='flex flex-col xl:flex-row   gap-x-20 xl:items-center gap-y-8 md:justify-around text-center  wideScreen'>
                     {infosData.map(info => (
                         <li>
                         <NewsCard
