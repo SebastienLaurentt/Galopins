@@ -21,6 +21,8 @@ function AccountRando() {
     }, []); 
 
   return (
+    <div className='flex flex-col items-center'>
+        <h5 className='mb-4'> Tableau de gestion des randonnées </h5>
         <table className="">
           <thead>
             <tr className='border-b-2'>
@@ -43,6 +45,8 @@ function AccountRando() {
             ))}
           </tbody>
         </table>
+    </div>
+
   );
 }
 
