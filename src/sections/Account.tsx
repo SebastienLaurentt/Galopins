@@ -5,10 +5,14 @@ import { BiArrowBack } from 'react-icons/bi';
 import { CiLogout } from "react-icons/ci";
 import AccountRando from './AccountRando';
 import AccountNews from './AccountNews';
+import { useAuth } from '../components/Auth';
+import { useNavigate } from 'react-router';
 
 
 function Account() {
+  const navigate = useNavigate();
   const [activeButton, setActiveButton] = useState('Infos'); // État initial avec le bouton "Infos" actif
+  const { logout } = useAuth(); 
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
@@ -17,7 +21,8 @@ function Account() {
 
 
   const handleLogout = async () => {
-
+    logout();
+    navigate('/auth/login');
   };
 
 
