@@ -1,21 +1,28 @@
 
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { useAuth } from './components/Auth';
+import { Routes, Route } from 'react-router-dom';
+
 import MainPage from './sections/MainPage';
 import Login from './sections/Login';
 import Account from './sections/Account';
+import PrivateRoute from './components/PrivateRoute';
+import { useAuth } from './components/Auth';
 
 const App = () => {
-  const  isAuthenticated  = useAuth();
+  const { isLogged }  = useAuth();
+  console.log (`Is Logged = ${isLogged}`)
 
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/auth/login" element={<Login />} />
       <Route
-        path="/account"
-        element={isAuthenticated ? <Account /> : <Navigate to="/auth/login" />}
-      />
+            path="/account"
+            element={
+              <PrivateRoute isLogged={isLogged}>
+                <Account />
+              </PrivateRoute>
+            }
+          />
     </Routes>
   );
 };

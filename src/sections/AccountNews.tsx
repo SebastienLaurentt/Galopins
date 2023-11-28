@@ -8,8 +8,16 @@ import { RiAddCircleLine } from "react-icons/ri";
 function AccountNews() {
   const [infosData, setInfosData] = useState([]); // State with all Rando Data
 
-  const handleDelete = (id) => {
-    setInfosData((prevInfos) => prevInfos.filter((info) => info.id !== id));
+  const handleDelete = async (id) => {
+    try {
+      // Effectuez la requête DELETE vers le backend
+      await axios.delete(`https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos/${id}`);
+
+      // Mettez à jour l'état pour refléter la suppression
+      setInfosData((prevData) => prevData.filter((info) => info.id !== id));
+    } catch (error) {
+      console.error("Erreur lors de la suppression :", error);
+    }
   };
 
     // Fetch all Randos Data

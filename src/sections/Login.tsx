@@ -2,13 +2,14 @@ import { useState } from "react";
 import Link from "../components/Link";
 import { BiArrowBack } from "react-icons/bi";
 import axios from "axios";
-import { useNavigate } from "react-router";
 import { useAuth } from "../components/Auth";
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Login () {
-
-    const navigate = useNavigate(); 
-    const { login } = useAuth();
+    const navigate = useNavigate();
+    const { login } = useAuth(); 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
@@ -24,17 +25,15 @@ function Login () {
 
 
 
-        // If success, set the state auth to true with the hook useAuth and log connexion response
+        // If success, set the state isLogged to true with login meth of useAuth and log connexion response
         login();
-        console.log('Réponse de la connexion:', response.data);
+        navigate('/account');
+  
 
         // User data
-        const user = response.data.data;
+        console.log('Réponse de la connexion:', response.data);
         
-        // If success, redirection
-        if (user) {
-            navigate('/account');
-        }
+        // If error 
         } catch (error) {
         console.error('Erreur de connexion:', error);
         setError("Nom d'utilisateur ou mot de passe incorrect.");

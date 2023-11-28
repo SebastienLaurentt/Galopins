@@ -1,21 +1,21 @@
-import React, { createContext, useContext, useState } from 'react';
-
+// Auth.js
+import { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isAuthenticated, setAuthenticated] = useState(false);
+  const [isLogged, setIsLogged] = useState(false);
 
   const login = () => {
-    setAuthenticated(true);
+    setIsLogged(true);
   };
 
   const logout = () => {
-    setAuthenticated(false);
+    setIsLogged(false);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isLogged, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
@@ -24,7 +24,8 @@ export const AuthProvider = ({ children }) => {
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth doit être utilisé dans un AuthProvider');
+    throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
 };
+

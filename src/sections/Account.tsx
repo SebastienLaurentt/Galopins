@@ -1,7 +1,5 @@
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../components/Auth'; 
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+
+import { useState } from 'react';
 import Link from '../components/Link';
 import { BiArrowBack } from 'react-icons/bi';
 import { CiLogout } from "react-icons/ci";
@@ -17,12 +15,9 @@ function Account() {
   };
 
 
-  const { logout } = useAuth(); 
-  const navigate = useNavigate();
 
   const handleLogout = async () => {
-    logout();
-    navigate('/auth/login');
+
   };
 
 
