@@ -4,6 +4,7 @@ import { BiArrowBack } from "react-icons/bi";
 import axios from "axios";
 import { useAuth } from "../components/Auth";
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 
 
@@ -23,7 +24,12 @@ function Login () {
             password: password,
         });
 
+        // Récupérez le token depuis la réponse de l'API
+        const token = response.data.token;
+        console.log(token)
 
+        // Enregistrez le token dans un cookie avec une expiration d'une heure
+        Cookies.set('token', token, { expires: 1 / 24, httpOnly: true }); // 1/24 représente 1 heure
 
         // If success, set the state isLogged to true with login meth of useAuth and log connexion response
         login();
