@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { RiAddCircleLine } from "react-icons/ri";
 
+import Cookies from 'js-cookie';
+
 
 
 function AccountNews() {
@@ -10,8 +12,21 @@ function AccountNews() {
 
   const handleDelete = async (id) => {
     try {
-      // Effectuez la requête DELETE vers le backend
-      await axios.delete(`https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos/${id}`);
+      // Get token cookie for Authorization
+      const token = Cookies.get('token');
+
+      // Error gestion if token not available
+      if (!token) {
+        console.error('Le token n\'est pas disponible.');
+        return;
+      }
+
+      // Delete request
+      await axios.delete(`https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       // Mettez à jour l'état pour refléter la suppression
       setInfosData((prevData) => prevData.filter((info) => info.id !== id));
