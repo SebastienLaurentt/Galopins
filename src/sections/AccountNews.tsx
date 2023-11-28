@@ -35,14 +35,14 @@ function AccountNews() {
     }
   };
 
-    // Fetch all Randos Data
-    useEffect(() => {
-      axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos/')
-      .then(response => {
-        setInfosData(response.data.data);
-      })
-  
-    }, []); 
+  // Fetch all Randos Data
+  useEffect(() => {
+    axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos/')
+    .then(response => {
+      setInfosData(response.data.data);
+    })
+
+  }, []); 
 
   return (
     <div className=''>
