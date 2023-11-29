@@ -8,6 +8,7 @@ import Account from './sections/Account';
 import PrivateRoute from './components/PrivateRoute';
 import { useAuth } from './components/Auth';
 import { useEffect } from 'react';
+import AccountNewsAdd from './sections/AccountNewsAdd';
 
 const App = () => {
   const { isLogged, login  }  = useAuth();
@@ -32,7 +33,15 @@ const App = () => {
                 <Account />
               </PrivateRoute>
             }
-          />
+      />
+      <Route
+            path="/account/addnews"
+            element={
+              <PrivateRoute isLogged={isLogged}>
+                <AccountNewsAdd />
+              </PrivateRoute>
+            }
+      />
     </Routes>
   );
 };
