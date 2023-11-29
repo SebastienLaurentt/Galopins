@@ -23,12 +23,20 @@ function Account() {
           Bienvenue sur l'espace administrateur des Galopins ! 
         </h3>
         <p className='italic text-black'> Depuis cet espace, il est possible de gérer les informations du site des Galopins. </p>
-        <p className='italic text-black'> Premierement, vous pouvez choisir le type d'informations avez lequel vous souhaitez interagir en cliquant sur les boutons ci-dessous. </p>
-        <p className='italic text-black'> Deuxiemement, vous pourez choisir d'ajouter, supprimer ou modifier ces informations.  </p>
+        <ol className='text-center text-black '>
+          <li>
+            <p > <span className='font-bold'>Premierement</span>, vous pouvez choisir le type d'informations avez lequel vous souhaitez interagir en cliquant sur les boutons ci-dessous. </p>
+          </li>
+          <li>
+            <p > <span className='font-bold'>Deuxiemement</span>, vous pourez choisir d'ajouter, supprimer ou modifier ces informations.  </p>
+          </li>
+        </ol>
+
+
 
         <div className='flex flex-row gap-x-2 text-black mb-2'>
           <button
-            className={`p-2 border-solid border-2 border-zinc-600 rounded-md ${
+            className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
               activeButton === 'Infos' ? 'bg-zinc-600 text-white' : ''
             }`}
             onClick={() => handleButtonClick('Infos')}
@@ -36,7 +44,7 @@ function Account() {
             Infos
           </button>
           <button
-            className={`p-2 border-solid border-2 border-zinc-600 rounded-md ${
+            className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
               activeButton === 'Rando' ? 'bg-zinc-600 text-white' : ''
             }`}
             onClick={() => handleButtonClick('Rando')}
@@ -44,7 +52,7 @@ function Account() {
             Rando
           </button>
           <button
-            className={`p-2 border-solid border-2 border-zinc-600 rounded-md ${
+            className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
               activeButton === 'Liens' ? 'bg-zinc-600 text-white' : ''
             }`}
             onClick={() => handleButtonClick('Liens')}
