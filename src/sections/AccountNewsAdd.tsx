@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import AccountHeader from '../components/AccountHeader';
 
 const AccountNewsAdd = () => {
   const [date, setDate] = useState('');
@@ -46,7 +47,9 @@ const AccountNewsAdd = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-stone-300 p-4 ">
+    <div className="min-h-screen bg-stone-300 p-4 ">
+      <AccountHeader />
+      <div className=" flex flex-col items-center justify-center bg-stone-300 p-4 ">
         <form onSubmit={handleSubmit} className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'>
             <div className='flex flex-col gap-y-1'>
                 <label>Date:</label>
@@ -62,8 +65,8 @@ const AccountNewsAdd = () => {
             </div>
             <button type="submit" className='mt-4 md:hover:font-bold'>Créer la nouvelle information</button>
         </form>
+      </div>
     </div>
-
   );
 };
 

@@ -28,7 +28,7 @@ function AccountHeader () {
                     <ButtonLink
                         bgColor='bg-green-800'
                         bgHoverColor='bg-green-600'
-                        href="/"
+                        href="/account"
                         linkName="Espace Administrateur"
                         logo={<BiArrowBack/>}
                         classname='md:ml-4'

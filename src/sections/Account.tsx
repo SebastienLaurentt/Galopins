@@ -1,12 +1,7 @@
 
 import { useState } from 'react';
-import Link from '../components/ButtonLink';
-import { BiArrowBack } from 'react-icons/bi';
-import { CiLogout } from "react-icons/ci";
 import AccountRando from '../components/AccountRando';
 import AccountNews from '../components/AccountNews';
-import { useAuth } from '../components/Auth';
-import { useNavigate } from 'react-router';
 import AccountHeader from '../components/AccountHeader';
 
 
@@ -18,11 +13,6 @@ function Account() {
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
-
-
-
-
-
 
 
   return (

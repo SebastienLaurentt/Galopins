@@ -19,7 +19,7 @@ function ButtonLink ({onClick, bgHoverColor, bgColor, href, linkName, logo, clas
             <Link
                 className={`flex  p-2 md:p-4 rounded-lg md:text-lg 2xl:text-2xl  ${classname} ${bgColor} md:hover:${bgHoverColor}`}
                 to={href}
-                target='_blank'
+                target='_blank' 
             >
                 <div className='flex gap-x-2 items-center'>
                     {linkName}
