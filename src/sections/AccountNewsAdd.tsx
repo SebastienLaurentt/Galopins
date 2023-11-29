@@ -60,7 +60,7 @@ const AccountNewsAdd = () => {
                 <label>Description:</label>
                 <textarea value={description} onChange={(e) => setDescription(e.target.value)} required className="text-black rounded-md p-1" />      
             </div>
-            <button type="submit" className='mt-4'>Créer la nouvelle information</button>
+            <button type="submit" className='mt-4 md:hover:font-bold'>Créer la nouvelle information</button>
         </form>
     </div>
 
