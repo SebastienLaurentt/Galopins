@@ -9,6 +9,7 @@ import PrivateRoute from './components/PrivateRoute';
 import { useAuth } from './components/Auth';
 import { useEffect } from 'react';
 import AccountNewsAdd from './sections/AccountNewsAdd';
+import AccountRandoAdd from './sections/AccountRandoAdd';
 
 const App = () => {
   const { isLogged, login  }  = useAuth();
@@ -39,6 +40,14 @@ const App = () => {
             element={
               <PrivateRoute isLogged={isLogged}>
                 <AccountNewsAdd />
+              </PrivateRoute>
+            }
+      />
+      <Route
+            path="/account/addrando"
+            element={
+              <PrivateRoute isLogged={isLogged}>
+                <AccountRandoAdd />
               </PrivateRoute>
             }
       />

@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { RiAddCircleLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 
 
@@ -43,8 +45,16 @@ function AccountRando() {
   }, []); 
 
   return (
-    <div className='flex flex-col items-center'>
-        <h5 className='mb-4'> Tableau de gestion des randonnées </h5>
+    <div className='flex flex-col '>
+        <h5 className='mb-4 text-center'> Tableau de gestion des randonnées </h5>
+        <div className='flex items-start justify-start mb-2'>
+          <Link to="/account/addrando">
+            <button className='flex flex-row items-center gap-x-1 p-2 rounded-md bg-green-800 md:hover:bg-green-600'> 
+              <span>Créer une nouvelle randonnée</span>
+              <span><RiAddCircleLine /></span>
+            </button>
+          </Link>
+        </div>
         <table className="">
           <thead>
             <tr className='border-b-2'>
