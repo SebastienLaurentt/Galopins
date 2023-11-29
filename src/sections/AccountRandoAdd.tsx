@@ -27,7 +27,7 @@ const AccountRandoAdd = () => {
       }
 
       // POST request to add new Info
-      const response = await axios.post('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos', 
+      const response = await axios.post('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/randos', 
         {
           date,
           title,
