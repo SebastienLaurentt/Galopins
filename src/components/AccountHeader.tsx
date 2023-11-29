@@ -13,7 +13,7 @@ function AccountHeader () {
 
     return (
         <header className=''>
-            <ul className="flex flex-row justify-center">
+            <ul className="flex flex-wrap gap-4 justify-center">
                 <li>
                     <ButtonLink
                         bgColor='bg-green-800'
