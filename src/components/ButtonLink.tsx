@@ -6,7 +6,7 @@ interface LinkProps {
 }
 
 
-function Link ({href, linkName, logo, classname }: LinkProps) {
+function ButtonLink ({href, linkName, logo, classname }: LinkProps) {
 
     return(
             <a 
@@ -24,4 +24,4 @@ function Link ({href, linkName, logo, classname }: LinkProps) {
 
 }
 
-export default Link;
+export default ButtonLink;

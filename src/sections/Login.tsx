@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from "../components/Link";
+import Link from "../components/ButtonLink";
 import { BiArrowBack } from "react-icons/bi";
 import axios from "axios";
 import { useAuth } from "../components/Auth";

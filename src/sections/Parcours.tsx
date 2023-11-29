@@ -7,7 +7,7 @@ import Section from '../components/Section';
 
 import ProgrammeFile from '../assets/Programme_Galopins.pdf'
 import DownloadLink from '../components/DownloadLink';
-import Link from '../components/Link';
+import ButtonLink from '../components/ButtonLink';
 import Tag from '../components/Tag';
 import ScrollTop from '../components/ScrollTop';
 
@@ -60,7 +60,7 @@ function Parcours() {
             <div className='mb-4  flex flex-col items-center md:items-start px-4 md:px-12 xl:px-20 wideScreen'>
                 <p className='mb-3'>Le lieu de <strong>rendez-vous</strong> avant chaque départ est situé sur le parking en face du  95 Route de Valence (Bar le Provence). L'heure de
                 départ est fixée à 13h30.</p>
-                <Link 
+                <ButtonLink 
                     href="https://maps.app.goo.gl/1fQz1QrNGHzLm8a48"
                     linkName="VOIR LE POINT DE RDV"
                     logo={<TfiLocationPin/>}
