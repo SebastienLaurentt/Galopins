@@ -29,7 +29,7 @@ function Login () {
         console.log(token)
 
         // Enregistrez le token dans un cookie avec une expiration d'une heure
-        Cookies.set('token', token, { expires: 1 / 24, httpOnly: true }); // 1/24 représente 1 heure
+        Cookies.set('token', token, { expires: 1 / 24, }); // 1/24 représente 1 heure
 
         // If success, set the state isLogged to true with login meth of useAuth and log connexion response
         login();

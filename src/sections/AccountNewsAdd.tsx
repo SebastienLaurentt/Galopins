@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 const AccountNewsAdd = () => {
   const [date, setDate] = useState('');
@@ -10,12 +11,27 @@ const AccountNewsAdd = () => {
     e.preventDefault();
 
     try {
+
+      // Get token cookie for Authorization
+      const token = Cookies.get('token');
+
+      // Error gestion if token not available
+      if (!token) {
+        console.error('Le token n\'est pas disponible.');
+        return;
+      }
+
       // Effectuez la requête POST pour ajouter une nouvelle information
       const response = await axios.post('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos', {
         date,
         title,
         description,
+        headers: {
+            Authorization: `Bearer ${token}`,
+          },
       });
+
+
 
 
       // Réinitialisez les champs du formulaire après l'ajout réussi

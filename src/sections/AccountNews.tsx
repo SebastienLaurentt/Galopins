@@ -10,11 +10,13 @@ import { Link } from 'react-router-dom';
 
 function AccountNews() {
   const [infosData, setInfosData] = useState([]); // State with all Rando Data
-
+  
   const handleDelete = async (id) => {
     try {
       // Get token cookie for Authorization
       const token = Cookies.get('token');
+
+      console.log(token)
 
       // Error gestion if token not available
       if (!token) {
@@ -50,10 +52,10 @@ function AccountNews() {
         <h5 className='mb-4 text-center'> Tableau de gestion des dernières infos </h5>
         <div className='flex items-start justify-start mb-2'>
           <Link to="/account/addnews">
-          <button className='flex flex-row items-center gap-x-1 p-2 rounded-md bg-green-800 md:hover:bg-green-600'> 
-            <span>Créer une nouvelle information</span>
-            <span><RiAddCircleLine /></span>
-          </button>
+            <button className='flex flex-row items-center gap-x-1 p-2 rounded-md bg-green-800 md:hover:bg-green-600'> 
+              <span>Créer une nouvelle information</span>
+              <span><RiAddCircleLine /></span>
+            </button>
           </Link>
         </div>
         <table className="mb-2">
