@@ -18,7 +18,7 @@ function DownloadLink ({file, fileName, linkName, classname }: DownloadLinkProps
                 download ={fileName}
             >
                 <div className='flex gap-x-2 items-center'>
-                    {linkName}
+                    <span>{linkName}</span>
                     <BiSolidDownload className="text-lg md:text-2xl 2xl:text-3xl"/>
                 </div>
             </a>
