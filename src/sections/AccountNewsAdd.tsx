@@ -22,7 +22,7 @@ const AccountNewsAdd = () => {
         return;
       }
 
-      // Effectuez la requête POST pour ajouter une nouvelle information
+      // POST request to add new Info
       const response = await axios.post('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos', 
         {
           date,
@@ -36,10 +36,7 @@ const AccountNewsAdd = () => {
         }
       );
 
-
-
-
-      // Réinitialisez les champs du formulaire après l'ajout réussi
+      // Reset form after submit success
       setDate('');
       setTitle('');
       setDescription('');
