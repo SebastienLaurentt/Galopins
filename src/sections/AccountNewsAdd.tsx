@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import AccountHeader from '../components/AccountHeader';
+import { useNavigate } from 'react-router';
 
 const AccountNewsAdd = () => {
+  const navigate = useNavigate();
+
   const [date, setDate] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -41,6 +44,8 @@ const AccountNewsAdd = () => {
       setDate('');
       setTitle('');
       setDescription('');
+
+      navigate('/account');
     } catch (error) {
       console.error('Erreur lors de l\'ajout d\'informations :', error);
     }
