@@ -14,6 +14,7 @@ const AccountNewsAdd = () => {
 
       // Get token cookie for Authorization
       const token = Cookies.get('token');
+      console.log(token)
 
       // Error gestion if token not available
       if (!token) {
@@ -22,14 +23,18 @@ const AccountNewsAdd = () => {
       }
 
       // Effectuez la requête POST pour ajouter une nouvelle information
-      const response = await axios.post('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos', {
-        date,
-        title,
-        description,
+      const response = await axios.post('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos', 
+        {
+          date,
+          title,
+          description,
+        },
+        {
         headers: {
-            Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
           },
-      });
+        }
+      );
 
 
 
@@ -45,18 +50,18 @@ const AccountNewsAdd = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-stone-300 p-4 ">
-        <form onSubmit={handleSubmit} className='flex flex-col gap-y-2 text-center bg-slate-900 p-8 rounded-md'>
+        <form onSubmit={handleSubmit} className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'>
             <div className='flex flex-col gap-y-1'>
                 <label>Date:</label>
-                <input type="text" value={date} onChange={(e) => setDate(e.target.value)} required />         
+                <input type="text" value={date} onChange={(e) => setDate(e.target.value)} required className="text-black rounded-md p-1" />         
             </div>
             <div className='flex flex-col gap-y-1'>
                 <label>Titre:</label>
-                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
+                <input type="text"  value={title} onChange={(e) => setTitle(e.target.value)} required className="text-black rounded-md p-1"  />
             </div>
             <div className='flex flex-col gap-y-1'>
                 <label>Description:</label>
-                <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />      
+                <textarea value={description} onChange={(e) => setDescription(e.target.value)} required className="text-black rounded-md p-1" />      
             </div>
             <button type="submit" className='mt-4'>Créer la nouvelle information</button>
         </form>
