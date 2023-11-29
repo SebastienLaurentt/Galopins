@@ -49,7 +49,7 @@ const AccountNewsAdd = () => {
   return (
     <div className="min-h-screen bg-stone-300 p-4 ">
       <AccountHeader />
-      <div className=" flex flex-col items-center justify-center bg-stone-300 p-4 ">
+      <div className=" flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-16">
         <form onSubmit={handleSubmit} className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'>
             <div className='flex flex-col gap-y-1'>
                 <label>Date:</label>
