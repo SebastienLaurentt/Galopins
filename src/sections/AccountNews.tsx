@@ -4,6 +4,7 @@ import axios from 'axios';
 import { RiAddCircleLine } from "react-icons/ri";
 
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
 
 
 
@@ -48,14 +49,12 @@ function AccountNews() {
     <div className=''>
         <h5 className='mb-4 text-center'> Tableau de gestion des dernières infos </h5>
         <div className='flex items-start justify-start mb-2'>
-            <button className='flex flex-row  items-center gap-x-1 p-2 rounded-md bg-green-800 md:hover:bg-green-600'> 
-                <span>
-                    Créer une nouvelle information 
-                </span>
-                <span>
-                    <RiAddCircleLine />
-                </span>  
-            </button>
+          <Link to="/account/addnews">
+          <button className='flex flex-row items-center gap-x-1 p-2 rounded-md bg-green-800 md:hover:bg-green-600'> 
+            <span>Créer une nouvelle information</span>
+            <span><RiAddCircleLine /></span>
+          </button>
+          </Link>
         </div>
         <table className="mb-2">
           <thead>
