@@ -61,6 +61,8 @@ function Parcours() {
                 <p className='mb-3'>Le lieu de <strong>rendez-vous</strong> avant chaque départ est situé sur le parking en face du  95 Route de Valence (Bar le Provence). L'heure de
                 départ est fixée à 13h30.</p>
                 <ButtonLink 
+                    bgColor='bg-green-800'
+                    bgHoverColor='bg-green-600'
                     href="https://maps.app.goo.gl/1fQz1QrNGHzLm8a48"
                     linkName="VOIR LE POINT DE RDV"
                     logo={<TfiLocationPin/>}

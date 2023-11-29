@@ -1,45 +1,49 @@
 import { BiArrowBack } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "./Auth";
+import ButtonLink from "./ButtonLink";
 
 function AccountHeader () {
-    const navigate = useNavigate();
     const { logout } = useAuth(); 
     
     const handleLogout = async () => {
         logout();
-        navigate('/auth/login');
         };
 
     return (
-        <header className='flex gap-4'>
-            <ul>
+        <header className=''>
+            <ul className="flex flex-row justify-center">
                 <li>
-                    <button
-                    className="flex  p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-red-600 bg-red-800"
-                    onClick={handleLogout}
-                    >
-                        <div className='flex gap-x-2 items-center'>
-                        <span>
-                            Se déconnecter
-                        </span>
-                        <span className='text-lg md:text-2xl 2xl:text-3xl'>
-                            <CiLogout />
-                        </span>
-                        </div>
-                    </button>
-                </li>
-                <li>
-                    <Link
-                    href="/"
-                    linkName="Retourner sur le site"
-                    logo={<BiArrowBack />}
-                    classname=''
+                    <ButtonLink
+                        bgColor='bg-green-800'
+                        bgHoverColor='bg-green-600'
+                        href="/"
+                        linkName="Retourner sur les Galopins"
+                        logo={<BiArrowBack/>}
+                        classname='md:ml-4'
                     />
                 </li>
                 <li>
-                    
+                    <ButtonLink
+                        bgColor='bg-green-800'
+                        bgHoverColor='bg-green-600'
+                        href="/"
+                        linkName="Espace Administrateur"
+                        logo={<BiArrowBack/>}
+                        classname='md:ml-4'
+                    />
+                </li>
+                <li>
+                    <ButtonLink
+                        onClick={handleLogout}
+                        bgColor='bg-red-800'
+                        bgHoverColor='bg-red-600'
+                        href="/auth/login"
+                        linkName="Deconnexion"
+                        logo={<CiLogout/>}
+                        classname='md:ml-4'
+                    />
                 </li>
             </ul>
 
