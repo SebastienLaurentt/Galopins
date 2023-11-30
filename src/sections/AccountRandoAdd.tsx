@@ -8,42 +8,55 @@ const AccountRandoAdd = () => {
   const navigate = useNavigate();
 
   const [date, setDate] = useState('');
-  const [title, setTitle] = useState('');
+  const [destination, setDestination] = useState('');
   const [description, setDescription] = useState('');
+  const [image, setImage] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setImage(reader.result);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-
-      // Get token cookie for Authorization
       const token = Cookies.get('token');
-      console.log(token)
 
-      // Error gestion if token not available
       if (!token) {
         console.error('Le token n\'est pas disponible.');
         return;
       }
 
-      // POST request to add new Info
-      const response = await axios.post('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/randos', 
+      const formData = new FormData();
+      formData.append('date', date);
+      formData.append('destination', destination);
+      formData.append('description', description);
+      formData.append('image', image);
+
+      const response = await axios.post(
+        'https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/randos',
+        formData,
         {
-          date,
-          title,
-          description,
-        },
-        {
-        headers: {
-          Authorization: `Bearer ${token}`,
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            Authorization: `Bearer ${token}`,
           },
         }
       );
 
-      // Reset form after submit success
       setDate('');
-      setTitle('');
+      setDestination('');
       setDescription('');
+      setImage(null);
 
       navigate('/account');
     } catch (error) {
@@ -54,24 +67,56 @@ const AccountRandoAdd = () => {
   return (
     <div className="min-h-screen bg-stone-300 p-4 ">
       <AccountHeader />
-      <h3 className="text-black  text-center m-8">
-          Formulaire d'ajout d'une nouvelle randonnée
+      <h3 className="text-black text-center m-8">
+        Formulaire d'ajout d'une nouvelle randonnée
       </h3>
-      <div className=" flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-16">
-        <form onSubmit={handleSubmit} className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'>
-            <div className='flex flex-col gap-y-1'>
-                <label>Date:</label>
-                <input type="text" value={date} onChange={(e) => setDate(e.target.value)} required className="text-black rounded-md p-1" />         
-            </div>
-            <div className='flex flex-col gap-y-1'>
-                <label>Titre:</label>
-                <input type="text"  value={title} onChange={(e) => setTitle(e.target.value)} required className="text-black rounded-md p-1"  />
-            </div>
-            <div className='flex flex-col gap-y-1'>
-                <label>Description:</label>
-                <textarea value={description} onChange={(e) => setDescription(e.target.value)} required rows="10" className="text-black rounded-md p-1" />      
-            </div>
-            <button type="submit" className='mt-4 md:hover:font-bold'>Créer la nouvelle randonnée</button>
+      <div className="flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-16">
+        <form
+          onSubmit={handleSubmit}
+          className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'
+        >
+          <div className='flex flex-col gap-y-1'>
+            <label>Date:</label>
+            <input
+              type="text"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              required
+              className="text-black rounded-md p-1"
+            />
+          </div>
+          <div className='flex flex-col gap-y-1'>
+            <label>Destination:</label>
+            <input
+              type="text"
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
+              required
+              className="text-black rounded-md p-1"
+            />
+          </div>
+          <div className='flex flex-col gap-y-1'>
+            <label>Description:</label>
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              required
+              rows="10"
+              className="text-black rounded-md p-1"
+            />
+          </div>
+          <div className='flex flex-col gap-y-1'>
+            <label>Image:</label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="text-black rounded-md p-1"
+            />
+          </div>
+          <button type="submit" className='mt-4 md:hover:font-bold'>
+            Créer la nouvelle randonnée
+          </button>
         </form>
       </div>
     </div>
