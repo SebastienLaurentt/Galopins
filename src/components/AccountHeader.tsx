@@ -1,12 +1,15 @@
 import { BiArrowBack } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
-import { Link } from "react-router-dom";
 import { useAuth } from "./Auth";
 import ButtonLink from "./ButtonLink";
+import { useLocation } from 'react-router-dom';
 
 function AccountHeader () {
     const { logout } = useAuth(); 
-    
+    const location = useLocation();
+
+    const isAccountRoute = location.pathname === '/account';
+
     const handleLogout = async () => {
         logout();
         };
@@ -24,6 +27,7 @@ function AccountHeader () {
                         classname=''
                     />
                 </li>
+                {!isAccountRoute && (
                 <li>
                     <ButtonLink
                         bgColor='bg-green-800'
@@ -34,6 +38,7 @@ function AccountHeader () {
                         classname=''
                     />
                 </li>
+                )}
                 <li>
                     <ButtonLink
                         onClick={handleLogout}
