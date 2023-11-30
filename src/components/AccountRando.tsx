@@ -59,8 +59,8 @@ function AccountRando() {
           <thead>
             <tr className='border-b-2'>
               <th className="px-4 py-2">N°</th>
-              <th className="px-4 py-2">Date de la rando</th>
-              <th className="px-4 py-2">Nom de la rando</th>
+              <th className="px-4 py-2">Date</th>
+              <th className="px-4 py-2">Destination</th>
               <th className="px-4 py-2">Actions</th>
             </tr>
           </thead>
@@ -69,7 +69,7 @@ function AccountRando() {
               <tr key={rando.id} className="border-b">
                 <td className="px-4 py-2">{rando.id}</td>
                 <td className="px-4 py-2">{rando.date}</td>
-                <td className="px-4 py-2">{rando.name}</td>
+                <td className="px-4 py-2">{rando.destination}</td>
                 <td className="px-4 py-2">
                   <button onClick={() => handleDelete(rando.id)} className="text-red-500 md:hover:font-bold">Supprimer</button>
                 </td>
