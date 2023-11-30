@@ -97,7 +97,7 @@ function Login () {
                 href="/"
                 linkName="Retourner sur les Galopins"
                 logo={<BiArrowBack/>}
-                classname='md:ml-4'
+                classname=''
             />
 
         </div>

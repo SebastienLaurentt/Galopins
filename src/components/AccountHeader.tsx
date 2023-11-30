@@ -21,7 +21,7 @@ function AccountHeader () {
                         href="/"
                         linkName="Retourner sur les Galopins"
                         logo={<BiArrowBack/>}
-                        classname='md:ml-4'
+                        classname=''
                     />
                 </li>
                 <li>
@@ -31,7 +31,7 @@ function AccountHeader () {
                         href="/account"
                         linkName="Espace Administrateur"
                         logo={<BiArrowBack/>}
-                        classname='md:ml-4'
+                        classname=''
                     />
                 </li>
                 <li>
@@ -42,7 +42,7 @@ function AccountHeader () {
                         href="/auth/login"
                         linkName="Deconnexion"
                         logo={<CiLogout/>}
-                        classname='md:ml-4'
+                        classname=''
                     />
                 </li>
             </ul>
