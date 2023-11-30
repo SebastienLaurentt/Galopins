@@ -17,7 +17,7 @@ import { SwiperSlide } from 'swiper/react';
 
 function Photos() {
   const [randosData, setRandosData] = useState([]); // State with all Rando Data
-  const [selectedRandoName, setSelectedRandoName] = useState('Bulbizarre'); // State with name about the selected Rando
+  const [selectedRandoDestination, setSelectedRandoDestination] = useState('Bulbizarre'); // State with name about the selected Rando
 
 
   // Fetch all Randos Data
@@ -31,12 +31,12 @@ function Photos() {
 
   // Set the state of the 
   const handleRandoChange = (event) => {
-    setSelectedRandoName(event.target.value);
+    setSelectedRandoDestination(event.target.value);
   };
 
   // Collect datas of the selectedRando with find method to allow a match with his name 
   // between the states selectedRandoName and randosData 
-  const selectedRandoData = randosData.find(rando => rando.name === selectedRandoName);
+  const selectedRandoData = randosData.find(rando => rando.destination === selectedRandoDestination);
 
 
   return (
@@ -52,17 +52,17 @@ function Photos() {
       <div className="mb-8 flex flex-wrap gap-2 justify-center items-center">
         <select
           id="photoSelect"
-          value={selectedRandoName}
+          value={selectedRandoDestination}
           onChange={handleRandoChange}
           className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
         >
           {randosData.map(rando => (
             <option
-              key={rando.name}
+              key={rando.destination}
               className="font-bold"
-              value={rando.name}
+              value={rando.destination}
             >
-             {rando.date} - {rando.name}
+             {rando.date} - {rando.destination}
             </option>
           ))}
         </select>
