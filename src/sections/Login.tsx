@@ -5,6 +5,7 @@ import axios from "axios";
 import { useAuth } from "../components/Auth";
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import ButtonLink from "../components/ButtonLink";
 
 
 
@@ -90,11 +91,13 @@ function Login () {
                 </form>
             </div>
 
-            <Link 
-                    href="/"
-                    linkName="Retourner sur le site"
-                    logo={<BiArrowBack />}
-                    classname=''
+            <ButtonLink
+                bgColor='bg-green-800'
+                bgHoverColor='bg-green-600'
+                href="/"
+                linkName="Retourner sur les Galopins"
+                logo={<BiArrowBack/>}
+                classname='md:ml-4'
             />
 
         </div>
