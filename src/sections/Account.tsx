@@ -16,21 +16,24 @@ function Account() {
 
 
   return (
-    <div className="min-h-screen bg-stone-300 p-4 ">
+    <div className="min-h-screen bg-stone-300  ">
       <AccountHeader />
-      <div className=" flex flex-col items-center justify-center bg-stone-300 p-4 ">
-        <h3 className="text-black p-4 text-center">
+      <div className=" flex flex-col items-center justify-center bg-stone-300 m-8  ">
+        <h3 className="text-black  text-center">
           Bienvenue sur l'espace administrateur des Galopins ! 
         </h3>
-        <p className='italic text-black'> Depuis cet espace, il est possible de gérer les informations du site des Galopins. </p>
-        <ol className='text-center text-black '>
-          <li>
-            <p > <span className='font-bold'>Premierement</span>, vous pouvez choisir le type d'informations avez lequel vous souhaitez interagir en cliquant sur les boutons ci-dessous. </p>
-          </li>
-          <li>
-            <p > <span className='font-bold'>Deuxiemement</span>, vous pourez choisir d'ajouter, supprimer ou modifier ces informations.  </p>
-          </li>
-        </ol>
+        <div className='bg-stone-200 p-8 mb-4 rounded-full text-center'>
+          <p className='italic text-black'> Depuis cet espace, il est possible de gérer les informations du site des Galopins. </p>
+          <ol className='text-center text-black '>
+            <li>
+              <p > <span className='font-bold'>Premierement</span>, vous pouvez choisir le type d'informations avez lequel vous souhaitez interagir en cliquant sur les boutons ci-dessous. </p>
+            </li>
+            <li>
+              <p className='mb-0'> <span className='font-bold'>Deuxiemement</span>, vous pourez choisir d'ajouter, supprimer ou modifier ces informations.  </p>
+            </li>
+          </ol>
+        </div>
+
 
 
 

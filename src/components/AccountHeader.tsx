@@ -15,7 +15,7 @@ function AccountHeader () {
         };
 
     return (
-        <header className=''>
+        <header className='p-4'>
             <ul className="flex flex-wrap gap-4 justify-center">
                 <li>
                     <ButtonLink
