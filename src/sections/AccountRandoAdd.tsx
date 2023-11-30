@@ -10,14 +10,14 @@ const AccountRandoAdd = () => {
   const [date, setDate] = useState('');
   const [destination, setDestination] = useState('');
   const [description, setDescription] = useState('');
-  const [image, setImage] = useState(null);
+  const [pictures, setPictures] = useState(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
 
     reader.onloadend = () => {
-      setImage(reader.result);
+      setPictures(reader.result);
     };
 
     if (file) {
@@ -43,7 +43,7 @@ const AccountRandoAdd = () => {
           date,
           destination,
           description,
-          image,
+          pictures,
         },
         {
         headers: {
@@ -55,7 +55,7 @@ const AccountRandoAdd = () => {
       setDate('');
       setDestination('');
       setDescription('');
-      setImage(null);
+      setPictures(null);
 
       navigate('/account');
     } catch (error) {
