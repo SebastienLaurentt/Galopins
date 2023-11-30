@@ -36,19 +36,18 @@ const AccountRandoAdd = () => {
         return;
       }
 
-      const formData = new FormData();
-      formData.append('date', date);
-      formData.append('destination', destination);
-      formData.append('description', description);
-      formData.append('image', image);
 
       const response = await axios.post(
         'https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/randos',
-        formData,
         {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-            Authorization: `Bearer ${token}`,
+          date,
+          destination,
+          description,
+          image,
+        },
+        {
+        headers: {
+          Authorization: `Bearer ${token}`,
           },
         }
       );
