@@ -54,6 +54,9 @@ const AccountRandoAdd = () => {
   return (
     <div className="min-h-screen bg-stone-300 p-4 ">
       <AccountHeader />
+      <h3 className="text-black  text-center m-8">
+          Formulaire d'ajout d'une nouvelle randonnée
+      </h3>
       <div className=" flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-16">
         <form onSubmit={handleSubmit} className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'>
             <div className='flex flex-col gap-y-1'>
