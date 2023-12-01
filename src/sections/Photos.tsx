@@ -12,6 +12,8 @@ import axios from 'axios';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card.js';
 import { SwiperSlide } from 'swiper/react';
+import { BiSolidDownload } from 'react-icons/bi';
+import JSZip from 'jszip';
 
 
 
@@ -37,6 +39,40 @@ function Photos() {
   // Collect datas of the selectedRando with find method to allow a match with his name 
   // between the states selectedRandoName and randosData 
   const selectedRandoData = randosData.find(rando => rando.destination === selectedRandoDestination);
+
+    // DOWLOAD IMG AS ZIP
+    const handleDownloadClick = async () => {
+      if (!selectedRandoData || !selectedRandoData.pictures) {
+        console.error('Aucune donnée de randonnée sélectionnée ou aucune image disponible.');
+        return;
+      }
+    
+      const imageUrls = selectedRandoData.pictures;
+    
+      const zip = new JSZip();
+    
+      const promises = imageUrls.map(async (url, index) => {
+        try {
+          const response = await fetch(url);
+          const arrayBuffer = await response.arrayBuffer();
+          zip.file(`image_${index + 1}.jpg`, arrayBuffer);
+        } catch (error) {
+          console.error(`Erreur lors du chargement de l'image ${url}:`, error);
+        }
+      });
+    
+      await Promise.all(promises);
+    
+      zip.generateAsync({ type: 'blob' })
+        .then(content => {
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(content);
+          link.download = 'images.zip';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+    };
 
 
   return (
@@ -87,6 +123,18 @@ function Photos() {
             }) : "Chargement"}
           </Carousel>
         </div> 
+
+        <div className="mb-4 xl:mb-0 flex flex-wrap gap-2 justify-center items-center justify-center md:cursor-pointer">
+          <a 
+            className={`flex p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 bg-green-800`}
+            onClick={handleDownloadClick}
+          >
+            <div className='flex gap-x-2 items-center'>
+              TÉLÉCHARGER LES PHOTOS
+              <BiSolidDownload className=" text-lg md:text-2xl 2xl:text-3xl"/>
+            </div>
+          </a>
+        </div>
 
 
       </SubSection>
