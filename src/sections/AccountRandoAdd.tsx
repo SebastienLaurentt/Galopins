@@ -88,7 +88,7 @@ const AccountRandoAdd = () => {
           className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'
         >
           <div className='flex flex-col gap-y-1'>
-            <label>Date:</label>
+            <label>Date</label>
             <input
               type="text"
               value={date}
@@ -98,7 +98,7 @@ const AccountRandoAdd = () => {
             />
           </div>
           <div className='flex flex-col gap-y-1'>
-            <label>Destination:</label>
+            <label>Destination</label>
             <input
               type="text"
               value={destination}
@@ -108,7 +108,7 @@ const AccountRandoAdd = () => {
             />
           </div>
           <div className='flex flex-col gap-y-1'>
-            <label>Description:</label>
+            <label>Description</label>
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
