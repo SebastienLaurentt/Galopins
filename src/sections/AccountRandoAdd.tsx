@@ -10,18 +10,31 @@ const AccountRandoAdd = () => {
   const [date, setDate] = useState('');
   const [destination, setDestination] = useState('');
   const [description, setDescription] = useState('');
-  const [pictures, setPictures] = useState(null);
+  const [pictures, setPictures] = useState([]);
 
   const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
+    const files = e.target.files;
 
-    reader.onloadend = () => {
-      setPictures(reader.result);
-    };
+    if (files) {
+      const imageArray = Array.from(files).map((file) => {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
 
-    if (file) {
-      reader.readAsDataURL(file);
+          reader.onloadend = () => {
+            resolve(reader.result);
+          };
+
+          reader.onerror = reject;
+
+          if (file) {
+            reader.readAsDataURL(file);
+          }
+        });
+      });
+
+      Promise.all(imageArray).then((base64Images) => {
+        setPictures(base64Images);
+      });
     }
   };
 
@@ -36,7 +49,6 @@ const AccountRandoAdd = () => {
         return;
       }
 
-
       const response = await axios.post(
         'https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/randos',
         {
@@ -46,8 +58,9 @@ const AccountRandoAdd = () => {
           pictures,
         },
         {
-        headers: {
-          Authorization: `Bearer ${token}`,
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -55,7 +68,7 @@ const AccountRandoAdd = () => {
       setDate('');
       setDestination('');
       setDescription('');
-      setPictures(null);
+      setPictures([]);
 
       navigate('/account');
     } catch (error) {
@@ -111,6 +124,7 @@ const AccountRandoAdd = () => {
               accept="image/*"
               onChange={handleImageChange}
               className="text-black rounded-md p-1"
+              multiple
             />
           </div>
           <button type="submit" className='mt-4 md:hover:font-bold'>
