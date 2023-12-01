@@ -2,14 +2,14 @@ import { BiSolidDownload } from 'react-icons/bi';
 
 
 interface DownloadButtonProps {
+    classname?:string;
     file?:string;
     fileName?:string;
     linkName:string;
-    classname?:string;
 }
 
 
-function DownloadButton ({file, fileName, linkName, classname }: DownloadButtonProps) {
+function DownloadButton ({ classname, file, fileName, linkName, }: DownloadButtonProps) {
 
     return(
             <a 

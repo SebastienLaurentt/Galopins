@@ -14,6 +14,7 @@ import Card from '../components/Card.js';
 import { SwiperSlide } from 'swiper/react';
 import { BiSolidDownload } from 'react-icons/bi';
 import JSZip from 'jszip';
+import ArchiveDownloadButton from '../components/ArchiveDownloadButton.js';
 
 
 
@@ -124,20 +125,11 @@ function Photos() {
           </Carousel>
         </div> 
 
-        <div className="mb-4 xl:mb-0 flex flex-wrap gap-2 justify-center items-center justify-center md:cursor-pointer">
-          <a 
-            className={`flex p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 bg-green-800`}
+        <ArchiveDownloadButton 
+            classname='md:ml-4'
             onClick={handleDownloadClick}
-          >
-            <div className='flex gap-x-2 items-center'>
-              TÉLÉCHARGER LES PHOTOS
-              <BiSolidDownload className=" text-lg md:text-2xl 2xl:text-3xl"/>
-            </div>
-          </a>
-        </div>
-
-        
-
+            linkName="TÉLÉCHARGER LES PHOTOS"
+        />
 
       </SubSection>
 
