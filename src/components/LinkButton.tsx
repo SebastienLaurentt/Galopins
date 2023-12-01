@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-interface LinkProps {
+interface LinkButtonProps {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     bgColor:string;
     bgHoverColor:string;
@@ -11,7 +11,7 @@ interface LinkProps {
 }
 
 
-function ButtonLink ({onClick, bgHoverColor, bgColor, href, linkName, logo, classname }: LinkProps) {
+function LinkButton ({onClick, bgHoverColor, bgColor, href, linkName, logo, classname }: LinkButtonProps) {
 
     return(
         <button
@@ -33,4 +33,4 @@ function ButtonLink ({onClick, bgHoverColor, bgColor, href, linkName, logo, clas
 
 }
 
-export default ButtonLink;
+export default LinkButton;

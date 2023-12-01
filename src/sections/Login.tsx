@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Link from "../components/ButtonLink";
+import Link from "../components/LinkButton";
 import { BiArrowBack } from "react-icons/bi";
 import axios from "axios";
 import { useAuth } from "../components/Auth";
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import ButtonLink from "../components/ButtonLink";
+import ButtonLink from "../components/LinkButton";
 
 
 

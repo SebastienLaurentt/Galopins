@@ -1,7 +1,7 @@
 import { BiArrowBack } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
 import { useAuth } from "./Auth";
-import ButtonLink from "./ButtonLink";
+import LinkButton from "./LinkButton";
 import { useLocation } from 'react-router-dom';
 
 function AccountHeader () {
@@ -18,7 +18,7 @@ function AccountHeader () {
         <header className='p-4'>
             <ul className="flex flex-wrap gap-4 justify-center">
                 <li>
-                    <ButtonLink
+                    <LinkButton
                         bgColor='bg-green-800'
                         bgHoverColor='bg-green-600'
                         href="/"
@@ -29,7 +29,7 @@ function AccountHeader () {
                 </li>
                 {!isAccountRoute && (
                 <li>
-                    <ButtonLink
+                    <LinkButton
                         bgColor='bg-green-800'
                         bgHoverColor='bg-green-600'
                         href="/account"
@@ -40,7 +40,7 @@ function AccountHeader () {
                 </li>
                 )}
                 <li>
-                    <ButtonLink
+                    <LinkButton
                         onClick={handleLogout}
                         bgColor='bg-red-800'
                         bgHoverColor='bg-red-600'
