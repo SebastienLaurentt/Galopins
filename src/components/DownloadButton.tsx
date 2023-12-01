@@ -1,7 +1,7 @@
 import { BiSolidDownload } from 'react-icons/bi';
 
 
-interface DownloadLinkProps {
+interface DownloadButtonProps {
     file?:string;
     fileName?:string;
     linkName:string;
@@ -9,7 +9,7 @@ interface DownloadLinkProps {
 }
 
 
-function DownloadLink ({file, fileName, linkName, classname }: DownloadLinkProps) {
+function DownloadButton ({file, fileName, linkName, classname }: DownloadButtonProps) {
 
     return(
             <a 
@@ -28,4 +28,4 @@ function DownloadLink ({file, fileName, linkName, classname }: DownloadLinkProps
 }
 
 
-export default DownloadLink;
+export default DownloadButton;

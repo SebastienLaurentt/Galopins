@@ -3,7 +3,7 @@ import RejoindreBg from '../static/img/rejoindre.webp';
 import { LuBackpack } from 'react-icons/lu';
 
 import AdmissionFile from '../assets/Admission_Galopins.pdf'
-import DownloadLink from '../components/DownloadLink';
+import DownloadButton from '../components/DownloadButton';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 import ScrollTop from '../components/ScrollTop';
@@ -32,7 +32,7 @@ function Rejoindre() {
                 
                 <p className='mb-4'>Les chaussures de randonnées sont <strong>obligatoires</strong> (baskets non autorisées). Une polaire et un coupe vent sont conseillés selon la saison. Les accompagnateurs se réservent le droit de refuser les personnes mal équipées.</p>
                 <p className='mb-3'>Un montant de 15€ ainsi que le formulaire d'inscription ci-dessous seront demandés afin de valider l'adhésion. </p>
-                <DownloadLink 
+                <DownloadButton 
                     file={AdmissionFile}
                     fileName="Admission_Galopins.pdf"
                     linkName="BULLETIN D'ADHÉSION"

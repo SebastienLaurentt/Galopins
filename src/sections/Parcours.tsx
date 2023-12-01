@@ -6,7 +6,7 @@ import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 
 import ProgrammeFile from '../assets/Programme_Galopins.pdf'
-import DownloadLink from '../components/DownloadLink';
+import DownloadButton from '../components/DownloadButton';
 import ButtonLink from '../components/ButtonLink';
 import Tag from '../components/Tag';
 import ScrollTop from '../components/ScrollTop';
@@ -29,7 +29,7 @@ function Parcours() {
             </SectionHeader>
             <div className='mb-4 flex flex-col items-center md:items-start px-4 md:px-12 xl:px-20 wideScreen'>
                 <p className='mb-3'>Le programme des randonnées est établi pour une période de <strong>4 mois</strong>. Vous pouvez télécharger le programme actuel ci-dessous : </p>
-                <DownloadLink 
+                <DownloadButton 
                     file={ProgrammeFile}
                     fileName="Programme_Galopins.pdf"
                     linkName="PROGRAMME"
