@@ -5,12 +5,16 @@ import Cookies from 'js-cookie';
 import { RiAddCircleLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-
+interface InfoDataProps {
+  id: number;
+  date: string;
+  destination: string;
+}
 
 function AccountRando() {
-  const [randosData, setRandosData] = useState([]); // State with all Rando Data
+  const [randosData, setRandosData] = useState<InfoDataProps[]>([]); // State with all Rando Data
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (id: number) => {
     try {
       // Get token cookie for Authorization
       const token = Cookies.get('token');

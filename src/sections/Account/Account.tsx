@@ -10,7 +10,7 @@ function Account() {
   const [activeButton, setActiveButton] = useState('Infos'); // État initial avec le bouton "Infos" actif
 
 
-  const handleButtonClick = (buttonName) => {
+  const handleButtonClick = (buttonName: string) => {
     setActiveButton(buttonName);
   };
 
@@ -33,9 +33,6 @@ function Account() {
             </li>
           </ol>
         </div>
-
-
-
 
         <div className='flex flex-row gap-x-2 text-black mb-2'>
           <button

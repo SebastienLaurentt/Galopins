@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import MainPage from './sections/MainPage';
 import Login from './sections/Account/Login';
 import Account from './sections/Account/Account';
-import PrivateRoute from './components/PrivateRoute';
+import PrivateRoute from './components/Account/PrivateRoute';
 import { useAuth } from './components/Account/Auth';
 import { useEffect } from 'react';
 import AccountNewsAdd from './sections/Account/AccountNewsAdd';

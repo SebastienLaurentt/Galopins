@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router';
 import Input from '../../components/Account/Input';
 import AccountHeader from '../../components/Account/AccountHeader';
-import Textarea from '../../components/Account/TextArea';
+import Textarea from '../../components/Account/Textarea';
 
 const AccountRandoAdd = () => {
   const navigate = useNavigate();

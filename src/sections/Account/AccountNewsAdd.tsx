@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router';
 import Input from '../../components/Account/Input';
 import AccountHeader from '../../components/Account/AccountHeader';
-import Textarea from '../../components/Account/TextArea';
+import Textarea from '../../components/Account/Textarea';
 
 const AccountNewsAdd = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const AccountNewsAdd = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -46,6 +46,8 @@ const AccountNewsAdd = () => {
       setDate('');
       setTitle('');
       setDescription('');
+
+      console.log(response)
 
       navigate('/account');
     } catch (error) {
