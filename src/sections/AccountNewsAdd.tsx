@@ -3,6 +3,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import AccountHeader from '../components/AccountHeader';
 import { useNavigate } from 'react-router';
+import DateInput from '../components/DateInput';
 
 const AccountNewsAdd = () => {
   const navigate = useNavigate();
@@ -10,6 +11,10 @@ const AccountNewsAdd = () => {
   const [date, setDate] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value)
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,10 +64,10 @@ const AccountNewsAdd = () => {
       </h3>
       <div className=" flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-16">
         <form onSubmit={handleSubmit} className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'>
-            <div className='flex flex-col gap-y-1'>
-                <label>Date</label>
-                <input type="text" value={date} onChange={(e) => setDate(e.target.value)} required className="text-black rounded-md p-1" />         
-            </div>
+            <DateInput 
+              date={date}  
+              handleDateChange={handleDateChange}
+            />
             <div className='flex flex-col gap-y-1'>
                 <label>Titre</label>
                 <input type="text"  value={title} onChange={(e) => setTitle(e.target.value)} required className="text-black rounded-md p-1"  />
