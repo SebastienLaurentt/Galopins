@@ -86,7 +86,7 @@ const AccountRandoAdd = () => {
       <h3 className="text-black text-center m-8">
         Formulaire d'ajout d'une nouvelle randonnée
       </h3>
-      <div className="flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-16">
+      <div className="flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-8">
         <form
           onSubmit={handleSubmit}
           className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'
@@ -94,13 +94,14 @@ const AccountRandoAdd = () => {
           <Input 
             inputName='Date'
             value={date}  
-            onChange={setDate}
+            setter={setDate}
             placeholder='JJ/MM/AAAA'
+            isDate={true}
           />
           <Input 
             inputName='Destination'
             value={destination}  
-            onChange={setDestination}
+            setter={setDestination}
             placeholder='Destination'
           />
           <Textarea

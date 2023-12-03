@@ -66,13 +66,14 @@ const AccountNewsAdd = () => {
           <Input 
             inputName='Date'
             value={date}  
-            onChange={setDate}
+            setter={setDate}
             placeholder='JJ/MM/AAAA'
+            isDate={true}
           />
           <Input 
             inputName='Titre'
             value={title}  
-            onChange={setTitle}
+            setter={setTitle}
             placeholder='Titre'
           />
           <Textarea
