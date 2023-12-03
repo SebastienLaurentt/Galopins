@@ -1,10 +1,17 @@
 // Auth.js
 import { createContext, useContext, useState } from 'react';
+import { ReactNode } from 'react';
 import Cookies from 'js-cookie';
 
-const AuthContext = createContext();
+interface AuthContextType {
+  isLogged: boolean;
+  login: () => void;
+  logout: () => void;
+}
 
-export const AuthProvider = ({ children }) => {
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [isLogged, setIsLogged] = useState(Cookies.get('isLogged') === 'true');
 
   const login = () => {
