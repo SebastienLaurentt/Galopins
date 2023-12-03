@@ -12,14 +12,18 @@ import axios from 'axios';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card.js';
 import { SwiperSlide } from 'swiper/react';
-import { BiSolidDownload } from 'react-icons/bi';
 import JSZip from 'jszip';
 import ArchiveDownloadButton from '../components/ArchiveDownloadButton.js';
 
-
+interface RandoData {
+  date:string;
+  destination: string;
+  description:string;
+  pictures?: string[];
+}
 
 function Photos() {
-  const [randosData, setRandosData] = useState([]); // State with all Rando Data
+  const [randosData, setRandosData] = useState<RandoData[]>([]); // State with all Rando Data
   const [selectedRandoDestination, setSelectedRandoDestination] = useState('Bulbizarre'); // State with name about the selected Rando
 
 
@@ -33,7 +37,7 @@ function Photos() {
   }, []); 
 
   // Set the state of the 
-  const handleRandoChange = (event) => {
+  const handleRandoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRandoDestination(event.target.value);
   };
 
@@ -111,18 +115,15 @@ function Photos() {
 
           
         <div className="mb-8 xl:mb-4 ">
-          <Carousel>
-            {selectedRandoData ? selectedRandoData.pictures.map((value) => {
-              return (
+        <Carousel>
+          {selectedRandoData && selectedRandoData.pictures
+            ? selectedRandoData.pictures.map((value) => (
                 <SwiperSlide className="" key={value}>
-                  <Card 
-                    key={value}
-                    mainImage={value}
-                  />
+                  <Card key={value} mainImage={value} />
                 </SwiperSlide>
-              );
-            }) : "Chargement"}
-          </Carousel>
+              ))
+            : "Chargement"}
+        </Carousel>
         </div> 
 
         <ArchiveDownloadButton 

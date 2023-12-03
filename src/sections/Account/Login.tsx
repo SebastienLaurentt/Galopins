@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from "../../components/LinkButton";
 import { BiArrowBack } from "react-icons/bi";
 import axios from "axios";
 import { useAuth } from "../../components/Account/Auth";
@@ -14,9 +13,9 @@ function Login () {
     const { login } = useAuth(); 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<null | string>(null);
   
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         try {

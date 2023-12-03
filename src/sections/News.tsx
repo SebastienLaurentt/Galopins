@@ -8,8 +8,14 @@ import NewsBg from '../static/img/news.webp';
 import { HiOutlineNewspaper } from "react-icons/hi2";
 import axios from "axios";
 
+interface InfoData {
+    title: string;
+    date: string;
+    description: string;
+  }
+
 function News() {
-    const [infosData, setInfosData] = useState([]); // State with all Rando Data
+    const [infosData, setInfosData] = useState<InfoData[]>([]);
 
       // Fetch all Randos Data
     useEffect(() => {

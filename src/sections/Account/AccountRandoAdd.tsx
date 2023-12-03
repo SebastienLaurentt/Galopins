@@ -12,18 +12,18 @@ const AccountRandoAdd = () => {
   const [date, setDate] = useState('');
   const [destination, setDestination] = useState('');
   const [description, setDescription] = useState('');
-  const [pictures, setPictures] = useState([]);
+  const [pictures, setPictures] = useState<string[]>([]);
 
-  const handleImageChange = (e) => {
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
 
     if (files) {
       const imageArray = Array.from(files).map((file) => {
-        return new Promise((resolve, reject) => {
+        return new Promise<string>((resolve, reject) => {
           const reader = new FileReader();
 
           reader.onloadend = () => {
-            resolve(reader.result);
+            resolve(reader.result as string);
           };
 
           reader.onerror = reject;
@@ -34,13 +34,13 @@ const AccountRandoAdd = () => {
         });
       });
 
-      Promise.all(imageArray).then((base64Images) => {
+      Promise.all(imageArray).then((base64Images: string[]) => {
         setPictures(base64Images);
       });
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -72,6 +72,8 @@ const AccountRandoAdd = () => {
       setDescription('');
       setPictures([]);
 
+      console.log(response.data);
+      
       navigate('/account');
     } catch (error) {
       console.error('Erreur lors de l\'ajout d\'informations :', error);
