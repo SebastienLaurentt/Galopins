@@ -3,13 +3,13 @@ import { Routes, Route } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 import MainPage from './sections/MainPage';
-import Login from './sections/Login';
-import Account from './sections/Account';
+import Login from './sections/Account/Login';
+import Account from './sections/Account/Account';
 import PrivateRoute from './components/PrivateRoute';
-import { useAuth } from './components/Auth';
+import { useAuth } from './components/Account/Auth';
 import { useEffect } from 'react';
-import AccountNewsAdd from './sections/AccountNewsAdd';
-import AccountRandoAdd from './sections/AccountRandoAdd';
+import AccountNewsAdd from './sections/Account/AccountNewsAdd';
+import AccountRandoAdd from './sections/Account/AccountRandoAdd';
 
 const App = () => {
   const { isLogged, login  }  = useAuth();

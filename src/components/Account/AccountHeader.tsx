@@ -1,7 +1,7 @@
 import { BiArrowBack } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
 import { useAuth } from "./Auth";
-import LinkButton from "./LinkButton";
+import LinkButton from "../LinkButton";
 import { useLocation } from 'react-router-dom';
 
 function AccountHeader () {

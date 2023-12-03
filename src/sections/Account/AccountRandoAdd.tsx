@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import AccountHeader from '../components/AccountHeader';
 import { useNavigate } from 'react-router';
+import Input from '../../components/Account/Input';
+import AccountHeader from '../../components/Account/AccountHeader';
+import Textarea from '../../components/Account/TextArea';
 
 const AccountRandoAdd = () => {
   const navigate = useNavigate();
@@ -87,36 +89,24 @@ const AccountRandoAdd = () => {
           onSubmit={handleSubmit}
           className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'
         >
-          <div className='flex flex-col gap-y-1'>
-            <label>Date</label>
-            <input
-              type="text"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              required
-              className="text-black rounded-md p-1"
-            />
-          </div>
-          <div className='flex flex-col gap-y-1'>
-            <label>Destination</label>
-            <input
-              type="text"
-              value={destination}
-              onChange={(e) => setDestination(e.target.value)}
-              required
-              className="text-black rounded-md p-1"
-            />
-          </div>
-          <div className='flex flex-col gap-y-1'>
-            <label>Description</label>
-            <textarea
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              required
-              rows="10"
-              className="text-black rounded-md p-1"
-            />
-          </div>
+          <Input 
+            inputName='Date'
+            value={date}  
+            onChange={setDate}
+            placeholder='JJ/MM/AAAA'
+          />
+          <Input 
+            inputName='Destination'
+            value={destination}  
+            onChange={setDestination}
+            placeholder='Destination'
+          />
+          <Textarea
+            textareaName='Description'
+            value={description}
+            onChange={setDescription}
+            placeholder='Description'
+          />
           <div className='flex flex-col gap-y-1'>
             <label>Image:</label>
             <input

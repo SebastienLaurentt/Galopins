@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
-import AccountRando from '../components/AccountRando';
-import AccountNews from '../components/AccountNews';
-import AccountHeader from '../components/AccountHeader';
+import AccountRando from '../../components/Account/AccountRando';
+import AccountNews from '../../components/Account/AccountNews';
+import AccountHeader from '../../components/Account/AccountHeader';
 
 
 function Account() {

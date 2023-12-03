@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import AccountHeader from '../components/AccountHeader';
 import { useNavigate } from 'react-router';
-import DateInput from '../components/DateInput';
+import Input from '../../components/Account/Input';
+import AccountHeader from '../../components/Account/AccountHeader';
+import Textarea from '../../components/Account/TextArea';
 
 const AccountNewsAdd = () => {
   const navigate = useNavigate();
@@ -11,10 +12,6 @@ const AccountNewsAdd = () => {
   const [date, setDate] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-
-  const handleDateChange = (e) => {
-    setDate(e.target.value)
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -64,18 +61,24 @@ const AccountNewsAdd = () => {
       </h3>
       <div className=" flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-16">
         <form onSubmit={handleSubmit} className='flex flex-col gap-y-4 text-center bg-slate-900 p-8 rounded-md'>
-            <DateInput 
-              date={date}  
-              handleDateChange={handleDateChange}
-            />
-            <div className='flex flex-col gap-y-1'>
-                <label>Titre</label>
-                <input type="text"  value={title} onChange={(e) => setTitle(e.target.value)} required className="text-black rounded-md p-1"  />
-            </div>
-            <div className='flex flex-col gap-y-1'>
-                <label>Description</label>
-                <textarea value={description} onChange={(e) => setDescription(e.target.value)} required className="text-black rounded-md p-1" />      
-            </div>
+          <Input 
+            inputName='Date'
+            value={date}  
+            onChange={setDate}
+            placeholder='JJ/MM/AAAA'
+          />
+          <Input 
+            inputName='Titre'
+            value={title}  
+            onChange={setTitle}
+            placeholder='Titre'
+          />
+          <Textarea
+            textareaName='Description'
+            value={description}
+            onChange={setDescription}
+            placeholder='Description'
+          />
             <button type="submit" className='mt-4 md:hover:font-bold'>Créer la nouvelle information</button>
         </form>
       </div>
