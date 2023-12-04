@@ -109,11 +109,6 @@ function Photos() {
           </select>
         </div>
 
-        <div className='flex flex-wrap justify-center'>
-        <p>{selectedRandoData ? selectedRandoData.description : "Chargement..."}</p>
-        </div>
-
-            
         <div className="mb-4">
           {selectedRandoData && selectedRandoData.pictures && (
             <Gallery
@@ -124,6 +119,10 @@ function Photos() {
               }))}
             />
           )}
+        </div>
+
+        <div className='flex flex-wrap justify-center'>
+        <p>{selectedRandoData ? selectedRandoData.description : "Chargement..."}</p>
         </div>
 
         <ArchiveDownloadButton 
