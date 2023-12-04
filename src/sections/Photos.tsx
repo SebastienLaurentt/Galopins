@@ -9,11 +9,11 @@ import Section from '../components/Section';
 import SubSection from '../components/SubSection';
 import ScrollTop from '../components/ScrollTop';
 import axios from 'axios';
-import Carousel from '../components/Carousel';
-import Card from '../components/Card.js';
-import { SwiperSlide } from 'swiper/react';
 import JSZip from 'jszip';
 import ArchiveDownloadButton from '../components/ArchiveDownloadButton.js';
+
+import Gallery from 'react-image-gallery';
+import 'react-image-gallery/styles/scss/image-gallery.scss';
 
 interface RandoData {
   date:string;
@@ -90,41 +90,41 @@ function Photos() {
         <MdOutlinePhotoCamera className="icon md:mt-4"/>
       </SectionHeader>
       <SubSection>
-      <div className="mb-8 flex flex-wrap gap-2 justify-center items-center">
-        <select
-          id="photoSelect"
-          value={selectedRandoDestination}
-          onChange={handleRandoChange}
-          className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
-        >
-          {randosData.map(rando => (
-            <option
-              key={rando.destination}
-              className="font-bold"
-              value={rando.destination}
-            >
-             {rando.date} - {rando.destination}
-            </option>
-          ))}
-        </select>
-      </div>
+        <div className="mb-8 flex flex-wrap gap-2 justify-center items-center">
+          <select
+            id="photoSelect"
+            value={selectedRandoDestination}
+            onChange={handleRandoChange}
+            className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
+          >
+            {randosData.map(rando => (
+              <option
+                key={rando.destination}
+                className="font-bold"
+                value={rando.destination}
+              >
+              {rando.date} - {rando.destination}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <div className='flex flex-wrap justify-center'>
         <p>{selectedRandoData ? selectedRandoData.description : "Chargement..."}</p>
         </div>
 
-          
-        <div className="mb-8 xl:mb-4 ">
-        <Carousel>
-          {selectedRandoData && selectedRandoData.pictures
-            ? selectedRandoData.pictures.map((value) => (
-                <SwiperSlide className="" key={value}>
-                  <Card key={value} mainImage={value} />
-                </SwiperSlide>
-              ))
-            : "Chargement"}
-        </Carousel>
-        </div> 
+            
+        <div className="mb-4">
+          {selectedRandoData && selectedRandoData.pictures && (
+            <Gallery
+              items={selectedRandoData.pictures.map(imageUrl => ({
+                original: imageUrl,
+                originalHeight: 200,
+                thumbnail: imageUrl,
+              }))}
+            />
+          )}
+        </div>
 
         <ArchiveDownloadButton 
             classname='md:ml-4'

@@ -8,7 +8,7 @@ interface InputProps {
 
 const Input = ({ inputName, value, setter, placeholder, isDate }: InputProps) => {
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let inputValue = e.target.value;
 
     if (isDate) {
