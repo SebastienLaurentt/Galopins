@@ -36,7 +36,7 @@ const Input = ({ inputName, value, setter, placeholder, isDate }: InputProps) =>
   };
 
   return (
-    <div className="flex flex-col gap-y-1">
+    <div className="flex flex-col gap-y-1 text-md">
       <label>{inputName}</label>
       <input
         type="text"

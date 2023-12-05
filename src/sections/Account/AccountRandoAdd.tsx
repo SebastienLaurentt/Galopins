@@ -6,6 +6,8 @@ import Input from '../../components/Account/Input';
 import AccountHeader from '../../components/Account/AccountHeader';
 import Textarea from '../../components/Account/Textarea';
 import imageCompression from 'browser-image-compression';
+import { AiOutlinePicture } from 'react-icons/ai';
+import ValidationButton from '../../components/Account/ValidationButton';
 
 const AccountRandoAdd = () => {
   const navigate = useNavigate();
@@ -47,6 +49,20 @@ const AccountRandoAdd = () => {
       reader.onerror = reject;
       reader.readAsDataURL(file);
     });
+  };
+
+  const renderSelectedImageCount = () => {
+    if (pictures.length === 0) {
+      return (
+        <span className="text-red-500 mt-2 text-md">Aucune image sélectionnée</span>
+      );
+    } else {
+      return (
+        <span className="text-green-600 mt-2 text-md">
+          {pictures.length} {pictures.length === 1 ? 'image sélectionnée' : 'images sélectionnées'} 
+        </span>
+      );
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -92,7 +108,7 @@ const AccountRandoAdd = () => {
   return (
     <div className="min-h-screen bg-stone-300 p-4 ">
       <AccountHeader />
-      <h3 className="text-black text-center m-8">
+      <h3 className="text-black text-center m-4">
         Formulaire d'ajout d'une nouvelle randonnée
       </h3>
       <div className="flex flex-col justify-center items-center justify-center bg-stone-300 p-4 mt-8">
@@ -111,27 +127,39 @@ const AccountRandoAdd = () => {
             inputName='Destination'
             value={destination}  
             setter={setDestination}
-            placeholder='Destination'
+            placeholder='Destination de la randonnée...'
           />
           <Textarea
             textareaName='Description'
             value={description}
             onChange={setDescription}
-            placeholder='Description'
+            placeholder='Description de la randonnée...'
           />
-          <div className='flex flex-col gap-y-1'>
-            <label>Image</label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="text-black rounded-md p-1"
-              multiple
-            />
+          <div className='flex flex-col gap-y-1 text-md'>
+            <label>
+              Images
+            <div className="flex flex-col items-center justify-center   cursor-pointer">
+              <AiOutlinePicture size={64} />
+              <p className="mb-0">
+                <span className="text-md">
+                  Cliquer pour sélectionner les images
+                </span>
+              </p>
+            </div>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="hidden"
+                multiple
+              />
+            </label>
+            {/* Afficher le nombre d'images sélectionnées à côté du bouton */}
+            {renderSelectedImageCount()}
           </div>
-          <button type="submit" className='mt-4 md:hover:font-bold'>
-            Créer la nouvelle randonnée
-          </button>
+          <ValidationButton
+            buttonName='Créer la nouvelle information'
+          />
         </form>
       </div>
     </div>

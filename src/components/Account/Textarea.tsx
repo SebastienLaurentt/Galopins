@@ -8,7 +8,7 @@ interface TextareaProps {
 const Textarea = ({ textareaName, value, onChange, placeholder }: TextareaProps) => {
 
   return (
-    <div className="flex flex-col gap-y-1">
+    <div className="flex flex-col gap-y-1 text-md">
       <label>{textareaName}</label>
       <textarea
         value={value}

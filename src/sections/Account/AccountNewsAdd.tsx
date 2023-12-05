@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router';
 import Input from '../../components/Account/Input';
 import AccountHeader from '../../components/Account/AccountHeader';
 import Textarea from '../../components/Account/Textarea';
+import ValidationButton from '../../components/Account/ValidationButton';
 
 const AccountNewsAdd = () => {
   const navigate = useNavigate();
@@ -74,15 +75,17 @@ const AccountNewsAdd = () => {
             inputName='Titre'
             value={title}  
             setter={setTitle}
-            placeholder='Titre'
+            placeholder="Titre de l'information..."
           />
           <Textarea
             textareaName='Description'
             value={description}
             onChange={setDescription}
-            placeholder='Description'
+            placeholder="Description de l'information..."
           />
-            <button type="submit" className='mt-4 md:hover:font-bold'>Créer la nouvelle information</button>
+          <ValidationButton
+            buttonName='Créer la nouvelle information'
+          />
         </form>
       </div>
     </div>
