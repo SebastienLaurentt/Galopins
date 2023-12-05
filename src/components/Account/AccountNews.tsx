@@ -4,7 +4,6 @@ import axios from 'axios';
 import { RiAddCircleLine } from "react-icons/ri";
 
 import Cookies from 'js-cookie';
-import { Link } from 'react-router-dom';
 import AccountLinkButton from './AccountLinkButton';
 
 interface InfoDataProps {

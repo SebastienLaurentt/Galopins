@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { RiAddCircleLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
 import AccountLinkButton from './AccountLinkButton';
 
 interface InfoDataProps {
