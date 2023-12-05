@@ -22,7 +22,7 @@ function Account() {
         <h3 className="text-black  text-center">
           Bienvenue sur l'espace administrateur des Galopins ! 
         </h3>
-        <div className='bg-stone-200 p-8 mb-4 rounded-full text-center'>
+        <div className='bg-stone-200 p-8 mb-4 rounded-xl text-center'>
           <p className='italic text-black'> Depuis cet espace, il est possible de gérer les informations du site des Galopins. </p>
           <ol className='text-center text-black '>
             <li>
@@ -49,7 +49,7 @@ function Account() {
             }`}
             onClick={() => handleButtonClick('Rando')}
           >
-            Rando
+            Randos
           </button>
           <button
             className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
@@ -64,7 +64,7 @@ function Account() {
 
         <div className="text-white bg-slate-900 p-4 rounded-md mb-4">
           {activeButton === 'Infos' && <AccountNews />}
-          {activeButton === 'Rando' && <AccountRando />}
+          {activeButton === 'Randos' && <AccountRando />}
           {/* {activeButton === 'Liens' && <AccountLiens />} */}
         </div>
       </div>
