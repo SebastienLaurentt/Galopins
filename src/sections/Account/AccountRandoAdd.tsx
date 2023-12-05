@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router';
 import Input from '../../components/Account/Input';
 import AccountHeader from '../../components/Account/AccountHeader';
 import Textarea from '../../components/Account/Textarea';
+import imageCompression from 'browser-image-compression';
 
 const AccountRandoAdd = () => {
   const navigate = useNavigate();
@@ -14,30 +15,38 @@ const AccountRandoAdd = () => {
   const [description, setDescription] = useState('');
   const [pictures, setPictures] = useState<string[]>([]);
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
 
     if (files) {
-      const imageArray = Array.from(files).map((file) => {
-        return new Promise<string>((resolve, reject) => {
-          const reader = new FileReader();
-
-          reader.onloadend = () => {
-            resolve(reader.result as string);
-          };
-
-          reader.onerror = reject;
-
-          if (file) {
-            reader.readAsDataURL(file);
+      const imageArray = await Promise.all(
+        Array.from(files).map(async (file) => {
+          try {
+            const compressedImage = await imageCompression(file, { maxSizeMB: 0.1 });
+            const base64Image = await convertToBase64(compressedImage);
+            return base64Image;
+          } catch (error) {
+            console.error('Erreur lors de la compression de l\'image :', error);
+            return null;
           }
-        });
-      });
+        })
+      );
 
-      Promise.all(imageArray).then((base64Images: string[]) => {
-        setPictures(base64Images);
-      });
+      const filteredImages = imageArray.filter(image => image !== null) as string[];
+
+      setPictures(filteredImages);
     }
+  };
+
+  const convertToBase64 = (file: Blob): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        resolve(reader.result as string);
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -111,7 +120,7 @@ const AccountRandoAdd = () => {
             placeholder='Description'
           />
           <div className='flex flex-col gap-y-1'>
-            <label>Image:</label>
+            <label>Image</label>
             <input
               type="file"
               accept="image/*"
