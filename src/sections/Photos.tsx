@@ -25,7 +25,7 @@ interface RandoData {
 
 function Photos() {
   const [randosData, setRandosData] = useState<RandoData[]>([]); // State with all Rando Data
-  const [selectedRandoDestination, setSelectedRandoDestination] = useState('Bulbizarre'); // State with name about the selected Rando
+  const [selectedRandoDestination, setSelectedRandoDestination] = useState('Test'); // State with name about the selected Rando
 
 
   // Fetch all Randos Data
