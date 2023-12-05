@@ -4,6 +4,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import { RiAddCircleLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import AccountLinkButton from './AccountLinkButton';
 
 interface InfoDataProps {
   id: number;
@@ -52,12 +53,13 @@ function AccountRando() {
     <div className='flex flex-col '>
         <h5 className='mb-4 text-center'> Tableau de gestion des randonnées </h5>
         <div className='flex items-start justify-start mb-2'>
-          <Link to="/account/addrando">
-            <button className='flex flex-row items-center gap-x-1 p-2 rounded-md bg-green-800 md:hover:bg-green-600'> 
-              <span>Créer une nouvelle randonnée</span>
-              <span><RiAddCircleLine /></span>
-            </button>
-          </Link>
+          <AccountLinkButton
+                  bgColor='bg-green-800'
+                  href="/account/addrando"
+                  linkName="Créer une nouvelle randonnée"
+                  logo={<RiAddCircleLine/>}
+                  classname='md:hover:bg-green-600'
+          />
         </div>
         <table className="">
           <thead>

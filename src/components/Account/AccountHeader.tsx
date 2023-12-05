@@ -1,8 +1,8 @@
 import { BiArrowBack } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
 import { useAuth } from "./Auth";
-import LinkButton from "../LinkButton";
 import { useLocation } from 'react-router-dom';
+import AccountLinkButton from "./AccountLinkButton";
 
 function AccountHeader () {
     const { logout } = useAuth(); 
@@ -18,36 +18,33 @@ function AccountHeader () {
         <header className='p-4'>
             <ul className="flex flex-wrap gap-4 justify-center">
                 <li>
-                    <LinkButton
-                        bgColor='bg-green-800'
-                        bgHoverColor='bg-green-600'
+                    <AccountLinkButton
+                        bgColor='bg-sky-800'
                         href="/"
                         linkName="Retourner sur les Galopins"
                         logo={<BiArrowBack/>}
-                        classname=''
+                        classname='md:hover:bg-sky-600'
                     />
                 </li>
                 {!isAccountRoute && (
                 <li>
-                    <LinkButton
-                        bgColor='bg-green-800'
-                        bgHoverColor='bg-green-600'
+                    <AccountLinkButton
+                        bgColor='bg-sky-800'
                         href="/account"
                         linkName="Espace Administrateur"
                         logo={<BiArrowBack/>}
-                        classname=''
+                        classname='md:hover:bg-sky-600'
                     />
                 </li>
                 )}
                 <li>
-                    <LinkButton
+                    <AccountLinkButton
                         onClick={handleLogout}
                         bgColor='bg-red-800'
-                        bgHoverColor='bg-red-600'
                         href="/auth/login"
                         linkName="Deconnexion"
                         logo={<CiLogout/>}
-                        classname=''
+                        classname='md:hover:bg-red-600'
                     />
                 </li>
             </ul>

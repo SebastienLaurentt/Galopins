@@ -4,7 +4,8 @@ import axios from "axios";
 import { useAuth } from "../../components/Account/Auth";
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import ButtonLink from "../../components/LinkButton";
+import AccountLinkButton from "../../components/Account/AccountLinkButton";
+import ValidationButton from "../../components/Account/ValidationButton";
 
 
 
@@ -86,17 +87,18 @@ function Login () {
                         />
                     </div>
                     {error && <p className="text-red-500">{error}</p>}
-                    <button type="submit" className="md:hover:font-bold">Se connecter</button>
+                    <ValidationButton
+                        buttonName="Se connecter"
+                    />
                 </form>
             </div>
 
-            <ButtonLink
-                bgColor='bg-green-800'
-                bgHoverColor='bg-green-600'
+            <AccountLinkButton
+                bgColor='bg-sky-800'
                 href="/"
                 linkName="Retourner sur les Galopins"
                 logo={<BiArrowBack/>}
-                classname=''
+                classname='md:hover:bg-sky-600'
             />
 
         </div>
