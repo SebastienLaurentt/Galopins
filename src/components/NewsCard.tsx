@@ -8,7 +8,7 @@ interface NewsCardProps {
 function NewsCard ({title, date, description}: NewsCardProps) {
     return (
         <div className='flex flex-col'>
-            <div className='bg-green-600 bg-opacity-40 rounded-2xl md:rounded-full xl:rounded-3xl p-4 md:p-8'>
+            <div className='bg-gray-800 bg-opacity-80 rounded-2xl md:rounded-full xl:rounded-3xl p-4 md:p-8'>
                 <h4 className="mb-0">
                     {title}
                 </h4>

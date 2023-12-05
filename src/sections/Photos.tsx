@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import PhotosBg from '../static/img/photos.webp';
 import { MdOutlinePhotoCamera } from 'react-icons/md';
 
+
 // @ts-ignore
 import data from '../data/photosData.js';
 import SectionHeader from '../components/SectionHeader';

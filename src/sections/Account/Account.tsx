@@ -45,7 +45,7 @@ function Account() {
           </button>
           <button
             className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
-              activeButton === 'Rando' ? 'bg-zinc-600 text-white' : ''
+              activeButton === 'Randos' ? 'bg-zinc-600 text-white' : ''
             }`}
             onClick={() => handleButtonClick('Randos')}
           >

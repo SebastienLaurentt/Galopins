@@ -39,9 +39,9 @@ function News() {
                 <HiOutlineNewspaper className="icon"/>
             </SectionHeader>
             <div className="">
-                <ul className='flex flex-col xl:flex-row   gap-x-20 xl:items-center gap-y-8 md:justify-around text-center  wideScreen'>
+                <ul className='flex flex-col xl:flex-row  gap-x-16 xl:items-center gap-y-8 md:justify-around text-center w-full'>
                     {infosData.map(info => (
-                        <li>
+                        <li className="w-1/3">
                         <NewsCard
                             title={info.title}
                             date={info.date}
