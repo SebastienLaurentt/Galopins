@@ -43,7 +43,7 @@ const Input = ({ inputName, value, setter, placeholder, isDate }: InputProps) =>
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
-        className="text-black rounded-md p-1"
+        className="text-black rounded-md p-2"
         required
       />
     </div>

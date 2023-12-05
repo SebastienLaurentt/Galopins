@@ -15,7 +15,7 @@ const Textarea = ({ textareaName, value, onChange, placeholder }: TextareaProps)
         onChange={(e) => onChange?.(e.target.value)}
         placeholder={placeholder}
         rows={10}
-        className="text-black rounded-md p-1"
+        className="text-black rounded-md p-2"
         required
       />
     </div>
