@@ -57,7 +57,7 @@ function AccountProg() {
         <div className='flex items-start justify-start mb-2'>
           <AccountLinkButton
                   bgColor='bg-green-800'
-                  href="/account/addnews"
+                  href="/account/addprogs"
                   linkName="Ajouter un nouveau programme"
                   logo={<RiAddCircleLine/>}
                   classname='md:hover:bg-green-600'
