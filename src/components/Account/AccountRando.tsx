@@ -4,6 +4,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import { RiAddCircleLine } from 'react-icons/ri';
 import AccountLinkButton from './AccountLinkButton';
+import { RotatingLines } from 'react-loader-spinner';
 
 interface InfoDataProps {
   id: number;
@@ -13,6 +14,7 @@ interface InfoDataProps {
 
 function AccountRando() {
   const [randosData, setRandosData] = useState<InfoDataProps[]>([]); // State with all Rando Data
+  const [loading, setLoading] = useState(true);
 
   const handleDelete = async (id: number) => {
     try {
@@ -42,11 +44,16 @@ function AccountRando() {
   // Fetch all Randos Data
   useEffect(() => {
     axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/randos/')
-    .then(response => {
-      setRandosData(response.data.data);
-    })
+      .then(response => {
+        setRandosData(response.data.data);
+        setLoading(false); 
+      })
+      .catch(error => {
+        console.error("Erreur lors de la récupération des données :", error);
+        setLoading(false); 
+      });
 
-  }, []); 
+  }, []);
 
   return (
     <div className='flex flex-col '>
@@ -60,30 +67,41 @@ function AccountRando() {
                   classname='md:hover:bg-green-600'
           />
         </div>
-        <table className="">
-          <thead>
-            <tr className='border-b-2'>
-              <th className="px-4 py-2">N°</th>
-              <th className="px-4 py-2">Date</th>
-              <th className="px-4 py-2">Destination</th>
-              <th className="px-4 py-2">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {randosData.map((rando) => (
-              <tr key={rando.id} className="border-b">
-                <td className="px-4 py-2">{rando.id}</td>
-                <td className="px-4 py-2">{rando.date}</td>
-                <td className="px-4 py-2">{rando.destination}</td>
-                <td className="px-4 py-2">
-                  <button onClick={() => handleDelete(rando.id)} className="text-red-500 md:hover:font-bold">Supprimer</button>
-                </td>
+        {loading ? (
+          <span className='flex justify-center'>
+            <RotatingLines
+              strokeColor="green"
+              strokeWidth="5"
+              animationDuration="0.5"
+              width="32"
+              visible={true}
+            />
+          </span>
+        ) : (
+          <table className="">
+            <thead>
+              <tr className='border-b-2'>
+                <th className="px-4 py-2">N°</th>
+                <th className="px-4 py-2">Date</th>
+                <th className="px-4 py-2">Destination</th>
+                <th className="px-4 py-2">Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {randosData.map((rando) => (
+                <tr key={rando.id} className="border-b">
+                  <td className="px-4 py-2">{rando.id}</td>
+                  <td className="px-4 py-2">{rando.date}</td>
+                  <td className="px-4 py-2">{rando.destination}</td>
+                  <td className="px-4 py-2">
+                    <button onClick={() => handleDelete(rando.id)} className="text-red-500 md:hover:font-bold">Supprimer</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+      )}
     </div>
-
   );
 }
 
