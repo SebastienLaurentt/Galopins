@@ -3,6 +3,7 @@ import { useState } from 'react';
 import AccountRando from '../../components/Account/AccountRando';
 import AccountNews from '../../components/Account/AccountNews';
 import AccountHeader from '../../components/Account/AccountHeader';
+import AccountProg from '../../components/Account/AccountProg';
 
 
 function Account() {
@@ -53,11 +54,11 @@ function Account() {
           </button>
           <button
             className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
-              activeButton === 'Liens' ? 'bg-zinc-600 text-white' : ''
+              activeButton === 'Programmes' ? 'bg-zinc-600 text-white' : ''
             }`}
-            onClick={() => handleButtonClick('Liens')}
+            onClick={() => handleButtonClick('Programmes')}
           >
-            Liens
+            Programmes
           </button>
         </div>
 
@@ -65,7 +66,7 @@ function Account() {
         <div className="text-white bg-slate-900 p-4 rounded-md mb-4">
           {activeButton === 'Infos' && <AccountNews />}
           {activeButton === 'Randos' && <AccountRando />}
-          {/* {activeButton === 'Liens' && <AccountLiens />} */}
+          {activeButton === 'Programmes' && <AccountProg />}
         </div>
       </div>
     </div>
