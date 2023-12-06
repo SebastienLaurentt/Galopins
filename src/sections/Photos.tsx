@@ -31,10 +31,18 @@ function Photos() {
   // Fetch all Randos Data
   useEffect(() => {
     axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/randos/')
-    .then(response => {
-      setRandosData(response.data.data);
-    })
+      .then(response => {
+        setRandosData(response.data.data);
 
+        // Check if there is at least one rando in the response
+        if (response.data.data.length > 0) {
+          // Set selectedRandoDestination to the destination of the last rando
+          setSelectedRandoDestination(response.data.data[response.data.data.length - 1].destination);
+        }
+      })
+      .catch(error => {
+        console.error("Erreur lors de la récupération des données :", error);
+      });
   }, []); 
 
   // Set the state of the 
