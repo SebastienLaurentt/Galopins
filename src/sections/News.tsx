@@ -7,6 +7,7 @@ import NewsBg from '../static/img/news.webp';
 
 import { HiOutlineNewspaper } from "react-icons/hi2";
 import axios from "axios";
+import SubSection from "../components/SubSection";
 
 interface InfoData {
     title: string;
@@ -38,21 +39,21 @@ function News() {
             <SectionHeader sectionTitle='LES DERNIERES INFOS'>
                 <HiOutlineNewspaper className="icon"/>
             </SectionHeader>
-            <div className="">
-                <ul className='flex flex-col xl:flex-row  gap-x-16 xl:items-center gap-y-8 md:justify-around text-center w-full'>
-                    {infosData.map(info => (
-                        <li className="w-1/3">
-                        <NewsCard
-                            title={info.title}
-                            date={info.date}
-                            description={info.description}
+            <SubSection>
+            <p> Pour se tenir au courant des informations concernant les prochaines randonnées, sorties détente ou réunions concernant l'association, c'est ici ! </p>
+                <ul className='flex flex-col xl:flex-row  gap-x-16 xl:justify-center gap-y-8 items-center text-center w-full'>
+                        {infosData.map(info => (
+                            <li className=" w-4/5 xl:w-1/3">
+                            <NewsCard
+                                title={info.title}
+                                date={info.date}
+                                description={info.description}
 
-                        />
-                    </li>
-                    ))}
-                </ul>
-            </div>
-
+                            />
+                        </li>
+                        ))}
+                    </ul>
+            </SubSection>
             <ScrollTop/>
     </Section>
     );
