@@ -5,7 +5,6 @@ import { TfiLocationPin } from 'react-icons/tfi';
 import SectionHeader from '../components/SectionHeader';
 import Section from '../components/Section';
 
-import ProgrammeFile from '../assets/Programme_Galopins.pdf'
 import DownloadButton from '../components/DownloadButton';
 import LinkButton from '../components/LinkButton';
 import Tag from '../components/Tag';
