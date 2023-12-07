@@ -21,13 +21,20 @@ interface ProgData {
 
 function Parcours() {
     const [progsData, setProgsData] = useState<ProgData[]>([]); // State with all Programme Data
-    const [selectedProgName, setSelectedProgName] = useState('Galopins 2023'); // State with name about the selected Programme
+    const [selectedProgName, setSelectedProgName] = useState<string>(''); // State with name about the selected Programme
+
 
     // Fetch all Randos Data
     useEffect(() => {
         axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/progs/')
         .then(response => {
             setProgsData(response.data.data);
+
+            // Check if there is at least one program in the response
+            if (response.data.data.length > 0) {
+                // Set selectedProgName to the name of the last program
+                setSelectedProgName(response.data.data[response.data.data.length - 1].name);
+            }
         })
         .catch(error => {
             console.error("Erreur lors de la récupération des données :", error);
@@ -37,7 +44,6 @@ function Parcours() {
   // Set the state of the 
   const handleRandoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedProgName(event.target.value);
-    console.log(selectedProgData);
   };
 
     // Collect datas of the selectedRando with find method to allow a match with his name 
