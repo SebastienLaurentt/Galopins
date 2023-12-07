@@ -10,10 +10,40 @@ import DownloadButton from '../components/DownloadButton';
 import LinkButton from '../components/LinkButton';
 import Tag from '../components/Tag';
 import ScrollTop from '../components/ScrollTop';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-
+interface ProgData {
+    name:string;
+    content?: string;
+  }
+  
 
 function Parcours() {
+    const [progsData, setProgsData] = useState<ProgData[]>([]); // State with all Programme Data
+    const [selectedProgName, setSelectedProgName] = useState('Galopins 2023'); // State with name about the selected Programme
+
+    // Fetch all Randos Data
+    useEffect(() => {
+        axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/progs/')
+        .then(response => {
+            setProgsData(response.data.data);
+        })
+        .catch(error => {
+            console.error("Erreur lors de la récupération des données :", error);
+        });
+    }, []); 
+
+  // Set the state of the 
+  const handleRandoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedProgName(event.target.value);
+    console.log(selectedProgData);
+  };
+
+    // Collect datas of the selectedRando with find method to allow a match with his name 
+  // between the states selectedRandoName and randosData 
+  const selectedProgData =  progsData.find(prog => prog.name === selectedProgName);
+
     return (
         <Section
             id='Parcours'
@@ -28,13 +58,35 @@ function Parcours() {
                 <GiStonePath className="icon"/>
             </SectionHeader>
             <div className='mb-4 flex flex-col items-center md:items-start px-4 md:px-12 xl:px-20 wideScreen'>
-                <p className='mb-3'>Le programme des randonnées est établi pour une période de <strong>4 mois</strong>. Vous pouvez télécharger le programme actuel ci-dessous : </p>
-                <DownloadButton 
-                    file={ProgrammeFile}
-                    fileName="Programme_Galopins.pdf"
-                    linkName="PROGRAMME"
-                    classname='md:ml-4'
-                />
+                <p className='mb-3'>Les programmes des randonnées sont établis pour une période de <strong>4 mois</strong>. Vous pouvez choisir puis télécharger le programme que vous souhaitez ci-dessous : </p>
+                <div className='flex flex-row justify-center items-center gap-x-2'>
+                    <div className="">
+                        <select
+                            id="photoSelect"
+                            value={selectedProgName}
+                            onChange={handleRandoChange}
+                            className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
+                        >
+                            {progsData.map(prog => (
+                            <option
+                                key={prog.name}
+                                className="font-bold"
+                                value={prog.name}
+                            >
+                            {prog.name}
+                            </option>
+                            ))}
+                        </select>
+                    </div>
+                    {selectedProgData && selectedProgData.content && (
+                        <DownloadButton 
+                            file={selectedProgData.content}
+                            fileName={`Programme_${selectedProgData.name}.pdf`}
+                            linkName={`TÉLÉCHARGER ${selectedProgData.name}`}
+                            classname=''
+                        />
+                )}
+                </div>
             </div>
             <div className='mb-2 px-4 md:px-12 xl:px-20 wideScreen'>
                 <p className='mb-3 2xl:mb-5'> Le détail des randonnées est : </p>
