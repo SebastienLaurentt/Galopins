@@ -114,8 +114,8 @@ function Parcours() {
                     </li>
                 </ul>
             </div>
-            <div className='mb-4  flex flex-col items-center md:items-start px-4 md:px-12 xl:px-20 wideScreen'>
-                <p className='mb-3'>Le lieu de <strong>rendez-vous</strong> avant chaque départ est situé sur le parking en face du  95 Route de Valence (Bar le Provence). L'heure de
+            <div className='mb-3  flex flex-col items-center md:items-start px-4 md:px-12 xl:px-20 wideScreen'>
+                <p className='mb-3'>Le <strong>lundi</strong>, le lieu de rendez-vous avant chaque départ est situé sur le parking en face du  95 Route de Valence (Bar le Provence) avec une heure de
                 départ est fixée à 13h30.</p>
                 <LinkButton 
                     bgColor='bg-green-800'
@@ -125,6 +125,7 @@ function Parcours() {
                     logo={<TfiLocationPin/>}
                     classname='md:ml-4'
                 />
+                <p className='mt-5'>Le <strong>vendredi</strong>, les lieux de rendez-vous et de départ seront précisés par mail ou sur le site par l'accompagnateur. </p>
             </div>
             <div className='px-4 md:px-12 xl:px-20 wideScreen'> 
                 <p>Les Galopins se déplacent toujours en <strong>covoiturage</strong> afin de limiter le nombre de voitures. Le tarif est laissé à l’appréciation du conducteur (la base étant de 0.2€ du km).

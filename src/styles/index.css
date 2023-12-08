@@ -39,7 +39,7 @@
   }
 
   strong{
-    @apply font-bold  md:text-xl 2xl:text-2xl
+    @apply font-bold 
   }
 
 }
