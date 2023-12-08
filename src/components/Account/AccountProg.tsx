@@ -13,7 +13,7 @@ interface ProgDataProps {
 }
 
 function AccountProg() {
-  const [progsData, setProgsData] = useState<ProgDataProps[]>([]); // State with all Rando Data
+  const [progsData, setProgsData] = useState<ProgDataProps[]>([]); // State with all Progs Data
   
   const handleDelete = async (id: number) => {
     try {
@@ -42,7 +42,7 @@ function AccountProg() {
     }
   };
 
-  // Fetch all Randos Data
+  // Fetch all Progs Data
   useEffect(() => {
     axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/progs/')
     .then(response => {
