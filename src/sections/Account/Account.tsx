@@ -60,6 +60,22 @@ function Account() {
           >
             Programmes
           </button>
+          <button
+            className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
+              activeButton === 'Adhesion' ? 'bg-zinc-600 text-white' : ''
+            }`}
+            onClick={() => handleButtonClick('Adhesion')}
+          >
+            Adhésion
+          </button>
+          <button
+            className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
+              activeButton === 'Rdv' ? 'bg-zinc-600 text-white' : ''
+            }`}
+            onClick={() => handleButtonClick('Rdv')}
+          >
+            Rendez-vous
+          </button>
         </div>
 
 
@@ -67,6 +83,8 @@ function Account() {
           {activeButton === 'Infos' && <AccountNews />}
           {activeButton === 'Randos' && <AccountRando />}
           {activeButton === 'Programmes' && <AccountProg />}
+          {/* {activeButton === 'Adhesion' && <AccountAdhe />}
+          {activeButton === 'Rdv' && <AccountRdv />} */}
         </div>
       </div>
     </div>
