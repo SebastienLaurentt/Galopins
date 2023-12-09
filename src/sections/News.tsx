@@ -40,10 +40,10 @@ function News() {
                 <HiOutlineNewspaper className="icon"/>
             </SectionHeader>
             <SubSection>
-            <p className="text-xl"> Les informations concernant les prochaines randonnées, sorties détente ou réunions concernant l'association, c'est ici ! </p>
+            <p className=" text-[16px] md:text-[24px] xl:text-[28px] text-center"> Les informations concernant les prochaines randonnées, sorties détente ou réunions concernant l'association, c'est ici ! </p>
             <ul className='flex flex-col xl:flex-row  gap-x-16 xl:justify-center gap-y-8 items-center text-center w-full'>
                     {infosData.map(info => (
-                        <li className="  xl:w-1/3">
+                        <li className=" xl:w-1/3">
                             <NewsCard
                                 title={info.title}
                                 date={info.date}
