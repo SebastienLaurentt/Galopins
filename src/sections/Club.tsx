@@ -69,15 +69,6 @@ function Club() {
             }
           />
         </motion.li>
-        <motion.li variants={liVariants}>
-          <ParcoursCard
-            day='Vendredi | Journée entière'
-            location="Vaucluse, Gard ou Lozère (100 km max)"
-            frequency="En alternance :"
-            description1="&#x2022;  Semaine A : Jusqu'à 15 km"
-            description2="&#x2022;  Semaine B : De 15 à 20 km"
-          />
-        </motion.li>
       </motion.ul>
       <div className='px-4 md:px-20 wideScreen'>
         <p>
