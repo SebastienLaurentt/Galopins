@@ -40,19 +40,19 @@ function News() {
                 <HiOutlineNewspaper className="icon"/>
             </SectionHeader>
             <SubSection>
-            <p> Pour se tenir au courant des informations concernant les prochaines randonnées, sorties détente ou réunions concernant l'association, c'est ici ! </p>
-                <ul className='flex flex-col xl:flex-row  gap-x-16 xl:justify-center gap-y-8 items-center text-center w-full'>
-                        {infosData.map(info => (
-                            <li className=" w-4/5 xl:w-1/3">
+            <p className="text-xl"> Les informations concernant les prochaines randonnées, sorties détente ou réunions concernant l'association, c'est ici ! </p>
+            <ul className='flex flex-col xl:flex-row  gap-x-16 xl:justify-center gap-y-8 items-center text-center w-full'>
+                    {infosData.map(info => (
+                        <li className="  xl:w-1/3">
                             <NewsCard
                                 title={info.title}
                                 date={info.date}
                                 description={info.description}
 
                             />
-                        </li>
-                        ))}
-                    </ul>
+                    </li>
+                    ))}
+            </ul>
             </SubSection>
             <ScrollTop/>
     </Section>
