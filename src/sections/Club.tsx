@@ -1,4 +1,5 @@
 import ClubBg from '../static/img/club.webp';
+import { useInView } from 'react-intersection-observer';
 import { AiFillHome } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
@@ -7,12 +8,16 @@ import Section from '../components/Section';
 import ParcoursCard from '../components/ClubCard';
 import ScrollTop from '../components/ScrollTop';
 
-const liVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
 function Club() {
+  const [ref, inView] = useInView({
+    triggerOnce: true, // L'animation ne se déclenche qu'une seule fois
+  });
+
+  const liVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <Section
       id='Club'
@@ -32,7 +37,8 @@ function Club() {
       <motion.ul
         variants={{ visible: { transition: { staggerChildren: 0.5 } } }}
         initial='hidden'
-        animate='visible'
+        animate={inView ? 'visible' : 'hidden'}
+        ref={ref} 
         className='flex flex-col xl:flex-row xl:items-center gap-y-8 md:justify-around text-center mb-4 md:mb-12 wideScreen'
       >
         <motion.li variants={liVariants}>
@@ -41,14 +47,14 @@ function Club() {
             location="Drôme ou Ardèche"
             frequency="Chaque semaine, 2 possibilités :"
             description1={
-                <>
+              <>
                 <strong>&#x2022; Cool :</strong> 5 à 9 km (2-3 h environ)
-                </>
+              </>
             }
             description2={
-                <>
+              <>
                 <strong>&#x2022; Classique :</strong> 10 à 14 km (200 à 500 m de dénivelé)
-                </>
+              </>
             }
           />
         </motion.li>
@@ -58,14 +64,14 @@ function Club() {
             location="Vaucluse, Gard ou Lozère (100 km max)"
             frequency="En alternance :"
             description1={
-                <>
+              <>
                 <strong>&#x2022; Semaine A :</strong> Jusqu'à 15 km
-                </>
+              </>
             }
             description2={
-                <>
+              <>
                 <strong>&#x2022; Semaine B</strong> De 15 à 20 km
-                </>
+              </>
             }
           />
         </motion.li>
