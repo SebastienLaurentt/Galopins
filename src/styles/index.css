@@ -10,7 +10,7 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    @apply text-3xl md:text-4xl xl:text-5xl 2xl:text-7xl font-bold 
+    @apply text-3.5xl md:text-4xl xl:text-5xl 2xl:text-7xl mb-8 font-bold 
   }
 
   h2 {
