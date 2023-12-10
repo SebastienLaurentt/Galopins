@@ -36,7 +36,7 @@ function News() {
             className='text-center md:text-left flex flex-col justify-around'
         >
             {/* CLUB CONTENT */}
-            <SectionHeader sectionTitle='LES DERNIERES INFOS'>
+            <SectionHeader sectionTitle='DERNIERES INFOS'>
                 <HiOutlineNewspaper className="icon"/>
             </SectionHeader>
             <SubSection>
