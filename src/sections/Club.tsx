@@ -70,7 +70,7 @@ function Club() {
             }
             description2={
               <>
-                <strong>&#x2022; Semaine B</strong> De 15 à 20 km
+                <strong>&#x2022; Semaine B :</strong> De 15 à 20 km
               </>
             }
           />
