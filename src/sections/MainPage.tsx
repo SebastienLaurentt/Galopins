@@ -11,8 +11,8 @@ function MainPage() {
         <div>
             <Home/>
             <News />
-            <Club/>
             <Parcours/>
+            <Club/>
             <Photos />
             <Rejoindre/>
       </div>

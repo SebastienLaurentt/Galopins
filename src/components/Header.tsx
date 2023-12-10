@@ -11,7 +11,7 @@ import { HiOutlineNewspaper } from "react-icons/hi2";
 function Header() {
     return (
       <header className="">
-        <ul className="flex flex-wrap justify-around md:justify-center md:gap-x-20 xl:gap-x-32 text-base md:text-lg xl:text-xl py-4 font-bold">
+        <ul className="flex flex-wrap  text-center justify-center gap-x-16 gap-y-4 xl:gap-x-32 text-base md:text-lg xl:text-xl py-4 font-bold">
             <li className=''>
                 <Link
                     to='News'
@@ -24,22 +24,22 @@ function Header() {
             </li>
             <li className=''>
                 <Link
-                    to='Club'
-                    smooth={true} 
-                    className="flex flex-col items-center cursor-pointer md:hover:text-green-500"
-                    >
-                    <AiFillHome className='iconHeader'/>
-                    Club
-                </Link>
-            </li>
-            <li className=''>
-                <Link
                     to='Parcours'
                     smooth={true} 
                     className="flex flex-col items-center cursor-pointer md:hover:text-green-500"
                     >
                     <GiStonePath className='iconHeader' />
                     Parcours
+                </Link>
+            </li>
+            <li className=''>
+                <Link
+                    to='Club'
+                    smooth={true} 
+                    className="flex flex-col items-center cursor-pointer md:hover:text-green-500"
+                    >
+                    <AiFillHome className='iconHeader'/>
+                    Club
                 </Link>
             </li>
             <li className=''>
