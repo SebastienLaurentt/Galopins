@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {},
     fontSize: {
+      xs: '0.7rem',
       sm: '0.8rem',
       base: '1rem',
       'md': '1.05rem',
@@ -14,14 +15,15 @@ export default {
       xl: '1.5rem',
       '2xl': '2rem',
       '3xl': '3rem',
+      '3.5xl': '3.5rem',
       '4xl': '4.5rem',
       '5xl': '6rem',
       '6xl' : '7.5rem',
       '7xl' : '10rem',
     },
     screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
+      'sm': '390px',
+      // => @media (min-width: 390px) { ... }
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }

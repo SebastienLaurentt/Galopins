@@ -10,7 +10,7 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    @apply text-3xl md:text-4xl xl:text-5xl 2xl:text-7xl font-bold 
+    @apply text-[38px] sm:text-3.5xl md:text-4xl xl:text-5xl 2xl:text-7xl mb-8 md:mb-4 font-bold 
   }
 
   h2 {
@@ -19,11 +19,11 @@
   }
 
   h3 {
-    @apply text-md md:text-xl xl:text-2xl 2xl:text-4xl italic mb-8 2xl:mb-12
+    @apply sm:text-md md:text-xl xl:text-2xl 2xl:text-4xl italic mb-8 2xl:mb-12
   }
 
   h4 {
-    @apply text-md md:text-xl xl:text-2xl 2xl:text-3xl italic mb-8 2xl:mb-12
+    @apply text-xl xl:text-2xl 2xl:text-3xl  mb-8 2xl:mb-12
   }
 
   h5 {
@@ -35,11 +35,11 @@
   }
 
   span {
-    @apply text-sm md:text-lg 2xl:text-xl
+    @apply text-xs sm:text-sm md:text-lg 2xl:text-xl
   }
 
   strong{
-    @apply font-bold  md:text-xl 2xl:text-2xl
+    @apply font-bold 
   }
 
 }

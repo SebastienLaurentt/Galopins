@@ -7,54 +7,64 @@ import { BsPeopleFill } from 'react-icons/bs';
 import { FaHiking } from 'react-icons/fa';
 import Section from '../components/Section';
 import ClubIcon from '../components/ClubIcon';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.5, // Délai entre les enfants
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 function Home() {
-    // const fadeInAnimationsVariants = {
-    //     initial: {
-    //         opacity:0,
-    //         y:100,
-    //     },
-    //     animate: () => ({
-    //         opacity:1,
-    //         y:0,
-    //         transition:{
-    //             delay:0.5,
-    //         },
-    //     }),
-    // };
-
-    return (
-        <Section
-            id='Accueil'
-            bg={HomeBg}
-            minHeightScreen={true}
-            className='text-center flex flex-col justify-around'
-        >
-            <Header/>
-            <h1>LES GALOPINS</h1>
-            <h3 className='italic'>Bienvenue sur notre site internet ! </h3>
-            <p className='px-4 md:px-20 wideScreen'>Nous sommes un club de randonnée situé à Montélimar, dans la Drôme, ayant pour but la découverte de la <strong>nature</strong> et du <strong>patrimoine</strong> dans la <strong>bonne humeur</strong> et en toute <strong>convivialité</strong>. Les randonnées ont lieu du <strong>1er Septembre au 30 Juin</strong>, les <strong>Lundis après-midi</strong> en alternance dans la Drôme et l'Ardèche ainsi que les <strong>Vendredis</strong>, à destination de la Drôme, l'Ardèche, le Gard, la Lozère ou encore le Vaucluse.  </p>
-            <ul className='flex flex-row justify-around md:justify-center xl:gap-x-8 2xl:gap-x-24 wideScreen'>
-                    <li>
-                        <ClubIcon iconDescription='Créé en Septembre 2004' >
-                            <BsFillPenFill className="icon" />
-                        </ClubIcon>
-                    </li>
-                    <li>
-                        <ClubIcon iconDescription='70 adhérents en 2022' >
-                            <BsPeopleFill className="icon" />
-                        </ClubIcon>
-                    </li>
-                    <li>
-                    <ClubIcon iconDescription='200 randonnées en 2022' >
-                        <FaHiking className="icon" />
-                    </ClubIcon>
-                    </li>
-            </ul>
-        </Section>
-
-    );
+  return (
+    <Section id='Accueil' bg={HomeBg} minHeightScreen={true} className='text-center flex flex-col justify-between'>
+      <Header />
+      <motion.div variants={containerVariants} initial='hidden' animate='visible' className=' px-4'>
+        <motion.h1 variants={childVariants}>LES GALOPINS</motion.h1>
+        <motion.h3 variants={childVariants} className='italic px-4'>
+          Bienvenue sur le site de notre club de randonnée situé à Montélimar !
+        </motion.h3>
+      </motion.div>
+      <motion.ul
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
+        className='flex flex-row justify-around md:justify-center xl:gap-x-8 2xl:gap-x-24 mb-8 wideScreen'
+      >
+        <motion.li 
+            variants={childVariants} 
+            transition={{ delay: 0.8 }} >
+          <ClubIcon iconDescription='Créé en Septembre 2004'>
+            <BsFillPenFill className="icon" />
+          </ClubIcon>
+        </motion.li>
+        <motion.li 
+            variants={childVariants} 
+            transition={{ delay: 1.0 }}>
+          <ClubIcon iconDescription='70 adhérents en 2022'>
+            <BsPeopleFill className="icon" />
+          </ClubIcon>
+        </motion.li>
+        <motion.li 
+            variants={childVariants} 
+            transition={{ delay: 1.20 }}>
+          <ClubIcon iconDescription='200 randonnées en 2022'>
+            <FaHiking className="icon" />
+          </ClubIcon>
+        </motion.li>
+      </motion.ul>
+    </Section>
+  );
 }
 
 export default Home;
+
+
