@@ -19,15 +19,15 @@ const containerVariants = {
 };
 
 const childVariants = {
-  hidden: { opacity: 0, y: -30 },
-  visible: { opacity: 1, y: -10 },
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
 };
 
 function Home() {
   return (
     <Section id='Accueil' bg={HomeBg} minHeightScreen={true} className='text-center flex flex-col justify-between'>
       <Header />
-      <motion.div variants={containerVariants} initial='hidden' animate='visible' className='mb-4 px-4'>
+      <motion.div variants={containerVariants} initial='hidden' animate='visible' className=' px-4'>
         <motion.h1 variants={childVariants}>LES GALOPINS</motion.h1>
         <motion.h3 variants={childVariants} className='italic px-4'>
           Bienvenue sur le site de notre club de randonnée situé à Montélimar !
@@ -37,7 +37,7 @@ function Home() {
         variants={containerVariants}
         initial='hidden'
         animate='visible'
-        className='flex flex-row justify-around md:justify-center xl:gap-x-8 2xl:gap-x-24 wideScreen'
+        className='flex flex-row justify-around md:justify-center xl:gap-x-8 2xl:gap-x-24 mb-8 wideScreen'
       >
         <motion.li 
             variants={childVariants} 
