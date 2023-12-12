@@ -11,7 +11,7 @@ import { HiOutlineNewspaper } from "react-icons/hi2";
 function Header() {
     return (
       <header className="">
-        <ul className="flex flex-wrap  text-center justify-center gap-x-16 gap-y-4 xl:gap-x-32 text-base md:text-lg xl:text-xl py-4 font-bold">
+        <ul className="flex flex-wrap text-center justify-center gap-x-16 gap-y-4 xl:gap-x-32 text-base md:text-lg xl:text-xl p-4 font-bold">
             <li className=''>
                 <Link
                     to='News'
