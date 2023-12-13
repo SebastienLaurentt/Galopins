@@ -1,9 +1,8 @@
 import { Swiper } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 interface CarouselProps {
   children: React.ReactNode;
@@ -15,41 +14,35 @@ interface CustomSwiperStyles {
 
 function Carousel({ children }: CarouselProps) {
   const swiperStyles: CustomSwiperStyles = {
-    "--swiper-navigation-color": "#FFFFFF",
-    "--swiper-navigation-size": "30px",
-  };
+    "--swiper-pagination-bullet-width": "12px",
+    "--swiper-pagination-bullet-height": "12px",
+    "--swiper-pagination-bullet-border-radius": "50%",
+    "--swiper-pagination-bullet-inactive-color": "#16a34a",
+    "--swiper-pagination-bullet-inactive-opacity": "0.4",
+    "--swiper-pagination-color": "#16a34a",
+    "--swiper-pagination-bullet-size": "8px",
+    "--swiper-pagination-bullet-horizontal-gap": "6px"
+};
   
   return (
     <div className=''>
       <Swiper 
         style={swiperStyles}
-        modules={[ Pagination, Navigation ]}
+        modules={[ Pagination]}
         slidesPerView={1}
         loop={false}
         centeredSlides={false}
-        pagination={{
-          type:'fraction',
-          el: '.swiper-custom-pagination',
-        }}
-        navigation= {{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
+        pagination={{ clickable: true }}
         breakpoints={{
           390: { slidesPerView: 1.0, spaceBetween: 8 },
           768: { slidesPerView: 1.0, spaceBetween: 8 },
           1024: { slidesPerView: 2.0, spaceBetween: 8 },
           1280: { slidesPerView: 2.0, spaceBetween: 32 },
         }}
-        className="px-2 md:px-4"
+        className="md:w-5/6 xl:w-3/4"
       >
-        <div className=''>
           {children}
-        </div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next "></div>
       </Swiper>
-      <div className="swiper-custom-pagination"/>
       
     </div>
   );

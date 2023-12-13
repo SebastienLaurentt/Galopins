@@ -25,7 +25,7 @@
     "react-router-dom": "^6.20.0",
     "react-scroll": "^1.8.9",
     "rsuite": "^5.46.1",
-    "swiper": "^10.3.0",
+    "swiper": "^11.0.5",
     "vue": "^3.2.36"
   },
   "devDependencies": {

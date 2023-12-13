@@ -8,6 +8,8 @@ import NewsBg from '../static/img/news.webp';
 import { HiOutlineNewspaper } from "react-icons/hi2";
 import axios from "axios";
 import SubSection from "../components/SubSection";
+import Carousel from "../components/Carousel";
+import { SwiperSlide } from "swiper/react";
 
 interface InfoData {
     title: string;
@@ -32,27 +34,30 @@ function News() {
         <Section
             id='News'
             bg={NewsBg}
-            minHeightScreen={true}
-            className='text-center md:text-left flex flex-col justify-around'
+            minHeightScreen={false}
         >
             {/* CLUB CONTENT */}
             <SectionHeader sectionTitle='DERNIERES INFOS'>
                 <HiOutlineNewspaper className="icon"/>
             </SectionHeader>
             <SubSection>
-            <p className=" text-[16px] md:text-[24px] xl:text-[28px] text-center"> Les informations concernant les prochaines randonnées, sorties détente ou réunions concernant l'association, c'est ici ! </p>
-            <ul className='flex flex-col xl:flex-row  gap-x-16 xl:justify-center gap-y-8 items-center text-center w-full'>
-                    {infosData.map(info => (
-                        <li className=" xl:w-1/3">
-                            <NewsCard
-                                title={info.title}
-                                date={info.date}
-                                description={info.description}
+                <p className=" text-[16px] md:text-[24px] xl:text-[28px] text-center"> Les informations concernant les prochaines randonnées, sorties détente ou réunions concernant l'association, c'est ici ! </p>
+                <Carousel>
+                <ul className=''>
+                        {infosData.map(info => (
+                            <SwiperSlide>
+                            <li className="text-center mb-10 mx-4 xl:mx-6">
+                                <NewsCard
+                                    title={info.title}
+                                    date={info.date}
+                                    description={info.description}
 
-                            />
-                    </li>
-                    ))}
-            </ul>
+                                />
+                            </li>
+                            </SwiperSlide>
+                        ))}
+                </ul>
+                </Carousel>
             </SubSection>
             <ScrollTop/>
     </Section>
