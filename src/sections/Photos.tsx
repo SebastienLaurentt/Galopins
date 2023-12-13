@@ -81,7 +81,7 @@ function Photos() {
         .then(content => {
           const link = document.createElement('a');
           link.href = URL.createObjectURL(content);
-          link.download = 'images.zip';
+          link.download = `${selectedRandoDestination}.zip`;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
