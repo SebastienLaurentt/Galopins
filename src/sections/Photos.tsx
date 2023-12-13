@@ -77,7 +77,7 @@ function Photos() {
     
       await Promise.all(promises);
 
-      // Remplace les espaces par des underscores dans le nom de destinatio
+      // Remplace les espaces par des underscores dans le nom de destination
     const sanitizedDestination = selectedRandoDestination.replace(/ /g, '_');
     
       zip.generateAsync({ type: 'blob' })
