@@ -143,6 +143,21 @@
   }
 }
 
-/* .image-gallery-thumbnail-inner  {
- width: 100%;
-} */
+.image-gallery-content.fullscreen {
+  background: #000;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .image-gallery-content.fullscreen {
+    padding:40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-gallery-content.fullscreen {
+    padding:100px;
+  }
+}
