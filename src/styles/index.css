@@ -52,14 +52,11 @@
   @apply text-xl md:text-2xl xl:text-3xl 2xl:text-4xl
 }
 
-.swiper-button-prev {
-  @apply left-0
+.wideScreen {
+  @apply 2xl:w-5/6 2xl:mx-auto
 }
 
-.swiper-button-next {
-  @apply right-0
-}
-
+/* Swipper */
 .swiper-custom-pagination {
   @apply text-center 
 }
@@ -71,6 +68,7 @@
   justify-content: center;
 }
 
+/* React image gallery */
 .image-gallery-thumbnails {
   @apply mt-4 w-5/6 xl:w-3/5 mx-auto
 }
@@ -79,6 +77,72 @@
   vertical-align: middle;
 }
 
-.wideScreen {
-  @apply 2xl:w-5/6 2xl:mx-auto
+/* Images styles */
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  max-height: calc(20vh);
 }
+
+@media (min-width: 768px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(30vh);
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(34vh);
+  }
+}
+
+@media (min-width: 1280px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(40vh);
+  }
+}
+
+@media (min-width: 1536px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(47vh);
+  }
+}
+
+@media (min-width: 1792px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(55vh);
+  }
+}
+
+@media (min-width: 2048px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(70vh);
+  }
+}
+
+/* Thumbnail styles */
+.image-gallery-thumbnail .image-gallery-thumbnail-image {
+  width: auto;
+  max-height: 5vh;
+  margin: 0 auto
+}
+
+@media (min-width: 768px) {
+  .image-gallery-thumbnail .image-gallery-thumbnail-image {
+    max-height: 7vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-gallery-thumbnail .image-gallery-thumbnail-image {
+    max-height: 9vh;
+  }
+}
+
+@media (min-width: 1536px) {
+  .image-gallery-thumbnail .image-gallery-thumbnail-image {
+    max-height: 12vh;
+  }
+}
+
+/* .image-gallery-thumbnail-inner  {
+ width: 100%;
+} */
