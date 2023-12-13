@@ -129,6 +129,7 @@ function Photos() {
                 originalHeight: 200,
                 thumbnail: imageUrl,
               }))}
+              
             />
           )}
         </div>
