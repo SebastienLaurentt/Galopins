@@ -71,7 +71,13 @@
   justify-content: center;
 }
 
+.image-gallery-thumbnails {
+  @apply mt-4 w-5/6 xl:w-3/5 mx-auto
+}
 
+.image-gallery-thumbnail {
+  vertical-align: middle;
+}
 
 .wideScreen {
   @apply 2xl:w-5/6 2xl:mx-auto
