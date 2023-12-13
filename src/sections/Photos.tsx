@@ -121,7 +121,7 @@ function Photos() {
           </select>
         </div>
 
-        <div className="mb-4 xl:mx-32">
+        <div className="mb-2 mx-8 xl:mx-48">
           {selectedRandoData && selectedRandoData.pictures && (
             <Gallery
               items={selectedRandoData.pictures.map(imageUrl => ({
@@ -134,7 +134,7 @@ function Photos() {
           )}
         </div>
 
-        <div className='flex flex-wrap justify-center'>
+        <div className='text-center'>
         <p>{selectedRandoData ? selectedRandoData.description : "Chargement..."}</p>
         </div>
 
