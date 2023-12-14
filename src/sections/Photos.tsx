@@ -101,7 +101,7 @@ function Photos() {
       <SectionHeader sectionTitle='NOS PHOTOS'>
         <MdOutlinePhotoCamera className="icon md:mt-4"/>
       </SectionHeader>
-      <SubSection>
+      <SubSection className=''>
         <div className="mb-8 flex flex-wrap gap-2 justify-center items-center">
           <select
             id="photoSelect"
@@ -121,7 +121,7 @@ function Photos() {
           </select>
         </div>
 
-        <div className="mb-2 mx-8 xl:mx-48">
+        <div className="mb-2 xl:mx-48">
           {selectedRandoData && selectedRandoData.pictures && (
             <Gallery
               items={selectedRandoData.pictures.map(imageUrl => ({
