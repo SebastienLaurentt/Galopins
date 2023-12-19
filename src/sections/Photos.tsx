@@ -15,6 +15,7 @@ import ArchiveDownloadButton from '../components/ArchiveDownloadButton.js';
 
 import Gallery from 'react-image-gallery';
 import 'react-image-gallery/styles/scss/image-gallery.scss';
+import { RotatingLines } from 'react-loader-spinner';
 
 interface RandoData {
   date:string;
@@ -26,7 +27,7 @@ interface RandoData {
 function Photos() {
   const [randosData, setRandosData] = useState<RandoData[]>([]); // State with all Rando Data
   const [selectedRandoDestination, setSelectedRandoDestination] = useState('Test'); // State with name about the selected Rando
-
+  const [loadingFetch, setLoadingFetch] = useState(true);
 
   // Fetch all Randos Data
   useEffect(() => {
@@ -34,16 +35,18 @@ function Photos() {
       .then(response => {
         setRandosData(response.data.data);
 
-        // Check if there is at least one rando in the response
         if (response.data.data.length > 0) {
-          // Set selectedRandoDestination to the destination of the last rando
           setSelectedRandoDestination(response.data.data[response.data.data.length - 1].destination);
         }
       })
       .catch(error => {
         console.error("Erreur lors de la récupération des données :", error);
+      })
+      .finally(() => {
+        // Marquez le chargement comme terminé, que ce soit réussi ou échoué
+        setLoadingFetch(false);
       });
-  }, []); 
+  }, []);
 
   // Set the state of the 
   const handleRandoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -92,63 +95,75 @@ function Photos() {
     };
 
 
-  return (
-    <Section 
-      id='Photos' 
-      bg={PhotosBg}
-      minHeightScreen={false}
-    >
-      <SectionHeader sectionTitle='NOS PHOTOS'>
-        <MdOutlinePhotoCamera className="icon md:mt-4"/>
-      </SectionHeader>
-      <SubSection className=''>
-        <div className="mb-8 flex flex-wrap gap-2 justify-center items-center">
-          <select
-            id="photoSelect"
-            value={selectedRandoDestination}
-            onChange={handleRandoChange}
-            className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
-          >
-            {randosData.map(rando => (
-              <option
-                key={rando.destination}
-                className="font-bold"
-                value={rando.destination}
+    return (
+      <Section 
+        id='Photos' 
+        bg={PhotosBg}
+        minHeightScreen={false}
+      >
+        <SectionHeader sectionTitle='NOS PHOTOS'>
+          <MdOutlinePhotoCamera className="icon md:mt-4"/>
+        </SectionHeader>
+    
+        {loadingFetch ? (
+          <div className="flex flex-col gap-4 items-center">
+              <RotatingLines
+                strokeColor="green"
+                strokeWidth="5"
+                animationDuration="0.5"
+                width="64"
+                visible={true}
+              />
+            <p>Chargement...</p>
+          </div>
+        ) : (
+          <SubSection className=''>
+            <div className="mb-8 flex flex-wrap gap-2 justify-center items-center">
+              <select
+                id="photoSelect"
+                value={selectedRandoDestination}
+                onChange={handleRandoChange}
+                className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
               >
-              {rando.date} - {rando.destination}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="mb-2 xl:mx-48">
-          {selectedRandoData && selectedRandoData.pictures && (
-            <Gallery
-              items={selectedRandoData.pictures.map(imageUrl => ({
-                original: imageUrl,
-                originalHeight: 100,
-                thumbnail: imageUrl,
-              }))}
-              
+                {randosData.map(rando => (
+                  <option
+                    key={rando.destination}
+                    className="font-bold"
+                    value={rando.destination}
+                  >
+                    {rando.date} - {rando.destination}
+                  </option>
+                ))}
+              </select>
+            </div>
+    
+            <div className="mb-2 xl:mx-48">
+              {selectedRandoData && selectedRandoData.pictures && (
+                <Gallery
+                  items={selectedRandoData.pictures.map(imageUrl => ({
+                    original: imageUrl,
+                    originalHeight: 100,
+                    thumbnail: imageUrl,
+                  }))}
+                />
+              )}
+            </div>
+    
+            <div className='text-center'>
+              <p>{selectedRandoData ? selectedRandoData.description : "Chargement..."}</p>
+            </div>
+    
+            <ArchiveDownloadButton 
+              classname='md:ml-4'
+              onClick={handleDownloadClick}
+              linkName="TÉLÉCHARGER LES PHOTOS"
             />
-          )}
-        </div>
-
-        <div className='text-center'>
-        <p>{selectedRandoData ? selectedRandoData.description : "Chargement..."}</p>
-        </div>
-
-        <ArchiveDownloadButton 
-            classname='md:ml-4'
-            onClick={handleDownloadClick}
-            linkName="TÉLÉCHARGER LES PHOTOS"
-        />
-
-      </SubSection>
-
-      <ScrollTop/>
-    </Section>
-  );
+          </SubSection>
+        )}
+    
+        <ScrollTop/>
+      </Section>
+    );
 }
 
 export default Photos;
