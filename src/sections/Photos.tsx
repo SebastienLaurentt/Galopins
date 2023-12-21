@@ -151,12 +151,12 @@ function Photos() {
                   </PhotoIcon>
                 </li>
                 <li>
-                  <PhotoIcon number={selectedRandoData.elevation} description='de dénivelé'>
+                  <PhotoIcon number={selectedRandoData.elevation + ' m'} description='de dénivelé'>
                     <GiHiking className="iconPhoto" />
                   </PhotoIcon>
                 </li>
                 <li>
-                  <PhotoIcon number={selectedRandoData.distance} description='de distance'>
+                  <PhotoIcon number={selectedRandoData.distance + ' km'} description='de distance'>
                     <GiPathDistance className="iconPhoto" />
                   </PhotoIcon>
                 </li>
