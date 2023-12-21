@@ -8,15 +8,19 @@ import Section from '../components/Section';
 import ParcoursCard from '../components/ClubCard';
 import ScrollTop from '../components/ScrollTop';
 
+
 function Club() {
   const [ref, inView] = useInView({
     triggerOnce: true, // L'animation ne se déclenche qu'une seule fois
   });
 
+
   const liVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+
+
 
   return (
     <Section
@@ -30,7 +34,12 @@ function Club() {
         <AiFillHome className="icon" />
       </SectionHeader>
       <p className='px-4 md:px-20 wideScreen'>
-        Notre club est une association à but non lucratif régie par la loi de 1901. Des randonnées sont proposées le{' '}
+        Notre club est une association à but non lucratif régie par la loi de 1901 ( 
+      <a href="mentions" className='italic text-green-600 underline md:hover:font-bold' >
+        voir les status des Galopins
+      </a>
+
+        ). Des randonnées sont proposées le{' '}
         <strong>Lundi après-midi</strong> et le <strong>Vendredi</strong> à la journée. Le Lundi,{' '}
         <strong>deux niveaux de difficultés</strong> sont possibles:
       </p>

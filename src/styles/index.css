@@ -78,15 +78,6 @@
 }
 
 /* Images styles */
-/* .image-gallery-content .image-gallery-slide .image-gallery-image {
-  max-height: calc(20vh);
-}
-
-@media (min-width: 768px) {
-  .image-gallery-content .image-gallery-slide .image-gallery-image {
-    max-height: calc(40vh);
-  }
-} */
 
 @media (min-width: 1024px) {
   .image-gallery-content .image-gallery-slide .image-gallery-image {
@@ -165,4 +156,14 @@
   .image-gallery-content.fullscreen {
     padding:100px;
   }
+}
+
+/* Mentions Title */
+
+.mentionsH4 {
+  @apply mb-1 mt-2 font-bold
+}
+
+.mentionsUl {
+  @apply list-disc list-inside text-sm md:text-lg mb-2
 }

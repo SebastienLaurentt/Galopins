@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import AccountNewsAdd from './sections/Account/AccountNewsAdd';
 import AccountRandoAdd from './sections/Account/AccountRandoAdd';
 import AccountProgAdd from './sections/Account/AccountProgAdd';
+import Mentions from './sections/Mentions';
 
 const App = () => {
   const { isLogged, login  }  = useAuth();
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
+      <Route path="/mentions" element={<Mentions />} />
       <Route path="/auth/login" element={<Login />} />
       <Route
             path="/account"
