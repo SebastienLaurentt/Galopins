@@ -4,9 +4,10 @@ interface InputProps {
     setter: (newValue: string) => void;
     placeholder?:string;
     isDate?:boolean;
+    isNumber?:boolean;
 }
 
-const Input = ({ inputName, value, setter, placeholder, isDate }: InputProps) => {
+const Input = ({ inputName, value, setter, placeholder, isDate, isNumber }: InputProps) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let inputValue = e.target.value;
@@ -15,22 +16,29 @@ const Input = ({ inputName, value, setter, placeholder, isDate }: InputProps) =>
       // Supprime tout sauf les chiffres
       inputValue = inputValue.replace(/[^0-9]/g, '');
 
-    // Ajoute le séparateur '/' après les deux premiers chiffres
-    if (inputValue.length >= 2) {
-      inputValue = inputValue.substring(0, 2) + '/' + inputValue.substring(2);
+      // Ajoute le séparateur '/' après les deux premiers chiffres
+      if (inputValue.length >= 2) {
+        inputValue = inputValue.substring(0, 2) + '/' + inputValue.substring(2);
+      }
+
+      // Ajoute le deuxième séparateur '/' après les quatre premiers chiffres
+      if (inputValue.length >= 5) {
+        inputValue = inputValue.substring(0, 5) + '/' + inputValue.substring(5);
+      }
+
+      // Limite la longueur à 10 caractères pour la date complète (JJ/MM/AAAA)
+      if (inputValue.length > 10) {
+        inputValue = inputValue.substring(0, 10);
+      } 
     }
 
-    // Ajoute le deuxième séparateur '/' après les quatre premiers chiffres
-    if (inputValue.length >= 5) {
-      inputValue = inputValue.substring(0, 5) + '/' + inputValue.substring(5);
-    }
+    else if (isNumber) {
+      // Autorise les chiffres, les virgules et les points
+      inputValue = inputValue.replace(/[^0-9,.]/g, '');
 
-    // Limite la longueur à 10 caractères pour la date complète (JJ/MM/AAAA)
-    if (inputValue.length > 10) {
-      inputValue = inputValue.substring(0, 10);
+      // Remplace les points par des virgules pour un format numérique uniforme
+      inputValue = inputValue.replace(/./g, ',');
     }
-
-  }
 
     setter(inputValue);
   };

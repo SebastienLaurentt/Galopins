@@ -4,7 +4,6 @@ import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router';
 import Input from '../../components/Account/Input';
 import AccountHeader from '../../components/Account/AccountHeader';
-import Textarea from '../../components/Account/Textarea';
 import imageCompression from 'browser-image-compression';
 import { AiOutlinePicture } from 'react-icons/ai';
 import ValidationButton from '../../components/Account/ValidationButton';
@@ -15,7 +14,9 @@ const AccountRandoAdd = () => {
 
   const [date, setDate] = useState('');
   const [destination, setDestination] = useState('');
-  const [description, setDescription] = useState('');
+  const [memberNumber, setMemberNumber] = useState('');
+  const [elevation, setElevation] = useState('');
+  const [distance, setDistance] = useState('');
   const [pictures, setPictures] = useState<string[]>([]);
   const [loadingImages, setLoadingImages] = useState(false);
   const [loadingSubmit, setLoadingSubmit] = useState(false);
@@ -90,7 +91,9 @@ const AccountRandoAdd = () => {
         {
           date,
           destination,
-          description,
+          memberNumber,
+          elevation,
+          distance,
           pictures,
         },
         {
@@ -103,7 +106,9 @@ const AccountRandoAdd = () => {
 
       setDate('');
       setDestination('');
-      setDescription('');
+      setMemberNumber(''),
+      setElevation(''),
+      setDistance(''),
       setPictures([]);
 
       console.log(response.data);
@@ -148,11 +153,26 @@ const AccountRandoAdd = () => {
             setter={setDestination}
             placeholder='Destination de la randonnée...'
           />
-          <Textarea
-            textareaName='Description'
-            value={description}
-            onChange={setDescription}
-            placeholder='Description de la randonnée...'
+          <Input 
+            inputName='Nombre de Galopins'
+            value={memberNumber}  
+            setter={setMemberNumber}
+            placeholder='Nombre de Galopins...'
+            isNumber={true}
+          />
+          <Input 
+            inputName='Dénivelé (en m)'
+            value={elevation}  
+            setter={setElevation}
+            placeholder='Dénivelé de la randonnée...'
+            isNumber={true}
+          />
+          <Input 
+            inputName='Distance (en km)'
+            value={distance}  
+            setter={setDistance}
+            placeholder='Distance de la randonnée...'
+            isNumber={true}
           />
           <div className='flex flex-col gap-y-1 text-md'>
             <label>
