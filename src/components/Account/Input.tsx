@@ -34,10 +34,8 @@ const Input = ({ inputName, value, setter, placeholder, isDate, isNumber }: Inpu
 
     else if (isNumber) {
       // Autorise les chiffres, les virgules et les points
-      inputValue = inputValue.replace(/[^0-9,.]/g, '');
+      inputValue = inputValue.replace(/[^0-9,,]/g, '');
 
-      // Remplace les points par des virgules pour un format numérique uniforme
-      inputValue = inputValue.replace(/./g, ',');
     }
 
     setter(inputValue);

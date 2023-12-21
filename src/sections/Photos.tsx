@@ -17,13 +17,15 @@ import Gallery from 'react-image-gallery';
 import 'react-image-gallery/styles/scss/image-gallery.scss';
 import { RotatingLines } from 'react-loader-spinner';
 import PhotoIcon from '../components/PhotoIcon.js';
-import { BsFillPenFill, BsPeopleFill } from 'react-icons/bs';
+import  { BsPeopleFill } from 'react-icons/bs';
 import { GiHiking, GiPathDistance } from 'react-icons/gi';
 
 interface RandoData {
   date:string;
   destination: string;
-  description:string;
+  memberNumber:string;
+  elevation:string;
+  distance:string;
   pictures?: string[];
 }
 
@@ -141,23 +143,25 @@ function Photos() {
             </div>
 
             <div>
+            {selectedRandoData && (
               <ul className='flex justify-center'>
                 <li>
-                  <PhotoIcon number='20' description='Galopins'>
+                  <PhotoIcon number={selectedRandoData.memberNumber} description='Galopins'>
                     <BsPeopleFill className="iconPhoto" />
                   </PhotoIcon>
                 </li>
                 <li>
-                  <PhotoIcon number='800m' description='de dénivelé'>
+                  <PhotoIcon number={selectedRandoData.elevation} description='de dénivelé'>
                     <GiHiking className="iconPhoto" />
                   </PhotoIcon>
                 </li>
                 <li>
-                  <PhotoIcon number='5kms' description='de distance'>
+                  <PhotoIcon number={selectedRandoData.distance} description='de distance'>
                     <GiPathDistance className="iconPhoto" />
                   </PhotoIcon>
                 </li>
               </ul>
+            )}
             </div>
     
             <div className="mb-2 xl:mx-48">
@@ -170,10 +174,6 @@ function Photos() {
                   }))}
                 />
               )}
-            </div>
-    
-            <div className='text-center'>
-              <p>{selectedRandoData ? selectedRandoData.description : "Chargement..."}</p>
             </div>
     
             <ArchiveDownloadButton 
