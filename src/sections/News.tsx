@@ -38,7 +38,7 @@ function News() {
         >
             {/* CLUB CONTENT */}
             <SectionHeader sectionTitle='DERNIERES INFOS'>
-                <HiOutlineNewspaper className="icon"/>
+                <HiOutlineNewspaper className="iconHome"/>
             </SectionHeader>
             <SubSection>
                 <p className=" text-[16px] md:text-[24px] xl:text-[28px] text-center"> Les informations concernant les prochaines randonnées, sorties détente ou réunions concernant l'association, c'est ici ! </p>

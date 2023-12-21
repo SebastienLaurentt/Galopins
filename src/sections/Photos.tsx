@@ -16,6 +16,9 @@ import ArchiveDownloadButton from '../components/ArchiveDownloadButton.js';
 import Gallery from 'react-image-gallery';
 import 'react-image-gallery/styles/scss/image-gallery.scss';
 import { RotatingLines } from 'react-loader-spinner';
+import PhotoIcon from '../components/PhotoIcon.js';
+import { BsFillPenFill, BsPeopleFill } from 'react-icons/bs';
+import { GiHiking, GiPathDistance } from 'react-icons/gi';
 
 interface RandoData {
   date:string;
@@ -102,7 +105,7 @@ function Photos() {
         minHeightScreen={false}
       >
         <SectionHeader sectionTitle='NOS PHOTOS'>
-          <MdOutlinePhotoCamera className="icon md:mt-4"/>
+          <MdOutlinePhotoCamera className="iconHome md:mt-4"/>
         </SectionHeader>
     
         {loadingFetch ? (
@@ -135,6 +138,26 @@ function Photos() {
                   </option>
                 ))}
               </select>
+            </div>
+
+            <div>
+              <ul className='flex justify-center'>
+                <li>
+                  <PhotoIcon number='20' description='Galopins'>
+                    <BsPeopleFill className="iconPhoto" />
+                  </PhotoIcon>
+                </li>
+                <li>
+                  <PhotoIcon number='800m' description='de dénivelé'>
+                    <GiHiking className="iconPhoto" />
+                  </PhotoIcon>
+                </li>
+                <li>
+                  <PhotoIcon number='5kms' description='de distance'>
+                    <GiPathDistance className="iconPhoto" />
+                  </PhotoIcon>
+                </li>
+              </ul>
             </div>
     
             <div className="mb-2 xl:mx-48">

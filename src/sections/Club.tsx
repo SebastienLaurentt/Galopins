@@ -31,7 +31,7 @@ function Club() {
     >
       {/* CLUB CONTENT */}
       <SectionHeader sectionTitle='LE CLUB'>
-        <AiFillHome className="icon" />
+        <AiFillHome className="iconHome" />
       </SectionHeader>
       <p className='px-4 md:px-20 wideScreen'>
         Notre club est une association à but non lucratif régie par la loi de 1901 ( 

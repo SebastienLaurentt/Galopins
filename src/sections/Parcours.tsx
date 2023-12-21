@@ -60,7 +60,7 @@ function Parcours() {
 
             {/* PARCOURS CONTENT */}
             <SectionHeader sectionTitle='LES PARCOURS'>
-                <GiStonePath className="icon"/>
+                <GiStonePath className="iconHome"/>
             </SectionHeader>
             <div className='mb-4 flex flex-col items-center md:items-start px-4 md:px-12 xl:px-20 wideScreen'>
                 <p className='mb-3'>Les programmes des randonnées sont établis pour une période de <strong>4 mois</strong>. Vous pouvez choisir puis télécharger le programme que vous souhaitez ci-dessous : </p>

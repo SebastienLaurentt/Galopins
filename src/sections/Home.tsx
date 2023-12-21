@@ -6,7 +6,7 @@ import { BsFillPenFill } from 'react-icons/bs';
 import { BsPeopleFill } from 'react-icons/bs';
 import { FaHiking } from 'react-icons/fa';
 import Section from '../components/Section';
-import ClubIcon from '../components/ClubIcon';
+import HomeIcon from '../components/HomeIcon';
 import { motion } from 'framer-motion';
 
 const containerVariants = {
@@ -42,23 +42,23 @@ function Home() {
         <motion.li 
             variants={childVariants} 
             transition={{ delay: 0.8 }} >
-          <ClubIcon iconDescription='Créé en Septembre 2004'>
-            <BsFillPenFill className="icon" />
-          </ClubIcon>
+          <HomeIcon iconDescription='Créé en Septembre 2004'>
+            <BsFillPenFill className="iconHome" />
+          </HomeIcon>
         </motion.li>
         <motion.li 
             variants={childVariants} 
             transition={{ delay: 1.0 }}>
-          <ClubIcon iconDescription='70 adhérents en 2022'>
-            <BsPeopleFill className="icon" />
-          </ClubIcon>
+          <HomeIcon iconDescription='70 adhérents en 2022'>
+            <BsPeopleFill className="iconHome" />
+          </HomeIcon>
         </motion.li>
         <motion.li 
             variants={childVariants} 
             transition={{ delay: 1.20 }}>
-          <ClubIcon iconDescription='200 randonnées en 2022'>
-            <FaHiking className="icon" />
-          </ClubIcon>
+          <HomeIcon iconDescription='200 randonnées en 2022'>
+            <FaHiking className="iconHome" />
+          </HomeIcon>
         </motion.li>
       </motion.ul>
     </Section>

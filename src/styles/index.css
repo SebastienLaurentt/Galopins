@@ -44,12 +44,16 @@
 
 }
 
-.icon {
+.iconHeader {
+  @apply text-xl md:text-2xl xl:text-3xl 2xl:text-4xl
+}
+
+.iconHome {
   @apply text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl
 }
 
-.iconHeader {
-  @apply text-xl md:text-2xl xl:text-3xl 2xl:text-4xl
+.iconPhoto {
+  @apply text-3xl md:text-4xl 2xl:text-5xl
 }
 
 .wideScreen {

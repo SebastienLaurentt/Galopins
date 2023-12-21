@@ -22,7 +22,7 @@ function Rejoindre() {
 
             {/* CONSEILS CONTENT */}
             <SectionHeader sectionTitle='ADHÉSION'>
-                <LuBackpack className="icon"/>
+                <LuBackpack className="iconHome"/>
             </SectionHeader>
             <div className='flex flex-col  items-center md:items-start px-4 md:px-12 xl:px-20 wideScreen '>
                 <p className='mb-4'>Pour <strong>rejoindre</strong> le club il est nécessaire de fournir un certificat médical validant l'aptitude à la randonnée ainsi qu'une copie d'attestation de responsabilité civile ou carte FFRP.
