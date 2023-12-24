@@ -32,7 +32,7 @@ function Home() {
         <motion.h1 variants={childVariants}>LES GALOPINS</motion.h1>
         <motion.h3 variants={childVariants} className='italic px-4 flex flex-row items-center justify-center'>
           <TbChristmasTree className="text-green-700 text-4xl" />
-          Les Galopins vous souhaite de joyeuses fêtes de fin d'année !
+          Les Galopins vous souhaitent de joyeuses fêtes de fin d'année !
           <TbChristmasTree className="text-green-700 text-4xl" />
         </motion.h3>
       </motion.div>
@@ -40,7 +40,7 @@ function Home() {
         variants={containerVariants}
         initial='hidden'
         animate='visible'
-        className='flex flex-row justify-around md:justify-center xl:gap-x-8 2xl:gap-x-24 mb-4 md:mb-0 wideScreen'
+        className='flex flex-row justify-around md:justify-center xl:gap-x-8 2xl:gap-x-24 mb-6 md:mb-0 wideScreen'
       >
         <motion.li 
             variants={childVariants} 
