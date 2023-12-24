@@ -35,8 +35,8 @@ function Club() {
       </SectionHeader>
       <p className='px-4 md:px-20 wideScreen'>
         Notre club est une association à but non lucratif régie par la loi de 1901 ( 
-      <a href="mentions" className='italic  underline md:hover:font-bold' >
-        voir les status des Galopins
+      <a href="mentions" className='italic  underline font-bold' >
+        voir les statuts des Galopins
       </a>
 
         ). Des randonnées sont proposées le{' '}
