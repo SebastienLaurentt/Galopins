@@ -16,6 +16,7 @@ function DownloadButton ({ classname, file, fileName, linkName, }: DownloadButto
                 className={`flex  p-2 rounded-lg md:text-lg 2xl:text-2xl md:p-4 md:hover:bg-green-600 ${classname} bg-green-800`}
                 href={file}
                 download ={fileName}
+                target="_blank"
             >
                 <div className='flex gap-x-2 items-center'>
                     <span>{linkName}</span>
