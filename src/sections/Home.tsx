@@ -8,6 +8,7 @@ import { FaHiking } from 'react-icons/fa';
 import Section from '../components/Section';
 import HomeIcon from '../components/HomeIcon';
 import { motion } from 'framer-motion';
+import { TbChristmasTree } from "react-icons/tb";
 
 const containerVariants = {
   hidden: {},
@@ -25,19 +26,21 @@ const childVariants = {
 
 function Home() {
   return (
-    <Section id='Accueil' bg={HomeBg} minHeightScreen={true} className='text-center flex flex-col justify-between'>
+    <Section id='Accueil' bg={HomeBg} minHeightScreen={true} className='text-center flex flex-col justify-between '>
       <Header />
       <motion.div variants={containerVariants} initial='hidden' animate='visible' className=' px-4'>
         <motion.h1 variants={childVariants}>LES GALOPINS</motion.h1>
-        <motion.h3 variants={childVariants} className='italic px-4'>
-          Bienvenue sur le site de notre club de randonnée situé à Montélimar !
+        <motion.h3 variants={childVariants} className='italic px-4 flex flex-row items-center justify-center'>
+          <TbChristmasTree className="text-green-700 text-4xl" />
+          Les Galopins vous souhaite de joyeuses fêtes de fin d'année !
+          <TbChristmasTree className="text-green-700 text-4xl" />
         </motion.h3>
       </motion.div>
       <motion.ul
         variants={containerVariants}
         initial='hidden'
         animate='visible'
-        className='flex flex-row justify-around md:justify-center xl:gap-x-8 2xl:gap-x-24 mb-8 wideScreen'
+        className='flex flex-row justify-around md:justify-center xl:gap-x-8 2xl:gap-x-24 mb-4 md:mb-0 wideScreen'
       >
         <motion.li 
             variants={childVariants} 
