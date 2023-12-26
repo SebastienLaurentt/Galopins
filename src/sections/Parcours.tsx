@@ -112,7 +112,7 @@ function Parcours() {
                 <p className='mt-5'>Le <strong>vendredi</strong>, les lieux de rendez-vous et de départ seront précisés par mail ou sur le site par l'accompagnateur. </p>
             </div>
             <div className='px-4 md:px-12 xl:px-20 wideScreen'> 
-                <p>Les Galopins se déplacent toujours en <strong>covoiturage</strong> afin de limiter le nombre de voitures. Le tarif est laissé à l’appréciation du conducteur (la base étant de 0.2€ du km).
+                <p>Les Galopins se déplacent toujours en <strong>covoiturage</strong> afin de limiter le nombre de voitures. Le tarif est laissé à l’appréciation du conducteur.
                 </p>
             </div>
             <ScrollTop/>
