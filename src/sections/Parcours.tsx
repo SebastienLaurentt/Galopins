@@ -9,45 +9,23 @@ import DownloadButton from '../components/DownloadButton';
 import LinkButton from '../components/LinkButton';
 import Tag from '../components/Tag';
 import ScrollTop from '../components/ScrollTop';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 
-interface ProgData {
-    name:string;
-    content?: string;
-  }
-  
+// Importez directement les fichiers PDF depuis le dossier public
+import Programme1PDF from '../../public/pdf/TRIMESTRE1_2024.pdf';
+import Programme2PDF from '../../public/pdf/TRIMESTRE3_2023.pdf';
 
 function Parcours() {
-    const [progsData, setProgsData] = useState<ProgData[]>([]); // State with all Programme Data
-    const [selectedProgName, setSelectedProgName] = useState<string>(''); // State with name about the selected Programme
+    const [selectedProgName, setSelectedProgName] = useState<string>('TRIMESTRE1_2024'); // Par défaut, sélectionnez TRIMESTRE1_2024
 
+    const programOptions = [
+        { value: 'TRIMESTRE1_2024', label: 'TRIMESTRE 1 2024' },
+        { value: 'TRIMESTRE3_2023', label: 'TRIMESTRE 3 2023' },
+    ];
 
-    // Fetch all Randos Data
-    useEffect(() => {
-        axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/progs/')
-        .then(response => {
-            setProgsData(response.data.data);
-
-            // Check if there is at least one program in the response
-            if (response.data.data.length > 0) {
-                // Set selectedProgName to the name of the last program
-                setSelectedProgName(response.data.data[response.data.data.length - 1].name);
-            }
-        })
-        .catch(error => {
-            console.error("Erreur lors de la récupération des données :", error);
-        });
-    }, []); 
-
-  // Set the state of the 
-  const handleRandoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedProgName(event.target.value);
-  };
-
-    // Collect datas of the selectedRando with find method to allow a match with his name 
-  // between the states selectedRandoName and randosData 
-  const selectedProgData =  progsData.find(prog => prog.name === selectedProgName);
+    const handleRandoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedProgName(event.target.value);
+    };
 
     return (
         <Section
@@ -55,9 +33,7 @@ function Parcours() {
             bg={ParcoursBg}
             minHeightScreen={true}
             className='text-center md:text-left flex flex-col justify-around '
-            
         >
-
             {/* PARCOURS CONTENT */}
             <SectionHeader sectionTitle='LES PARCOURS'>
                 <GiStonePath className="iconHome"/>
@@ -67,30 +43,38 @@ function Parcours() {
                 <div className='flex flex-row justify-center items-center gap-x-2'>
                     <div className="">
                         <select
-                            id="photoSelect"
+                            id="programSelect"
                             value={selectedProgName}
                             onChange={handleRandoChange}
                             className="md:cursor-pointer p-2 md:p-4 border border-gray-300 rounded-md text-black text-sm md:text-lg font-bold"
                         >
-                            {progsData.map(prog => (
-                            <option
-                                key={prog.name}
-                                className="font-bold"
-                                value={prog.name}
-                            >
-                            {prog.name}
-                            </option>
+                            {programOptions.map((option) => (
+                                <option
+                                    key={option.value}
+                                    className="font-bold"
+                                    value={option.value}
+                                >
+                                    {option.label}
+                                </option>
                             ))}
                         </select>
                     </div>
-                    {selectedProgData && selectedProgData.content && (
-                        <DownloadButton 
-                            file={selectedProgData.content}
-                            fileName={`Programme_${selectedProgData.name}.pdf`}
-                            linkName={`TÉLÉCHARGER ${selectedProgData.name}`}
+                    {selectedProgName === 'TRIMESTRE1_2024' && (
+                        <DownloadButton
+                            file={Programme1PDF}
+                            fileName="TRIMESTRE1_2024.pdf"
+                            linkName="TÉLÉCHARGER TRIMESTRE 1 2024"
                             classname=''
                         />
-                )}
+                    )}
+                    {selectedProgName === 'TRIMESTRE3_2023' && (
+                        <DownloadButton
+                            file={Programme2PDF}
+                            fileName="TRIMESTRE3_2023.pdf"
+                            linkName="TÉLÉCHARGER TRIMESTRE 3 2023"
+                            classname=''
+                        />
+                    )}
                 </div>
             </div>
             <div className='mb-2 px-4 md:px-12 xl:px-20 wideScreen'>
