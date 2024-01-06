@@ -38,19 +38,19 @@ function Account() {
         <div className='flex flex-row gap-x-2 text-black mb-2'>
           <button
             className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
-              activeButton === 'Infos' ? 'bg-zinc-600 text-white' : ''
+              activeButton === 'Dernières Infos' ? 'bg-zinc-600 text-white' : ''
             }`}
-            onClick={() => handleButtonClick('Infos')}
+            onClick={() => handleButtonClick('Dernières Infos')}
           >
-            Infos
+            Dernières Infos
           </button>
           <button
             className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
-              activeButton === 'Randos' ? 'bg-zinc-600 text-white' : ''
+              activeButton === 'Photos Randos' ? 'bg-zinc-600 text-white' : ''
             }`}
-            onClick={() => handleButtonClick('Randos')}
+            onClick={() => handleButtonClick('Photos Randos')}
           >
-            Randos
+            Photos Randos
           </button>
           <button
             className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
@@ -64,8 +64,8 @@ function Account() {
 
 
         <div className="text-white bg-slate-900 p-4 rounded-md mb-4">
-          {activeButton === 'Infos' && <AccountNews />}
-          {activeButton === 'Randos' && <AccountRando />}
+          {activeButton === 'Dernières Infos' && <AccountNews />}
+          {activeButton === 'Photos Randos' && <AccountRando />}
           {activeButton === 'Programmes' && <AccountProg />}
         </div>
       </div>
