@@ -8,7 +8,6 @@ import { FaHiking } from 'react-icons/fa';
 import Section from '../components/Section';
 import HomeIcon from '../components/HomeIcon';
 import { motion } from 'framer-motion';
-import { TbChristmasTree } from "react-icons/tb";
 
 const containerVariants = {
   hidden: {},
@@ -31,9 +30,7 @@ function Home() {
       <motion.div variants={containerVariants} initial='hidden' animate='visible' className=' px-4'>
         <motion.h1 variants={childVariants}>LES GALOPINS</motion.h1>
         <motion.h3 variants={childVariants} className='italic px-4 flex flex-row items-center justify-center'>
-          <TbChristmasTree className="text-green-700 text-4xl" />
-          Les Galopins vous souhaitent de joyeuses fêtes de fin d'année !
-          <TbChristmasTree className="text-green-700 text-4xl" />
+          Bienvenue sur le site de notre club de randonnée situé à Montélimar
         </motion.h3>
       </motion.div>
       <motion.ul
