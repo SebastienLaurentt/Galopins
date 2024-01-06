@@ -9,7 +9,7 @@ import { AiOutlinePicture } from 'react-icons/ai';
 import ValidationButton from '../../components/Account/ValidationButton';
 import { RotatingLines } from  'react-loader-spinner'
 
-const AccountRandoAdd = () => {
+const AccountRandoUpdate = () => {
   const navigate = useNavigate();
 
   const [date, setDate] = useState('');
@@ -238,4 +238,4 @@ const AccountRandoAdd = () => {
   );
 };
 
-export default AccountRandoAdd;
+export default AccountRandoUpdate;
