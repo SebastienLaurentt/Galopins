@@ -54,14 +54,14 @@ const App = () => {
               </PrivateRoute>
             }
       />
-            <Route
+      {/* <Route
             path="/account/addprogs"
             element={
               <PrivateRoute isLogged={isLogged}>
                 <AccountProgAdd />
               </PrivateRoute>
             }
-      />
+      /> */}
     </Routes>
   );
 };

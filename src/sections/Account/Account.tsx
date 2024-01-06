@@ -52,21 +52,21 @@ function Account() {
           >
             Photos Randos
           </button>
-          <button
+          {/* <button
             className={`p-2 border-solid border-2 border-zinc-600 rounded-md md:hover:bg-zinc-600 md:hover:text-white ${
               activeButton === 'Programmes' ? 'bg-zinc-600 text-white' : ''
             }`}
             onClick={() => handleButtonClick('Programmes')}
           >
             Programmes
-          </button>
+          </button> */}
         </div>
 
 
         <div className="text-white bg-slate-900 p-4 rounded-md mb-4">
           {activeButton === 'Dernières Infos' && <AccountNews />}
           {activeButton === 'Photos Randos' && <AccountRando />}
-          {activeButton === 'Programmes' && <AccountProg />}
+          {/* {activeButton === 'Programmes' && <AccountProg />} */}
         </div>
       </div>
     </div>
