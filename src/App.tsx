@@ -12,6 +12,7 @@ import AccountNewsAdd from './sections/Account/AccountNewsAdd';
 import AccountRandoAdd from './sections/Account/AccountRandoAdd';
 // import AccountProgAdd from './sections/Account/AccountProgAdd';
 import Mentions from './sections/Mentions';
+import AccountRandoUpdate from './sections/Account/AccountRandoUpdate';
 
 const App = () => {
   const { isLogged, login  }  = useAuth();
@@ -51,6 +52,14 @@ const App = () => {
             element={
               <PrivateRoute isLogged={isLogged}>
                 <AccountRandoAdd />
+              </PrivateRoute>
+            }
+      />
+      <Route
+            path="/account/updaterando/:id"
+            element={
+              <PrivateRoute isLogged={isLogged}>
+                <AccountRandoUpdate />
               </PrivateRoute>
             }
       />
