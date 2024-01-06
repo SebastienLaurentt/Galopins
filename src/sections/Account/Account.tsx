@@ -3,7 +3,7 @@ import { useState } from 'react';
 import AccountRando from '../../components/Account/AccountRando';
 import AccountNews from '../../components/Account/AccountNews';
 import AccountHeader from '../../components/Account/AccountHeader';
-import AccountProg from '../../components/Account/AccountProg';
+// import AccountProg from '../../components/Account/AccountProg';
 
 
 function Account() {

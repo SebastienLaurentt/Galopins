@@ -10,7 +10,7 @@ import { useAuth } from './components/Account/Auth';
 import { useEffect } from 'react';
 import AccountNewsAdd from './sections/Account/AccountNewsAdd';
 import AccountRandoAdd from './sections/Account/AccountRandoAdd';
-import AccountProgAdd from './sections/Account/AccountProgAdd';
+// import AccountProgAdd from './sections/Account/AccountProgAdd';
 import Mentions from './sections/Mentions';
 
 const App = () => {
