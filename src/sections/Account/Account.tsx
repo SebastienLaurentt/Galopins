@@ -8,7 +8,7 @@ import AccountHeader from '../../components/Account/AccountHeader';
 
 function Account() {
 
-  const [activeButton, setActiveButton] = useState('Infos'); // État initial avec le bouton "Infos" actif
+  const [activeButton, setActiveButton] = useState('Dernières Infos'); // État initial avec le bouton "Infos" actif
 
 
   const handleButtonClick = (buttonName: string) => {
