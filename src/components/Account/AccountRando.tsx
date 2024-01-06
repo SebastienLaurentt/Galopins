@@ -5,6 +5,7 @@ import Cookies from 'js-cookie';
 import { RiAddCircleLine } from 'react-icons/ri';
 import AccountLinkButton from './AccountLinkButton';
 import { RotatingLines } from 'react-loader-spinner';
+import { Link } from 'react-router-dom';
 
 interface InfoDataProps {
   id: number;
@@ -92,10 +93,16 @@ function AccountRando() {
                 <tr key={rando.id} className="border-b">
                   <td className="px-4 py-2">{rando.id}</td>
                   <td className="px-4 py-2">{rando.date}</td>
-                  <td className="px-4 py-2">{rando.destination}</td>
-                  <td className="px-4 py-2">
-                    <button onClick={() => handleDelete(rando.id)} className="text-red-500 md:hover:font-bold">Supprimer</button>
+                  <td className="px-4 py-2 text-center">{rando.destination}</td>
+                  <td className="px-4 py-2 text-center">
+                    <td className="px-2 ">
+                      <button onClick={() => handleDelete(rando.id)} className="text-red-500 md:hover:font-bold">Supprimer</button>
+                    </td>
+                    <td className="px-2">
+                      <Link to={`/account/updaterando/${rando.id}`} className="text-cyan-500 md:hover:font-bold">Modifier</Link>
+                    </td>
                   </td>
+
                 </tr>
               ))}
             </tbody>
