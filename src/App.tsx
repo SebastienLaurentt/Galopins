@@ -48,6 +48,14 @@ const App = () => {
             }
       />
       <Route
+            path="/account/updatenews/:id"
+            element={
+              <PrivateRoute isLogged={isLogged}>
+                <AccountNewsUpdate />
+              </PrivateRoute>
+            }
+      />
+      <Route
             path="/account/addrando"
             element={
               <PrivateRoute isLogged={isLogged}>
