@@ -22,10 +22,13 @@ function News() {
 
       // Fetch all Randos Data
     useEffect(() => {
-        axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/infos/last')
+        axios.get('https://young-oasis-97886-5eb78d4cde61.herokuapp.com/api/lastinfos')
         .then(response => {
             setInfosData(response.data.data);
+            console.log(response)
         })
+
+        
 
     }, []); 
 

@@ -13,6 +13,7 @@ import AccountRandoAdd from './sections/Account/AccountRandoAdd';
 // import AccountProgAdd from './sections/Account/AccountProgAdd';
 import Mentions from './sections/Mentions';
 import AccountRandoUpdate from './sections/Account/AccountRandoUpdate';
+import AccountNewsUpdate from './sections/Account/AccoutNewsUpdate';
 
 const App = () => {
   const { isLogged, login  }  = useAuth();

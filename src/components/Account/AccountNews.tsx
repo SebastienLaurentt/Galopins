@@ -83,7 +83,7 @@ function AccountNews() {
                   </td>
                   <td>
                   <td className="px-2">
-                      <Link to={`/account/updateinfo/${info.id}`} className="text-cyan-500 md:hover:font-bold">Modifier</Link>
+                      <Link to={`/account/updatenews/${info.id}`} className="text-cyan-500 md:hover:font-bold">Modifier</Link>
                   </td>
                   </td>
                   
