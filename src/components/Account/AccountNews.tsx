@@ -66,7 +66,6 @@ function AccountNews() {
         <table className="mb-2">
           <thead>
             <tr className='border-b-2'>
-              <th className="px-4 py-2">N°</th>
               <th className="px-4 py-2">Date de l'info</th>
               <th className="px-4 py-2">Titre de l'info</th>
               <th className="px-4 py-2">Actions</th>
@@ -75,7 +74,6 @@ function AccountNews() {
           <tbody>
             {infosData.map((info) => (
               <tr key={info.id} className="border-b">
-                <td className="px-4 py-2">{info.id}</td>
                 <td className="px-4 py-2">{info.date}</td>
                 <td className="px-4 py-2">{info.title}</td>
                 <td className="px-4 py-2">
