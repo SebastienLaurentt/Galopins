@@ -37,7 +37,7 @@ const AccountNewsUpdate = () => {
           }
         );
 
-        const dataNouvelle = response.data.data; // Remplacer par la structure de données réelle de votre API
+        const dataNouvelle = response.data.data; 
 
         setDate(dataNouvelle.date || '');
         setTitle(dataNouvelle.title || '');
