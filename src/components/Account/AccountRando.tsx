@@ -82,7 +82,6 @@ function AccountRando() {
           <table className="">
             <thead>
               <tr className='border-b-2'>
-                <th className="px-4 py-2">N°</th>
                 <th className="px-4 py-2">Date</th>
                 <th className="px-4 py-2">Destination</th>
                 <th className="px-4 py-2">Actions</th>
@@ -91,7 +90,6 @@ function AccountRando() {
             <tbody>
               {randosData.map((rando) => (
                 <tr key={rando.id} className="border-b">
-                  <td className="px-4 py-2">{rando.id}</td>
                   <td className="px-4 py-2">{rando.date}</td>
                   <td className="px-4 py-2 text-center">{rando.destination}</td>
                   <td className="px-4 py-2 text-center">
