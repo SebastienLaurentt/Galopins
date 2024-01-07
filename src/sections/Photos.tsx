@@ -10,8 +10,8 @@ import Section from '../components/Section';
 import SubSection from '../components/SubSection';
 import ScrollTop from '../components/ScrollTop';
 import axios from 'axios';
-// import JSZip from 'jszip';
-// import ArchiveDownloadButton from '../components/ArchiveDownloadButton.js';
+import JSZip from 'jszip';
+import ArchiveDownloadButton from '../components/ArchiveDownloadButton.js';
 
 import Gallery from 'react-image-gallery';
 import 'react-image-gallery/styles/scss/image-gallery.scss';
@@ -63,41 +63,41 @@ function Photos() {
   const selectedRandoData = randosData.find(rando => rando.destination === selectedRandoDestination);
 
     // DOWLOAD IMG AS ZIP
-    // const handleDownloadClick = async () => {
-    //   if (!selectedRandoData || !selectedRandoData.pictures) {
-    //     console.error('Aucune donnée de randonnée sélectionnée ou aucune image disponible.');
-    //     return;
-    //   }
+    const handleDownloadClick = async () => {
+      if (!selectedRandoData || !selectedRandoData.pictures) {
+        console.error('Aucune donnée de randonnée sélectionnée ou aucune image disponible.');
+        return;
+      }
     
-    //   const imageUrls = selectedRandoData.pictures;
+      const imageUrls = selectedRandoData.pictures;
     
-    //   const zip = new JSZip();
+      const zip = new JSZip();
     
-    //   const promises = imageUrls.map(async (url, index) => {
-    //     try {
-    //       const response = await fetch(url);
-    //       const arrayBuffer = await response.arrayBuffer();
-    //       zip.file(`image_${index + 1}.jpg`, arrayBuffer);
-    //     } catch (error) {
-    //       console.error(`Erreur lors du chargement de l'image ${url}:`, error);
-    //     }
-    //   });
+      const promises = imageUrls.map(async (url, index) => {
+        try {
+          const response = await fetch(url);
+          const arrayBuffer = await response.arrayBuffer();
+          zip.file(`image_${index + 1}.jpg`, arrayBuffer);
+        } catch (error) {
+          console.error(`Erreur lors du chargement de l'image ${url}:`, error);
+        }
+      });
     
-    //   await Promise.all(promises);
+      await Promise.all(promises);
 
-    //   // Remplace les espaces par des underscores dans le nom de destination
-    // const sanitizedDestination = selectedRandoDestination.replace(/ /g, '_');
+      // Remplace les espaces par des underscores dans le nom de destination
+    const sanitizedDestination = selectedRandoDestination.replace(/ /g, '_');
     
-    //   zip.generateAsync({ type: 'blob' })
-    //     .then(content => {
-    //       const link = document.createElement('a');
-    //       link.href = URL.createObjectURL(content);
-    //       link.download = `${sanitizedDestination}.zip`;
-    //       document.body.appendChild(link);
-    //       link.click();
-    //       document.body.removeChild(link);
-    //     });
-    // };
+      zip.generateAsync({ type: 'blob' })
+        .then(content => {
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(content);
+          link.download = `${sanitizedDestination}.zip`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+    };
 
 
     return (
@@ -176,11 +176,11 @@ function Photos() {
               )}
             </div>
     
-            {/* <ArchiveDownloadButton 
+            <ArchiveDownloadButton 
               classname='md:ml-4'
               onClick={handleDownloadClick}
               linkName="TÉLÉCHARGER LES PHOTOS"
-            /> */}
+            />
           </SubSection>
         )}
     
